@@ -1,12 +1,17 @@
+let mic
 function setup() {
   createCanvas(500, 500);
+ mic = new p5.AudioIn();
+  mic.start();
 }
 
 function draw() {
+ let = vol =mic.getLevel();
+ let h = map(vol,0,1,0,350);
   background(220);
-  beginShape();
-  //Ma dreta
-  fill(255,200,0);
+//mano derecha
+ 
+  fill(255-h,200,h);
 vertex(238, 352.1875);
 vertex(241, 359.1875);
 vertex(244, 365.1875);
@@ -75,6 +80,7 @@ vertex(237, 34.1875);
 vertex(238, 50.1875);
 vertex(238, 353.1875);
  // Ma esquerra
+   fill(255-h,200,h);
   vertex(237, 351.1875);
 vertex(234, 357.1875);
 vertex(232, 362.1875);
@@ -151,7 +157,7 @@ vertex(236, 16.1875);
 vertex(236, 23.1875);
 vertex(237, 36.1875);
 vertex(235, 346.1875);
-endShape();
+endShape(CLOSE);
   beginShape();
   //braç esquerra
   fill(0,50,200);
@@ -271,5 +277,6 @@ vertex(277, 399.1875);
 vertex(277, 395.1875);
 vertex(278, 391.1875);
 vertex(279, 390.1875);
-endShape();
+endShape(CLOSE);
 }
+  
