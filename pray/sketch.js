@@ -6,7 +6,7 @@ function draw() {
   background(220);
   beginShape();
   //Ma dreta
-  fill(255,200,0)
+  fill(255,200,0);
 vertex(238, 352.1875);
 vertex(241, 359.1875);
 vertex(244, 365.1875);
@@ -154,7 +154,7 @@ vertex(235, 346.1875);
 endShape();
   beginShape();
   //braç esquerra
-  fill(0,50,200)
+  fill(0,50,200);
 vertex(111, 318.1875);
 vertex(105, 321.1875);
 vertex(102, 325.1875);
