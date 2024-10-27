@@ -6,39 +6,85 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Web de Gerard</title>
     <style>
-    
-body {
-            padding: 20px; /* Espai extra per als marges laterals */
+        body {
+            background-color: #f7f9fc; /* Color de fondo suave */
+            color: #333; /* Color de texto principal */
+            font-family: Arial, sans-serif;
+            padding: 20px;
         }
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
 
-.logo {
-    margin-right: 20px; /* Ajusta aquest valor segons el necessari */
-}
+        .navbar {
+            background-color: #007bff; /* Color de fondo de la barra de navegación */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la barra de navegación */
+        }
 
-.brand-text {
-    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
-    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
-}  
-.content-container {
-            margin-left: 10px;
-            margin-right: 10px; /* Marges laterals ajustats */
-            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
+        .navbar-brand {
+            color: #ffffff !important;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f7f9fc !important;
+        }
+
+        .navbar-nav .dropdown-menu {
+            background-color: #007bff;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el menú desplegable */
+        }
+
+        .navbar-nav .dropdown-item {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .dropdown-item:hover {
+            background-color: #0056b3; /* Color de fondo para items al pasar el ratón */
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+        }
+
+        h1 {
+            color: #0056b3; /* Color principal para el encabezado */
+            font-weight: bold;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #444;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            list-style-type: disc;
         }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
        <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="logo.jpg" alt="Logo" width="50" class="logo">
-    <span class="brand-text">Web de Gerard</span>
-</a>
+            <img src="logo.jpg" alt="Logo" width="50" class="logo">
+            <span class="brand-text">Web de Gerard</span>
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
