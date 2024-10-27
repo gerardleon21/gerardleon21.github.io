@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Reproductor de Audio</title>
+    <title>Reproductor de Audio - Coldplay</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -92,105 +93,107 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="logo.jpg" alt="Logo" width="50">
-            Web de Gerard
-        </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Logo" width="50">
+                Web de Gerard
+            </a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content-container">
+        <h1>Reproductor de Audio con Visualización - Coldplay</h1>
+        
+        <audio id="audioPlayer" controls>
+            <source src="good_feelings.mp3" type="audio/mp3">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+        
+        <label for="shapeSelector">Selecciona la forma:</label>
+        <select id="shapeSelector">
+            <option value="sphere">Esfera</option>
+            <option value="heart">Corazón</option>
+        </select>
+        
+        <button onclick="startVisualization()">Iniciar Visualización</button>
+
+        <canvas id="visualCanvas" width="600" height="400"></canvas>
     </div>
-</nav>
 
-<!-- Content -->
-<div class="content-container">
-    <h1>Reproductor de Audio con Visualización</h1>
-    
-    <audio id="audioPlayer" controls>
-        <source src="good_feelings.mp3" type="audio/mp3">
-        Tu navegador no soporta la etiqueta de audio.
-    </audio>
-    
-    <label for="shapeSelector">Selecciona la forma:</label>
-    <select id="shapeSelector">
-        <option value="sphere">Esfera</option>
-        <option value="heart">Corazón</option>
-    </select>
-    
-    <button onclick="startVisualization()">Iniciar Visualización</button>
-
-    <canvas id="visualCanvas" width="600" height="400"></canvas>
-</div>
-
-<script>
-    let audioContext, analyser, dataArray, bufferLength;
-    let canvas = document.getElementById('visualCanvas');
-    let ctx = canvas.getContext('2d');
-    
-    function startVisualization() {
-        let audioPlayer = document.getElementById('audioPlayer');
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        let source = audioContext.createMediaElementSource(audioPlayer);
+    <script>
+        let audioContext, analyser, dataArray, bufferLength;
+        let canvas = document.getElementById('visualCanvas');
+        let ctx = canvas.getContext('2d');
         
-        analyser = audioContext.createAnalyser();
-        source.connect(analyser);
-        analyser.connect(audioContext.destination);
-        
-        analyser.fftSize = 256;
-        bufferLength = analyser.frequencyBinCount;
-        dataArray = new Uint8Array(bufferLength);
-
-        audioPlayer.play();
-        visualize();
-    }
-
-    function visualize() {
-        requestAnimationFrame(visualize);
-        analyser.getByteFrequencyData(dataArray);
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        let shape = document.getElementById('shapeSelector').value;
-        let barWidth = (canvas.width / bufferLength) * 2.5;
-        let barHeight;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            barHeight = dataArray[i] / 2;
-
-            let r = barHeight + 25 * (i / bufferLength);
-            let g = 250 * (i / bufferLength);
-            let b = 50;
-
-            ctx.fillStyle = `rgb(${r},${g},${b})`;
-
-            if (shape === 'sphere') {
-                ctx.beginPath();
-                ctx.arc(x + barWidth / 2, canvas.height - barHeight, barHeight / 2, 0, 2 * Math.PI);
-                ctx.fill();
-            } else if (shape === 'heart') {
-                ctx.save();
-                ctx.translate(x + barWidth / 2, canvas.height - barHeight);
-                ctx.scale(0.1 * barHeight / 10, 0.1 * barHeight / 10);
-                ctx.beginPath();
-                ctx.moveTo(75, 40);
-                ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-                ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-                ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-                ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-                ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-                ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-                ctx.fill();
-                ctx.restore();
-            }
+        function startVisualization() {
+            let audioPlayer = document.getElementById('audioPlayer');
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            let source = audioContext.createMediaElementSource(audioPlayer);
             
-            x += barWidth + 5;
-        }
-    }
-</script>
+            analyser = audioContext.createAnalyser();
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            
+            analyser.fftSize = 256;
+            bufferLength = analyser.frequencyBinCount;
+            dataArray = new Uint8Array(bufferLength);
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+            audioPlayer.play();
+            visualize();
+        }
+
+        function visualize() {
+            requestAnimationFrame(visualize);
+            analyser.getByteFrequencyData(dataArray);
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            let shape = document.getElementById('shapeSelector').value;
+            let barWidth = (canvas.width / bufferLength) * 2.5;
+            let barHeight;
+            let x = 0;
+
+            for (let i = 0; i < bufferLength; i++) {
+                barHeight = dataArray[i] / 2;
+
+                let r = barHeight + 25 * (i / bufferLength);
+                let g = 250 * (i / bufferLength);
+                let b = 50;
+
+                ctx.fillStyle = `rgb(${r},${g},${b})`;
+
+                if (shape === 'sphere') {
+                    ctx.beginPath();
+                    ctx.arc(x + barWidth / 2, canvas.height - barHeight, barHeight / 2, 0, 2 * Math.PI);
+                    ctx.fill();
+                } else if (shape === 'heart') {
+                    ctx.save();
+                    ctx.translate(x + barWidth / 2, canvas.height - barHeight);
+                    ctx.scale(0.1 * barHeight / 10, 0.1 * barHeight / 10);
+                    ctx.beginPath();
+                    ctx.moveTo(75, 40);
+                    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+                    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+                    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+                    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+                    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+                    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+                    ctx.fill();
+                    ctx.restore();
+                }
+                
+                x += barWidth + 5;
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
