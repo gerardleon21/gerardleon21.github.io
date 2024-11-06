@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Audio Visualizer</title>
     <style>
+        /* Fondo negro y tipografía futurista */
         body {
-            font-family:  Arial, sans-serif;
+            font-family: "Times New Roman", Times, serif;
+            background-color: #000;
+            color: #ff073a;
             text-align: center;
-            background-color: #1a1a1a;
-            color: #fff;
+            margin: 0;
+            padding: 0;
         }
+        h1 {
+            font-size: 2.5em;
+            color: #ff073a;
+            text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a, 0 0 40px #ff073a;
+            margin-top: 20px;
+        }
+        /* Estilo del select y botones de archivo y control */
+        .controls label, .controls select, .controls input[type="file"], audio {
+            color: #ff073a;
+            font-size: 1.2em;
+            background-color: #111;
+            border: 1px solid #ff073a;
+            padding: 8px;
+            border-radius: 5px;
+            outline: none;
+            box-shadow: 0 0 10px #ff073a;
+            margin-top: 10px;
+        }
+        /* SVG visualizador con borde y neón */
         svg {
             display: block;
             margin: 20px auto;
-            background-color: #000;
-        }
-        .controls {
-            margin: 20px;
+            background-color: #111;
+            border: 2px solid #ff073a;
+            box-shadow: 0 0 20px #ff073a, 0 0 30px #ff073a;
         }
     </style>
 </head>
