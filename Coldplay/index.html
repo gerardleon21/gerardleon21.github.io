@@ -5,40 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Audio Visualizer</title>
     <style>
-        /* Fondo negro y tipografía futurista */
+        /* Fondo animado con gradiente */
         body {
             font-family: "Times New Roman", Times, serif;
-            background-color: #000;
-            color: #ff073a;
-            text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(130deg, #020024, #090979, #ff073a);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
         }
+
+        /* Animación del fondo */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Estilo del título animado */
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #ff073a;
-            text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a, 0 0 40px #ff073a;
-            margin-top: 20px;
+            text-shadow: 0 0 20px #ff073a, 0 0 40px #ff073a, 0 0 60px #ff073a;
+            animation: flicker 2s infinite alternate;
+            margin-top: 30px;
         }
-        /* Estilo del select y botones de archivo y control */
+
+        /* Animación de parpadeo del título */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        /* Estilo de controles futuristas */
         .controls label, .controls select, .controls input[type="file"], audio {
             color: #ff073a;
             font-size: 1.2em;
-            background-color: #111;
+            background-color: rgba(20, 20, 20, 0.8);
             border: 1px solid #ff073a;
-            padding: 8px;
-            border-radius: 5px;
+            padding: 10px;
+            border-radius: 8px;
             outline: none;
-            box-shadow: 0 0 10px #ff073a;
+            box-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a;
+            transition: transform 0.2s;
             margin-top: 10px;
         }
-        /* SVG visualizador con borde y neón */
+
+        .controls select:hover, .controls input[type="file"]:hover {
+            transform: scale(1.05);
+        }
+
+        /* SVG visualizador estilo ciberpunk */
         svg {
             display: block;
-            margin: 20px auto;
-            background-color: #111;
+            margin: 30px auto;
+            background-color: rgba(20, 20, 20, 0.7);
             border: 2px solid #ff073a;
+            border-radius: 15px;
             box-shadow: 0 0 20px #ff073a, 0 0 30px #ff073a;
+            animation: pulse 2s infinite;
+        }
+
+        /* Pulso en el borde del SVG */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; }
+            50% { box-shadow: 0 0 30px #ff073a, 0 0 60px #ff073a; }
+            100% { box-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; }
         }
     </style>
 </head>
@@ -49,7 +88,6 @@
         <select id="songSelect">
             <option value="song1">Song 1</option>
             <option value="song2">Song 2</option>
-            <!-- Easily add more songs here -->
         </select>
         <br><br>
         <input type="file" id="audioFile" accept="audio/*">
