@@ -3,81 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Audio Visualizer</title>
+    <title>Ultimate Futuristic Audio Visualizer</title>
     <style>
-        /* Fondo animado con gradiente */
+        /* Fondo de gradiente animado */
         body {
-            font-family: "Times New Roman", Times, serif;
+            font-family: "Orbitron", sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: linear-gradient(130deg, #020024, #090979, #ff073a);
+            min-height: 200vh; /* permite scroll vertical */
+            background: linear-gradient(130deg, #0d0d27, #08031a, #1c064f, #23056f);
             background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
+            animation: animateBackground 20s ease infinite;
             color: #fff;
-            text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        /* Animación del fondo */
-        @keyframes gradient {
+        @keyframes animateBackground {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Estilo del título animado */
+        /* Título con efectos de neón */
         h1 {
             font-size: 3em;
-            color: #ff073a;
-            text-shadow: 0 0 20px #ff073a, 0 0 40px #ff073a, 0 0 60px #ff073a;
-            animation: flicker 2s infinite alternate;
+            color: #00d1ff;
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 0 0 10px #00d1ff, 0 0 30px #00d1ff, 0 0 60px #00d1ff, 0 0 90px #00d1ff;
+            animation: neonGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            0% { text-shadow: 0 0 20px #00d1ff, 0 0 40px #00d1ff; }
+            100% { text-shadow: 0 0 40px #00d1ff, 0 0 80px #00d1ff; }
+        }
+
+        /* Contenedor para controles */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 30px;
+            gap: 15px;
+            background: rgba(10, 10, 30, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #00d1ff;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 20px #00d1ff;
         }
 
-        /* Animación de parpadeo del título */
-        @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        /* Estilo de controles futuristas */
         .controls label, .controls select, .controls input[type="file"], audio {
-            color: #ff073a;
+            color: #00d1ff;
             font-size: 1.2em;
-            background-color: rgba(20, 20, 20, 0.8);
-            border: 1px solid #ff073a;
+            background: rgba(0, 10, 30, 0.9);
+            border: 1px solid #00d1ff;
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
-            box-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a;
-            transition: transform 0.2s;
-            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
         }
 
-        .controls select:hover, .controls input[type="file"]:hover {
-            transform: scale(1.05);
-        }
-
-        /* SVG visualizador estilo ciberpunk */
+        /* SVG visualizador estilo holograma */
         svg {
             display: block;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
             margin: 30px auto;
-            background-color: rgba(20, 20, 20, 0.7);
-            border: 2px solid #ff073a;
-            border-radius: 15px;
-            box-shadow: 0 0 20px #ff073a, 0 0 30px #ff073a;
-            animation: pulse 2s infinite;
+            background: rgba(10, 10, 30, 0.5);
+            border: 1px solid #00d1ff;
+            border-radius: 10px;
+            box-shadow: 0 0 30px #00d1ff, 0 0 50px #00d1ff;
+            animation: pulse 2s infinite alternate;
         }
 
-        /* Pulso en el borde del SVG */
+        /* Pulso de borde */
         @keyframes pulse {
-            0% { box-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; }
-            50% { box-shadow: 0 0 30px #ff073a, 0 0 60px #ff073a; }
-            100% { box-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; }
+            0% { box-shadow: 0 0 20px #00d1ff, 0 0 40px #00d1ff; }
+            100% { box-shadow: 0 0 40px #00d1ff, 0 0 80px #00d1ff; }
+        }
+
+        /* Partículas animadas estilo neón */
+        .particle {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.6);
+            width: 8px;
+            height: 8px;
+            animation: floatParticle 5s linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translate(0, 0); opacity: 0.8; }
+            50% { transform: translate(100px, -200px); opacity: 0.5; }
+            100% { transform: translate(0, -500px); opacity: 0; }
         }
     </style>
 </head>
