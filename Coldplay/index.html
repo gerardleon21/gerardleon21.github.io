@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Audio Visualizer</title>
+    <title>Elegante Audio Visualizer</title>
     <style>
-        /* Diseño sencillo y centrado */
+        /* Fondo claro con tonos de rojo oscuro */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Georgia', serif;
+            background-color: #f3f3f3;
+            color: #4a0000;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,10 +18,10 @@
             min-height: 100vh;
         }
 
-        /* Encabezado simple */
+        /* Encabezado elegante */
         h1 {
             font-size: 2.5em;
-            color: #333;
+            color: #800000; /* Rojo oscuro */
             margin-top: 20px;
         }
 
@@ -30,24 +30,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #fff;
+            background: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             margin-top: 20px;
             width: 90%;
             max-width: 600px;
         }
 
-        .controls label, .controls select, .controls input[type="file"], audio {
-            color: #333;
+        .controls label {
+            color: #800000;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .controls select, .controls input[type="file"], audio {
+            font-family: 'Georgia', serif;
             font-size: 1em;
+            color: #4a0000;
+            background-color: #fafafa;
+            border: 1px solid #800000;
             padding: 10px;
             width: 100%;
             max-width: 400px;
-            margin: 5px 0;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            margin: 5px 0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         /* Visualizador de audio SVG */
@@ -58,8 +67,8 @@
             height: auto;
             margin: 30px auto;
             border-radius: 8px;
-            border: 1px solid #ddd;
-            background: #e9ecef;
+            border: 1px solid #800000;
+            background: #ffecec;
         }
     </style>
 </head>
