@@ -5,38 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Futuristic Audio Visualizer</title>
     <style>
-        /* Fondo de gradiente animado */
+        /* Fondo negro */
         body {
             font-family: "Orbitron", sans-serif;
             margin: 0;
             padding: 0;
             min-height: 200vh; /* permite scroll vertical */
-            background: linear-gradient(130deg, #0d0d27, #08031a, #1c064f, #23056f);
-            background-size: 400% 400%;
-            animation: animateBackground 20s ease infinite;
-            color: #fff;
+            background: #000;
+            color: #ff004f; /* Color rojo */
             overflow-x: hidden;
         }
 
-        @keyframes animateBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Título con efectos de neón */
+        /* Título con efectos de neón en rojo */
         h1 {
             font-size: 3em;
-            color: #00d1ff;
+            color: #ff004f;
             text-align: center;
             margin-top: 50px;
-            text-shadow: 0 0 10px #00d1ff, 0 0 30px #00d1ff, 0 0 60px #00d1ff, 0 0 90px #00d1ff;
-            animation: neonGlow 2s ease-in-out infinite alternate;
+            text-shadow: 0 0 10px #ff004f, 0 0 30px #ff004f, 0 0 60px #ff004f, 0 0 90px #ff004f;
+            animation: redNeonGlow 2s ease-in-out infinite alternate;
         }
 
-        @keyframes neonGlow {
-            0% { text-shadow: 0 0 20px #00d1ff, 0 0 40px #00d1ff; }
-            100% { text-shadow: 0 0 40px #00d1ff, 0 0 80px #00d1ff; }
+        @keyframes redNeonGlow {
+            0% { text-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f; }
+            100% { text-shadow: 0 0 40px #ff004f, 0 0 80px #ff004f; }
         }
 
         /* Contenedor para controles */
@@ -46,21 +38,21 @@
             align-items: center;
             margin-top: 30px;
             gap: 15px;
-            background: rgba(10, 10, 30, 0.85);
+            background: rgba(0, 0, 0, 0.85);
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid #00d1ff;
+            border: 1px solid #ff004f;
             width: 90%;
             max-width: 600px;
             margin: auto;
-            box-shadow: 0 0 20px #00d1ff;
+            box-shadow: 0 0 20px #ff004f;
         }
 
         .controls label, .controls select, .controls input[type="file"], audio {
-            color: #00d1ff;
+            color: #ff004f;
             font-size: 1.2em;
-            background: rgba(0, 10, 30, 0.9);
-            border: 1px solid #00d1ff;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #ff004f;
             padding: 10px;
             border-radius: 10px;
             outline: none;
@@ -75,24 +67,24 @@
             max-width: 600px;
             height: auto;
             margin: 30px auto;
-            background: rgba(10, 10, 30, 0.5);
-            border: 1px solid #00d1ff;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #ff004f;
             border-radius: 10px;
-            box-shadow: 0 0 30px #00d1ff, 0 0 50px #00d1ff;
-            animation: pulse 2s infinite alternate;
+            box-shadow: 0 0 30px #ff004f, 0 0 50px #ff004f;
+            animation: redPulse 2s infinite alternate;
         }
 
         /* Pulso de borde */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 20px #00d1ff, 0 0 40px #00d1ff; }
-            100% { box-shadow: 0 0 40px #00d1ff, 0 0 80px #00d1ff; }
+        @keyframes redPulse {
+            0% { box-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f; }
+            100% { box-shadow: 0 0 40px #ff004f, 0 0 80px #ff004f; }
         }
 
-        /* Partículas animadas estilo neón */
+        /* Partículas animadas estilo neón rojo */
         .particle {
             position: fixed;
             border-radius: 50%;
-            background: rgba(0, 255, 255, 0.6);
+            background: rgba(255, 0, 79, 0.6);
             width: 8px;
             height: 8px;
             animation: floatParticle 5s linear infinite;
