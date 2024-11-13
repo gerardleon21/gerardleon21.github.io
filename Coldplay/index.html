@@ -3,97 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Futuristic Audio Visualizer</title>
+    <title>Basic Audio Visualizer</title>
     <style>
-        /* Fondo negro */
+        /* Diseño sencillo y centrado */
         body {
-            font-family: "Orbitron", sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             margin: 0;
             padding: 0;
-            min-height: 200vh; /* permite scroll vertical */
-            background: #000;
-            color: #ff004f; /* Color rojo */
-            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* Título con efectos de neón en rojo */
+        /* Encabezado simple */
         h1 {
-            font-size: 3em;
-            color: #ff004f;
-            text-align: center;
-            margin-top: 50px;
-            text-shadow: 0 0 10px #ff004f, 0 0 30px #ff004f, 0 0 60px #ff004f, 0 0 90px #ff004f;
-            animation: redNeonGlow 2s ease-in-out infinite alternate;
+            font-size: 2.5em;
+            color: #333;
+            margin-top: 20px;
         }
 
-        @keyframes redNeonGlow {
-            0% { text-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f; }
-            100% { text-shadow: 0 0 40px #ff004f, 0 0 80px #ff004f; }
-        }
-
-        /* Contenedor para controles */
+        /* Contenedor de controles */
         .controls {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 30px;
-            gap: 15px;
-            background: rgba(0, 0, 0, 0.85);
+            background: #fff;
             padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ff004f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
             width: 90%;
             max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 20px #ff004f;
         }
 
         .controls label, .controls select, .controls input[type="file"], audio {
-            color: #ff004f;
-            font-size: 1.2em;
-            background: rgba(0, 0, 0, 0.9);
-            border: 1px solid #ff004f;
+            color: #333;
+            font-size: 1em;
             padding: 10px;
-            border-radius: 10px;
-            outline: none;
             width: 100%;
             max-width: 400px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
 
-        /* SVG visualizador estilo holograma */
+        /* Visualizador de audio SVG */
         svg {
             display: block;
             width: 100%;
             max-width: 600px;
             height: auto;
             margin: 30px auto;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid #ff004f;
-            border-radius: 10px;
-            box-shadow: 0 0 30px #ff004f, 0 0 50px #ff004f;
-            animation: redPulse 2s infinite alternate;
-        }
-
-        /* Pulso de borde */
-        @keyframes redPulse {
-            0% { box-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f; }
-            100% { box-shadow: 0 0 40px #ff004f, 0 0 80px #ff004f; }
-        }
-
-        /* Partículas animadas estilo neón rojo */
-        .particle {
-            position: fixed;
-            border-radius: 50%;
-            background: rgba(255, 0, 79, 0.6);
-            width: 8px;
-            height: 8px;
-            animation: floatParticle 5s linear infinite;
-        }
-
-        @keyframes floatParticle {
-            0% { transform: translate(0, 0); opacity: 0.8; }
-            50% { transform: translate(100px, -200px); opacity: 0.5; }
-            100% { transform: translate(0, -500px); opacity: 0; }
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #e9ecef;
         }
     </style>
 </head>
