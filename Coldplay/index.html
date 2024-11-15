@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegante Audio Visualizer</title>
+    <title>Elegante Audio Visualizer</title>  
     <style>
         /* Fondo rojo oscuro */
         body {
@@ -124,30 +124,29 @@
             coldplay: document.getElementById('coldplay'),
             elefante: document.getElementById('elefante'),
             manzana: document.getElementById('manzana')
-
         };
 
         let audioContext, analyser, frequencyData;
         let currentShapeIndex = 0;
         let cycleInterval;
 
-        // Configuration for each song (easily scalable)
+        // Configuración para cada canción (escalable fácilmente)
         const songConfig = {
             song1: {
                 shapeOrder: ['coldplay', 'elefante', 'manzana'],
-                durations: [8000, 8000, 8000]
+                durations: [8000, 8000, 8000] // Duración de las formas
             },
             song2: {
                 shapeOrder: ['coldplay', 'elefante', 'manzana'],
-                durations: [5000, 5000, 5000]
+                durations: [5000, 5000, 5000] // Duración de las formas
             }
         };
 
-       fileInput.addEventListener('change', handleFileUpload);
+        fileInput.addEventListener('change', handleFileUpload);
         songSelect.addEventListener('change', resetVisualizer);
         audioPlayer.addEventListener('play', startCycleShapes);
         audioPlayer.addEventListener('pause', stopCycleShapes);
-    
+
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (file && file.type.startsWith('audio/')) {
@@ -159,66 +158,63 @@
                 alert('Please upload a valid audio file.');
             }
         }
-    
+
         function initAudio() {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioContext.createAnalyser();
             analyser.fftSize = 256;
             frequencyData = new Uint8Array(analyser.frequencyBinCount);
-    
+
             const source = audioContext.createMediaElementSource(audioPlayer);
             source.connect(analyser);
             analyser.connect(audioContext.destination);
-    
+
             visualize();
         }
-    
+
         function visualize() {
             requestAnimationFrame(visualize);
             analyser.getByteFrequencyData(frequencyData);
-    
+
             const averageFrequency = frequencyData.reduce((a, b) => a + b) / frequencyData.length;
             const scale = averageFrequency / 255;
-    
+
             const selectedShape = shapes[getCurrentShape()];
             const hue = Math.round((averageFrequency / 255) * 360);
             selectedShape.setAttribute('fill', `hsl(${hue}, 100%, 50%)`);
             selectedShape.setAttribute('transform', `scale(${scale + 0.5})`);
         }
-    
+
         function startCycleShapes() {
             const songData = songConfig[songSelect.value];
             updateShapeVisibility();
-    
-            // Avanzar a la siguiente forma después de la duración actual solo si el audio está reproduciéndose
-            cycleTimeout = setTimeout(() => {
+
+            cycleInterval = setInterval(() => {
                 currentShapeIndex = (currentShapeIndex + 1) % songData.shapeOrder.length;
-                if (!audioPlayer.paused) {
-                    startCycleShapes(); // Recursión controlada para que avance solo al reproducirse
-                }
+                updateShapeVisibility();
             }, songData.durations[currentShapeIndex]);
         }
-    
+
         function stopCycleShapes() {
-            clearTimeout(cycleTimeout); // Detiene el cambio de formas cuando el audio se pausa
+            clearInterval(cycleInterval);
         }
-    
+
+        function updateShapeVisibility() {
+            const songData = songConfig[songSelect.value];
+            const currentShape = songData.shapeOrder[currentShapeIndex];
+            for (const shape in shapes) {
+                shapes[shape].style.display = shape === currentShape ? 'block' : 'none';
+            }
+        }
+
         function resetVisualizer() {
-            clearTimeout(cycleTimeout);
-            audioPlayer.currentTime = 0;
-            audioPlayer.pause();
             currentShapeIndex = 0;
             updateShapeVisibility();
         }
-    
+
         function getCurrentShape() {
-            return songConfig[songSelect.value].shapeOrder[currentShapeIndex];
-        }
-    
-        function updateShapeVisibility() {
-            Object.keys(shapes).forEach(key => {
-                shapes[key].style.display = key === getCurrentShape() ? 'block' : 'none';
-            });
+            const songData = songConfig[songSelect.value];
+            return songData.shapeOrder[currentShapeIndex];
         }
     </script>    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
