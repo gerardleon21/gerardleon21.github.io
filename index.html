@@ -8,48 +8,70 @@
     <style>
         body {
             font-family: 'Georgia', serif;
-            background-color: #3b0d0c; /* Rojo oscuro elegante */
+            background: linear-gradient(145deg, #3b0d0c, #1c0605); /* Gradiente de fondo */
             color: #f2e5e5; /* Texto en crema */
             margin: 0;
             padding: 0;
         }
 
         .navbar {
-            background-color: #4b1e1c; /* Rojo oscuro más claro */
+            background: linear-gradient(145deg, #4b1e1c, #31110f); /* Gradiente para navbar */
             padding: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .navbar-brand {
             color: #f9f9f9;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efecto 3D */
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1); /* Agranda ligeramente al pasar el ratón */
         }
 
         .navbar-nav .nav-link {
             color: #f2d5d5;
             margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .navbar-nav .nav-link:hover {
             color: #f9f9f9;
+            transform: translateY(-3px); /* Efecto de flotación */
         }
 
         .content-container {
             margin: 20px;
-            padding: 20px;
-            background: #5a1f1d;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            background: linear-gradient(145deg, #5a1f1d, #3e1513);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Sombra pronunciada */
+            transform: perspective(1000px) rotateX(1deg); /* Ligero efecto de perspectiva */
+            animation: float 3s ease-in-out infinite; /* Animación de flotación */
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: perspective(1000px) rotateX(1deg) translateY(0);
+            }
+            50% {
+                transform: perspective(1000px) rotateX(1deg) translateY(-10px);
+            }
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #f9f9f9;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Efecto 3D */
             margin-bottom: 20px;
         }
 
         p, ul {
             font-size: 1.2em;
+            line-height: 1.8;
         }
 
         ul li {
@@ -58,12 +80,29 @@
 
         a {
             color: #f2d5d5;
-            text-decoration: underline;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
         a:hover {
             color: #f9f9f9;
-            text-decoration: none;
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(145deg, #4b1e1c, #31110f);
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Sombra flotante */
+        }
+
+        .dropdown-item {
+            color: #f2d5d5;
+        }
+
+        .dropdown-item:hover {
+            background-color: #5a1f1d;
+            color: #f9f9f9;
         }
     </style>
 </head>
