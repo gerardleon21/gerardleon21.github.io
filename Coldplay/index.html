@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Visualizer</title>  
+    <title>Audio Visualizer</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -56,7 +56,6 @@
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Visualizador de audio SVG */
         svg {
             display: block;
             width: 100%;
@@ -70,13 +69,12 @@
     </style>
 </head>
 <body>
-     <h1>SVG Audio Visualizer</h1>
+    <h1>SVG Audio Visualizer</h1>
     <div class="controls">
         <label for="songSelect">Choose Song:</label>
         <select id="songSelect">
-            <option value="song1">Song 1</option>
-            <option value="song2">Song 2</option>
-            <!-- Easily add more songs here -->
+            <option value="song1.mp3">Song 1</option>
+            <option value="song2.mp3">Song 2</option>
         </select>
         <br><br>
         <input type="file" id="audioFile" accept="audio/*">
@@ -85,6 +83,7 @@
     </div>
 
     <svg id="svgVisualizer" width="400" height="400" viewBox="0 0 150 150">
+ 
 
            <g id="coldplay" style="display:none;" fill="hsl(200, 100%, 50%)">
 <path d="M 66.109214 32.132353 C 69.689836 21.147978 81.490013 15.123162 92.496456 18.685662 C 103.485261 22.248162 109.517639 34.053309 105.954655 45.055147 C 102.391672 56.056985 90.591495 62.081801 79.585052 58.519301 C 68.578608 54.974265 62.546231 43.169118 66.109214 32.167279 " transform="matrix(0.221461,0,0,0.223684,0,0)"/>
@@ -123,118 +122,29 @@
 <path  d="M 201.164723 384.232695 C 175.434859 461.088008 185.787962 458.675313 179.060629 506.973086 C 184.259023 516.58 178.40537 575.712969 209.246259 527.108125 C 223.225132 484.469219 227.15669 401.647969 255.507592 416.431211 C 281.06272 450.033477 241.747139 559.262773 233.359815 635.723281 C 209.377311 732.801367 185.700594 828.958242 193.126871 836.898203 C 220.516725 890.460039 265.642276 786.231602 259.526518 774.519063 L 293.731074 621.641914 C 305.6568 610.806719 315.31096 609.008164 321.90724 619.624023 C 343.268706 661.999727 330.03246 681.389023 339.992408 758.463672 C 341.477663 837.336875 356.679688 834.090703 368.168574 852.997461 C 375.245379 855.98043 379.832196 861.419961 402.373129 848.96168 C 371.095401 681.608359 365.241747 536.846641 382.234815 412.39543 L 460.691241 513.026758 C 480.523768 536.495703 518.397777 532.854727 502.933649 511.008867 C 472.485915 467.887422 456.104423 442.883125 426.486686 372.169219 C 405.693112 332.118477 384.943222 331.723672 364.149648 321.897422 C 327.236686 312.422109 291.110035 306.850977 259.526518 323.915313 C 205.314701 360.45668 206.275748 377.170078 201.164723 384.232695 Z M 201.164723 384.232695 " transform="matrix(0.0894207,0,0,0.0890472,0,0)"/>
 <path  d="M 567.323834 456.657422 C 586.93794 394.409883 615.944102 343.831016 655.827575 327.907227 C 774.604313 286.979141 818.419344 345.980508 836.897667 448.629727 L 844.935519 541.189492 C 833.883473 549.304922 822.65669 558.341563 816.803037 535.13582 C 809.376761 515.527187 811.910431 408.49125 766.479093 416.431211 C 749.354974 424.23957 752.93706 432.223398 762.460167 472.75668 L 832.878741 832.862422 C 826.588248 852.471055 815.011994 861.463828 792.645797 848.96168 C 763.727003 782.590625 742.540273 716.175703 740.356074 649.804648 C 721.353543 603.6125 700.822073 608.832695 692.041593 659.850234 C 689.245819 738.67957 689.901078 774.255859 665.918574 848.96168 C 611.96886 877.826289 625.46721 809.876016 639.708187 728.633984 C 650.760233 611.72793 665.525418 485.258828 639.751871 412.39543 C 620.225132 442.839258 598.90735 479.249023 563.304908 515.000781 C 570.381712 523.160078 511.670445 549.041719 519.053037 513.026758 C 538.841879 492.40918 556.359155 484.688555 567.323834 456.657422 Z M 567.323834 456.657422 " transform="matrix(0.0894207,0,0,0.0890472,0,0)"/>
 </g>
-        </svg>
-     <script>
-        const fileInput = document.getElementById('audioFile');
+</svg>
+
+    <script>
         const audioPlayer = document.getElementById('audioPlayer');
         const songSelect = document.getElementById('songSelect');
-        const shapes = {
-            coldplay: document.getElementById('coldplay'),
-            elefante: document.getElementById('elefante'),
-            manzana: document.getElementById('manzana'),
-            mariposa: document.getElementById('mariposa'),
-            personas: document.getElementById('personas'),
-        };
+        const audioFileInput = document.getElementById('audioFile');
 
-        let audioContext, analyser, frequencyData;
-        let currentShapeIndex = 0;
-        let cycleInterval;
+        // Reproducir archivo desde selección de lista
+        songSelect.addEventListener('change', () => {
+            const selectedSong = songSelect.value;
+            audioPlayer.src = selectedSong; // Asigna la ruta del archivo al reproductor
+            audioPlayer.play();
+        });
 
-        // Configuración para cada canción (escalable fácilmente)
-        const songConfig = {
-            song1: {
-                shapeOrder: ['coldplay', 'elefante', 'manzana', 'mariposa', 'personas'],
-                durations: [5000, 5000, 5000, 5000, 5000] // Duración de las formas
-            },
-            song2: {
-              
-        },
-
-      //COPIADLO DE AQUÍ HASTA EL FINAL
-        
-        fileInput.addEventListener('change', handleFileUpload);
-        songSelect.addEventListener('change', resetVisualizer);
-        audioPlayer.addEventListener('play', startCycleShapes);
-        audioPlayer.addEventListener('pause', stopCycleShapes);
-    
-        function handleFileUpload(event) {
+        // Reproducir archivo desde input
+        audioFileInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
-            if (file && file.type.startsWith('audio/')) {
-                const audioURL = URL.createObjectURL(file);
-                audioPlayer.src = audioURL;
-                audioPlayer.load();
-                initAudio();
-            } else {
-                alert('Please upload a valid audio file.');
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                audioPlayer.src = fileURL;
+                audioPlayer.play();
             }
-        }
-    
-        function initAudio() {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioContext.createAnalyser();
-            analyser.fftSize = 256;
-            frequencyData = new Uint8Array(analyser.frequencyBinCount);
-    
-            const source = audioContext.createMediaElementSource(audioPlayer);
-            source.connect(analyser);
-            analyser.connect(audioContext.destination);
-    
-            visualize();
-        }
-    
-        function visualize() {
-            requestAnimationFrame(visualize);
-            analyser.getByteFrequencyData(frequencyData);
-    
-            const averageFrequency = frequencyData.reduce((a, b) => a + b) / frequencyData.length;
-            const scale = averageFrequency / 255;
-    
-            const selectedShape = shapes[getCurrentShape()];
-            const hue = Math.round((averageFrequency / 255) * 360);
-            selectedShape.setAttribute('fill', `hsl(${hue}, 100%, 50%)`);
-            selectedShape.setAttribute('transform', `scale(${scale + 0.5})`);
-        }
-    
-        function startCycleShapes() {
-            const songData = songConfig[songSelect.value];
-            updateShapeVisibility();
-    
-            // Avanzar a la siguiente forma después de la duración actual solo si el audio está reproduciéndose
-            cycleTimeout = setTimeout(() => {
-                currentShapeIndex = (currentShapeIndex + 1) % songData.shapeOrder.length;
-                if (!audioPlayer.paused) {
-                    startCycleShapes(); // Recursión controlada para que avance solo al reproducirse
-                }
-            }, songData.durations[currentShapeIndex]);
-        }
-    
-        function stopCycleShapes() {
-            clearTimeout(cycleTimeout); // Detiene el cambio de formas cuando el audio se pausa
-        }
-    
-        function resetVisualizer() {
-            clearTimeout(cycleTimeout);
-            audioPlayer.currentTime = 0;
-            audioPlayer.pause();
-            currentShapeIndex = 0;
-            updateShapeVisibility();
-        }
-    
-        function getCurrentShape() {
-            return songConfig[songSelect.value].shapeOrder[currentShapeIndex];
-        }
-    
-        function updateShapeVisibility() {
-            Object.keys(shapes).forEach(key => {
-                shapes[key].style.display = key === getCurrentShape() ? 'block' : 'none';
-            });
-        }
+        });
     </script>
-    <video width="1280" height="720" controls>
-  <source src="/files/202411142120(1).mp4" type="video/mp4">
-</video>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
