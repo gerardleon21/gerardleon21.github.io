@@ -150,11 +150,13 @@
               
         },
 
+      //COPIADLO DE AQUÍ HASTA EL FINAL
+        
         fileInput.addEventListener('change', handleFileUpload);
         songSelect.addEventListener('change', resetVisualizer);
         audioPlayer.addEventListener('play', startCycleShapes);
         audioPlayer.addEventListener('pause', stopCycleShapes);
-
+    
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (file && file.type.startsWith('audio/')) {
@@ -166,65 +168,72 @@
                 alert('Please upload a valid audio file.');
             }
         }
-
+    
         function initAudio() {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioContext.createAnalyser();
             analyser.fftSize = 256;
             frequencyData = new Uint8Array(analyser.frequencyBinCount);
-
+    
             const source = audioContext.createMediaElementSource(audioPlayer);
             source.connect(analyser);
             analyser.connect(audioContext.destination);
-
+    
             visualize();
         }
-
+    
         function visualize() {
             requestAnimationFrame(visualize);
             analyser.getByteFrequencyData(frequencyData);
-
+    
             const averageFrequency = frequencyData.reduce((a, b) => a + b) / frequencyData.length;
             const scale = averageFrequency / 255;
-
+    
             const selectedShape = shapes[getCurrentShape()];
             const hue = Math.round((averageFrequency / 255) * 360);
             selectedShape.setAttribute('fill', `hsl(${hue}, 100%, 50%)`);
             selectedShape.setAttribute('transform', `scale(${scale + 0.5})`);
         }
-
+    
         function startCycleShapes() {
             const songData = songConfig[songSelect.value];
             updateShapeVisibility();
-
-            cycleInterval = setInterval(() => {
+    
+            // Avanzar a la siguiente forma después de la duración actual solo si el audio está reproduciéndose
+            cycleTimeout = setTimeout(() => {
                 currentShapeIndex = (currentShapeIndex + 1) % songData.shapeOrder.length;
-                updateShapeVisibility();
+                if (!audioPlayer.paused) {
+                    startCycleShapes(); // Recursión controlada para que avance solo al reproducirse
+                }
             }, songData.durations[currentShapeIndex]);
         }
-
+    
         function stopCycleShapes() {
-            clearInterval(cycleInterval);
+            clearTimeout(cycleTimeout); // Detiene el cambio de formas cuando el audio se pausa
         }
-
-        function updateShapeVisibility() {
-            const songData = songConfig[songSelect.value];
-            const currentShape = songData.shapeOrder[currentShapeIndex];
-            for (const shape in shapes) {
-                shapes[shape].style.display = shape === currentShape ? 'block' : 'none';
-            }
-        }
-
+    
         function resetVisualizer() {
+            clearTimeout(cycleTimeout);
+            audioPlayer.currentTime = 0;
+            audioPlayer.pause();
             currentShapeIndex = 0;
             updateShapeVisibility();
         }
-
+    
         function getCurrentShape() {
-            const songData = songConfig[songSelect.value];
-            return songData.shapeOrder[currentShapeIndex];
+            return songConfig[songSelect.value].shapeOrder[currentShapeIndex];
         }
-    </script>    
+    
+        function updateShapeVisibility() {
+            Object.keys(shapes).forEach(key => {
+                shapes[key].style.display = key === getCurrentShape() ? 'block' : 'none';
+            });
+        }
+    </script>
+    <video width="1280" height="720" controls>
+  <source src="/files/202411142120(1).mp4" type="video/mp4">
+</video>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
