@@ -44,21 +44,26 @@ fill(0);
   //text("Volum: " + vol, 50, 100);
   //text("Ales: " + ales);
   text("Cara con mosca" , 50, 350)
-  fill(255,204,153);//cara
+ //cara
+ fill(255,204,153);
  ellipse(faceX,faceY,270,300);
    // Cellas
   stroke(0);
   strokeWeight(4);
   line(200, 120, 260, 130); 
   line(340, 130, 390, 120); 
- fill(255,255,255);//ulls
+ //ulls
+ fill(255,255,255);
  ellipse(faceX-50,faceY-50,50,leftEyeSize);
  ellipse(faceX+50,faceY-50,50,rightEyeSize);
- fill(0,0,0);//pupil·la
+ //pupil·les
+ fill(0,0,0);
  ellipse(faceX-50,faceY-50,25,leftEyeSize/2);
  ellipse(faceX+50,faceY-50,25,rightEyeSize/2);
+ //boca
  fill(0,0,0);
- arc(faceX, faceY + 50, 120, 30+h, 0, PI); // La variable "h" determina la alçada de la boca 
+ arc(faceX, faceY + 50, 120, 30+h, 0, PI);
+ // La variable "h" determina la alçada de la boca 
  fill(255);
  noStroke();
  ellipse(x-10,y, 15+ales,25);
