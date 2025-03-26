@@ -44,9 +44,14 @@ fill(0);
   //text("Volum: " + vol, 50, 100);
   //text("Ales: " + ales);
   text("Cara con mosca" , 50, 350)
-  fill(255,223,196);//cara
- ellipse(faceX,faceY,220,300);
- fill(81,209,246);//ulls
+  fill(255,204,153);//cara
+ ellipse(faceX,faceY,270,300);
+   // Cellas
+  stroke(0);
+  strokeWeight(4);
+  line(200, 120, 260, 130); 
+  line(340, 130, 390, 120); 
+ fill(255,255,255);//ulls
  ellipse(faceX-50,faceY-50,50,leftEyeSize);
  ellipse(faceX+50,faceY-50,50,rightEyeSize);
  fill(0,0,0);//pupil·la
@@ -66,5 +71,5 @@ fill(0);
        Utilitza random() per generar components RGB aleatoris dins d'un interval.
        Aquesta funció es crida en prémer el botó "Canvia Fons". */
        function changeBackground() {
-        bgColor = color(random(100, 255), random(100, 255), random(100, 255));
+        bgColor = color(random(130, 255), random(130, 255), random(130, 255));
       }
