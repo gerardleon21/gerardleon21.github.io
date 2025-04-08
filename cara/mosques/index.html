@@ -1,38 +1,67 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-  <meta charset="UTF-8">
-  <title>Mosques amb Cos, Ales i Antenes</title>
-  <!-- Incloem la biblioteca p5.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-<!-- and it's easy to individually load additional languages -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
-
-<script>hljs.highlightAll();</script>
-</head>
-<body>
-  <h2>Programació orientada a objectes</h2>
-  <p>Llenguatges de programació com C++, Javascrypt o Python sôn POO, en canvi, C, no es orientada a objectes</p>
-  <p>En el exemple que veurem, construirem una classe "Mosca", les classes acostumen a tenir noms en Majùscula, i, dintre seu, hi ha diferents parts.</p>
-  <p>La primera part, utilitzem la paraula clau "constructor" per formar la propia classe, que actua com a motlle. Dintre del constructor, introduim arguments que afecten a la propia classe designats amb la paraula "this".</p>
-  <p>Al principi donem valors inicals als parametres/propitats de la classe. Analitzarem la classe mosca:</p>
-  <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-javascript">
-      class Mosca { //L'objectiu de crear una classe es poder crear diverses instÂncies de objectes d'una mateixa classe. Les Classes ens ajuden a tenir el codi ordenat i encapsulat
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        // La mida base determina la grandària de la mosca
-        this.mida = random(10, 20);
-        this.velocitat = random(1, 3);
-        // Offsets per al moviment suau amb noise
-        this.offsetX = random(1000);
-        this.offsetY = random(1000);
-      }
-  </code></pre>
-  <script src="sketch.js"></script>
-</body>
+<html>
+  <head>
+  </head>
+  <body>
+   <h1> Programació orientada a objectes
+   </h1> 
+    <h2>
+    Introducció
+    </h2>
+    <p>
+      Els llenguatges de programació orientada a objectes són dels més
+      utilitzats: Phyton, JavaScript i C++. En canvi altres llenguatges com C
+      no estan orientats a objectes.
+    </p>
+    <h2>
+      Advantatges de la POO
+    </h2>
+    <ol>
+      <li>
+        <b>Encapsulació</b>: Consisteix en agrupar dades (propietats) i  les funcions
+        s'acostumen a anomenar mètodes que operen sobre les dades anteriors en una única entitat
+        anomenada <b>classe</b>. Té els següents avantatges: la classe queda oculta i només
+        podem interactuar amb l'objecte creat a partir de la classe. És més difícil cometre
+        errors al crear objectes perquè la classe normalment es defineix bé. El codi és més segur
+        perquè només interactuem amb objectes i no amb classes.
+      </li>
+      <li>
+        <b>Reutilització del codi:</b> podem utilitzar la mateixa classe o el mateix objecte en
+        diferents parts del programa o en programes diferents. Les avantatges són: Evita duplicacions
+        del codi. Podem crear moltes instancies diferents de la mateixa classe o objectes amb 
+        facilitats. També puc fer una classe complexa en forma de biblioteca constituïda per una o més
+        classes i utilitzarla en molts programes diferents.
+      </li>
+      <li>
+        <b>Herència:</b> Ens permet crear una classe o subclasse heredant les propietats i els mètodes
+        de una classe existent o de una superclasse. Té l'avantatge d'extendre les propietats i els mètodes
+        d'una superclasse o classe a una subclasse o classe. La nomenclatura pot ser jeràrquica superclasse
+        per sobre de subclasse o heredada: Classe principal i classe heredada de la classe principal. L'avantatge
+        és que evitem escriure codi redundant i no repetir un codi quan volem o variar les funcions d'una classe
+      </li>
+      <li>
+        <b>Polimorfisme:</b> Permet crear objectes diferents a partir de la mateixa classe, per exemple variant elss
+        arguments. L'avantatge és que puc crear objectes diferents variant els arguments o cridant diferents mètodes
+        de la classe a cada objecte.
+      </li>
+      <li>
+        <b>Mantenibilitat:</b> El codi creat per classes és més fàcil de mantenir perquè cada classe té una responsabilitat
+        específica. Si tenim el codi separat en classes, podem trobar els errors amb més facilitat.
+      </li>
+      <li>
+        <b>Escalabilitat:</b> El projecte és més escalable, vol dir que es pot fer més gran i complex perquè podem afegir
+        noves funcionalitats sense afectar al codi existent. 
+      </li>
+      <li>
+        <b>Modularitat:</b> El codi dividit en classes permet que diferents equips de desenvolupament treballin en classes o
+        mòduls diferents i independents que posteriorment en ser mòduls independents poden combinar-se entre si.
+      </li>
+      <li>
+        <b>Abstracció:</b> Permet fer més clar el codi perquè oculta els detalls interns de la complexitats.
+      </li>
+      <li>
+        <b>Organització:</b> Permet tenir el codi més ordenat i més llegible per altres programadors facilitant el manteniment
+        a llarg termini i la documentació
+      </li>
+    </ol>
+  </body>
 </html>
