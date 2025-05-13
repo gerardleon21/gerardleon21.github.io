@@ -1,4 +1,4 @@
-    let mosques = [];
+let mosques = [];
 
     function setup() {
       createCanvas(windowWidth, windowHeight);
@@ -9,7 +9,7 @@
     }
 
     function draw() {
-      background(220);
+      background(355,50,100,50);
       // Actualitzem i dibuixem cada mosca
       for (let m of mosques) {
         m.mou();
@@ -22,8 +22,8 @@
         this.x = x;
         this.y = y;
         // La mida base determina la grandària de la mosca
-        this.mida = random(10, 20);
-        this.velocitat = random(1, 3);
+        this.mida = random(10, 30);
+        this.velocitat = random(1, 10);
         // Offsets per al moviment suau amb noise
         this.offsetX = random(1000);
         this.offsetY = random(1000);
