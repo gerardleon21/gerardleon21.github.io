@@ -850,9 +850,9 @@ endShape();
     r = map(intensity, 0, 1, 255, 255);
     g = map(intensity, 0, 1, 255, 128);
     b = map(intensity, 0, 1, 255, 0);
-    r2 = map(intensity, 1, 0, 255, 255);
-    g2 = map(intensity, 1, 0, 255, 128);
-    b2 = map(intensity, 1, 0, 255, 0);
+    r2 = map(intensity, 1, 0, 200, 255);
+    g2 = map(intensity, 1, 0, 255, 0);
+    b2 = map(intensity, 1, 0, 200, 255);
 
 background(r2, g2, b2);
   
@@ -860,7 +860,7 @@ background(r2, g2, b2);
   
   beginShape();
   stroke(0);
-  fill(219, 171, 123);
+  fill(r2, g2, b2);
 vertex(342, 251.1875);
 vertex(338, 249.1875);
 vertex(334, 244.1875);
