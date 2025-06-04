@@ -109,10 +109,14 @@
       push();
       translate(width/2, height/2);
       switch(currentExpression.dominant) {
-        case 'happy':
+        //Felic
+         case 'happy': 
+        push();
+        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800
+        figuraFelic(smoothIntensity); 
+        pop();
+        break;
 
-         figuraFelic(smoothIntensity);
-          break;
         case 'sad':       
          figuraTrist(smoothIntensity); break;
         
@@ -2497,7 +2501,7 @@ vertex(60, 51.1875);
 vertex(27, 19.1875);
 vertex(30, 0.1875);
   endShape(CLOSE);
- fill(4, 21, 49);
+ fill(r2, g2, b2);
   beginShape();
 vertex(67, 59.1875);
 vertex(64, 69.1875);
