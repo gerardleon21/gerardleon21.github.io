@@ -2742,8 +2742,8 @@ vertex(325, 107.1875);
   //cejas
   strokeWeight(4)
   fill(255, 255, 255, 0);
-  line(305, 125, 335, 145);
-  line(360, 145, 390, 125);
+  line(305-5*intensity, 125+10*intensity, 335+5*intensity, 145+10*intensity);
+  line(360-5*intensity, 145+10*intensity, 390+5*intensity, 125+10*intensity);
   
   //ojeras
   noStroke();
@@ -2755,34 +2755,34 @@ vertex(325, 107.1875);
   stroke(0);
   strokeWeight(2)
  fill(230, 178, 118);
-  ellipse(320, 148.1875, 20, 15);
+  ellipse(320, 148.1875, 20+5*intensity, 15-5*intensity);
  
   //pupila izquierda
   
  fill(0);
-ellipse(320, 148.1875, 5, 3);
+ellipse(320, 148.1875, 5+5*intensity, 3);
  
   // ojo derecho
   
  fill(230, 178, 118);
-  ellipse(372, 148.1875, 20, 15);
+  ellipse(372, 148.1875, 20+5*intensity, 15-5*intensity);
  
   // pupila derecha
   
   fill(0);
-  ellipse(372, 148.875, 5, 3);
+  ellipse(372, 148.875, 5+5*intensity, 3);
   
   //nariz
   
   noStroke();
   fill(200, 131, 100);
- ellipse(340, 170.1875, 8, 10);
- ellipse(355, 170.1875, 8, 10);
+ ellipse(340, 170.1875-5*intensity, 8, 10);
+ ellipse(355, 170.1875-5*intensity, 8, 10);
 
   //boca
    stroke(0);
   fill(200, 131, 100);
-  ellipse(350, 210.1875, 37.5, 25)
+  ellipse(350, 210.1875+2.5*intensity, 37.5+5*intensity, 25+5*intensity)
   
   
   //cuerpo
