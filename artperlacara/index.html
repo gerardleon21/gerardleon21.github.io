@@ -195,7 +195,7 @@
   // fons
   
   noStroke();
-  fill(255, 192, 122)
+  fill(255, 192+20*intensity, 122-22*intensity)
   beginShape();
 vertex(30, 1.1875);
 vertex(47, 14.1875);
@@ -224,7 +224,7 @@ vertex(370, 1.1875);
 vertex(29, 0.1875);
   endShape(CLOSE);
   stroke(0);
-  fill(240, 174, 152)
+  fill(240+10*intensity, 174+30*intensity, 152-10*intensity)
   beginShape();
 vertex(408, 271.1875);
 vertex(405, 265.1875);
@@ -276,7 +276,7 @@ vertex(647, 418.1875);
 vertex(610, 419.1875);
 vertex(408, 270.1875);
   endShape(CLOSE);
-  fill(240, 105, 39);
+  fill(240+10*intensity, 105+50*intensity, 39-9*intensity);
   beginShape();
   vertex(651, 2.1875);
 vertex(652, 12.1875);
@@ -302,7 +302,7 @@ vertex(650, 1.1875);
   //puente
   
   strokeWeight(2)
-  fill(252, 178, 69);
+  fill(252, 178+10*intensity, 69);
   beginShape();
 vertex(31, 0.1875);
 vertex(296, 215.1875);
@@ -367,7 +367,7 @@ vertex(62, 110.1875);
 vertex(178, 272.1875);
 vertex(181, 228.1875);
   endShape(CLOSE);
-  fill(252, 178, 69)
+  fill(252, 178+10*intensity, 69)
   beginShape();
   vertex(409, 271.1875);
 vertex(610, 419.1875);
@@ -395,7 +395,7 @@ vertex(408, 271.1875);
   
   //suelo puente
   
-  fill(204, 150, 104)
+  fill(204-4*intensity, 150+20*intensity, 104)
   beginShape();
 vertex(238, 393.1875);
 vertex(27, 81.1875);
@@ -1388,7 +1388,7 @@ vertex(297, 236.1875);
   // fondo
   
   noStroke();
-  fill(255, 192, 122)
+  fill(255-100*intensity, 192-40*intensity, 122+50*intensity);
   beginShape();
 vertex(30, 1.1875);
 vertex(47, 14.1875);
@@ -1417,7 +1417,7 @@ vertex(370, 1.1875);
 vertex(29, 0.1875);
   endShape(CLOSE);
   stroke(0);
-  fill(240, 174, 152)
+  fill(240-10*intensity, 174-14*intensity, 152+38*intensity);
   beginShape();
 vertex(408, 271.1875);
 vertex(405, 265.1875);
@@ -1469,7 +1469,7 @@ vertex(647, 418.1875);
 vertex(610, 419.1875);
 vertex(408, 270.1875);
   endShape(CLOSE);
-  fill(240, 105, 39);
+  fill(240-30*intensity, 105, 39+200*intensity);
   beginShape();
   vertex(651, 2.1875);
 vertex(652, 12.1875);
@@ -1495,7 +1495,7 @@ vertex(650, 1.1875);
   //puente
   
   strokeWeight(2)
-  fill(252, 178, 69);
+  fill(252-70*intensity, 178-18*intensity, 69+150*intensity);
   beginShape();
 vertex(31, 0.1875);
 vertex(296, 215.1875);
@@ -1560,7 +1560,7 @@ vertex(62, 110.1875);
 vertex(178, 272.1875);
 vertex(181, 228.1875);
   endShape(CLOSE);
-  fill(252, 178, 69)
+  fill(252-70*intensity, 178-18*intensity, 69+150*intensity)
   beginShape();
   vertex(409, 271.1875);
 vertex(610, 419.1875);
@@ -1588,7 +1588,7 @@ vertex(408, 271.1875);
   
   //suelo puente
   
-  fill(204, 150, 104)
+  fill(204-70*intensity, 150-20*intensity, 104+50*intensity)
   beginShape();
 vertex(238, 393.1875);
 vertex(27, 81.1875);
@@ -2599,18 +2599,18 @@ vertex(297, 236.1875);
   //lágrimas
   stroke(0);
   fill(0, 60, 200);
-ellipse(371, 165.1875+10*intensity, 8, 10+5*intensity);
-ellipse(320, 165.1875+10*intensity, 8, 10+5*intensity);
-ellipse(330, 179.1875+10*intensity, 8, 12+5*intensity);
-ellipse(324, 197.1875+10*intensity, 8, 15+5*intensity);
-ellipse(382, 189.1875+10*intensity, 7, 12+5*intensity);
-ellipse(379, 225.1875+10*intensity, 8, 12+5*intensity);
-ellipse(326, 245.1875+10*intensity, 9, 11+5*intensity);
-ellipse(377, 260.1875+10*intensity, 8, 14+5*intensity);
-ellipse(325, 304.1875+10*intensity, 8, 17+5*intensity);
-ellipse(379, 337.1875+10*intensity, 8, 16+5*intensity);
-ellipse(320, 377.1875+10*intensity, 8, 17+5*intensity);
-ellipse(375, 395.1875+10*intensity, 8, 17+5*intensity);
+ellipse(371, 165.1875, 8, 10+10*intensity);
+ellipse(320, 165.1875, 8, 10+10*intensity);
+ellipse(330, 179.1875, 8, 12+10*intensity);
+ellipse(324, 197.1875, 8, 15+10*intensity);
+ellipse(382, 189.1875, 7, 12+10*intensity);
+ellipse(379, 225.1875, 8, 12+10*intensity);
+ellipse(326, 245.1875, 9, 11+10*intensity);
+ellipse(377, 260.1875, 8, 14+10*intensity);
+ellipse(325, 304.1875, 8, 17+10*intensity);
+ellipse(379, 337.1875, 8, 16+10*intensity);
+ellipse(320, 377.1875, 8, 17+10*intensity);
+ellipse(375, 395.1875, 8, 17+10*intensity);
 
     }
 
@@ -2619,18 +2619,13 @@ ellipse(375, 395.1875+10*intensity, 8, 17+5*intensity);
     r = map(intensity, 0, 1, 219, 255);
     g = map(intensity, 0, 1, 171, 0);
     b = map(intensity, 0, 1, 123, 0);
-    r2 = map(intensity, 0, 1, 255, 255);
-    g2 = map(intensity, 0, 1, 1, 0);
-    b2 = map(intensity, 0, 1, 150, 60);
-
-
 
   background(r, g, b);
    
   // fondo
   
   noStroke();
-  fill(255, 192, 122)
+  fill(255, 192-32*intensity, 122-22*intensity);
   beginShape();
 vertex(30, 1.1875);
 vertex(47, 14.1875);
@@ -2659,7 +2654,7 @@ vertex(370, 1.1875);
 vertex(29, 0.1875);
   endShape(CLOSE);
   stroke(0);
-  fill(240, 174, 152)
+  fill(240+15*intensity, 174-14*intensity, 152-12*intensity);
   beginShape();
 vertex(408, 271.1875);
 vertex(405, 265.1875);
@@ -2711,7 +2706,7 @@ vertex(647, 418.1875);
 vertex(610, 419.1875);
 vertex(408, 270.1875);
   endShape(CLOSE);
-  fill(240, 105, 39);
+  fill(240+10*intensity, 105, 39+1*intensity);
   beginShape();
   vertex(651, 2.1875);
 vertex(652, 12.1875);
@@ -2737,7 +2732,7 @@ vertex(650, 1.1875);
   //puente
   
   strokeWeight(2)
-  fill(252, 178, 69);
+  fill(255, 178-18*intensity, 69+21*intensity);
   beginShape();
 vertex(31, 0.1875);
 vertex(296, 215.1875);
@@ -2802,7 +2797,7 @@ vertex(62, 110.1875);
 vertex(178, 272.1875);
 vertex(181, 228.1875);
   endShape(CLOSE);
-  fill(252, 178, 69)
+  fill(255, 178-18*intensity, 69+21*intensity)
   beginShape();
   vertex(409, 271.1875);
 vertex(610, 419.1875);
@@ -2830,7 +2825,7 @@ vertex(408, 271.1875);
   
   //suelo puente
   
-  fill(204, 150, 104)
+  fill(204+26*intensity, 150, 104)
   beginShape();
 vertex(238, 393.1875);
 vertex(27, 81.1875);
