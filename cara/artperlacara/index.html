@@ -106,19 +106,22 @@
       smoothIntensity = lerp(smoothIntensity, currentExpression.intensity, 0.1);
 
       // Dibuixa la figura geomètrica gran centrada segons el sentiment
-       push();
-       translate(width/2, height/2);
+      push();
+      translate(width/2, height/2);
       switch(currentExpression.dominant) {
-        //Felic
-        case 'happy': 
+        case 'happy':
         push();
-        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800
-        figuraFelic(smoothIntensity); 
+        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800  
+        figuraFelic(smoothIntensity);
         pop();
         break;
-
-        case 'sad':       
-         figuraTrist(smoothIntensity); break;
+        
+        case 'sad':
+        push();
+        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800       
+        figuraTrist(smoothIntensity); 
+        pop();
+        break;
         
         //Enfadat
         case 'angry':
@@ -144,8 +147,19 @@
         pop();
         break;
 
-        case 'fearful':    figuraEspantat(smoothIntensity); break;
-        default:           figuraNeutral(smoothIntensity); break;
+        case 'fearful':    
+        push();
+        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800
+        figuraEspantat(smoothIntensity); 
+        pop();
+        break;
+
+        default:       
+        push();
+        translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800    
+        figuraNeutral(smoothIntensity); 
+        pop();
+        break;
       }
       pop();
 
