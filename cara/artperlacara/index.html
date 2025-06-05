@@ -2898,12 +2898,9 @@ endShape();
     function figuraFastiguejat(intensity) {
     r = map(intensity, 0, 1, 255, 0);
     g = map(intensity, 0, 1, 255, 255);
-    b = map(intensity, 0, 1, 255, 0);
-    r2 = map(intensity, 1, 0, 255, 0);
-    g2 = map(intensity, 1, 0, 255, 255);
-    b2 = map(intensity, 1, 0, 255, 0);
-
-    background(r2, g2, b2);
+    b = map(intensity, 0, 1, 255, 60);
+     
+    background(r, g, b);
 
 
 // fons
@@ -3067,7 +3064,7 @@ vertex(60, 51.1875);
 vertex(27, 19.1875);
 vertex(30, 0.1875);
   endShape(CLOSE);
- fill(4, 21, 49);
+ fill(r, g, b);
   beginShape();
 vertex(67, 59.1875);
 vertex(64, 69.1875);
@@ -3773,7 +3770,7 @@ endShape(CLOSE);
   
   beginShape();
   stroke(0);
-  fill(219, 171, 123);
+  fill(r, g, b);
 vertex(342, 251.1875);
 vertex(338, 249.1875);
 vertex(334, 244.1875);
@@ -3974,12 +3971,12 @@ vertex(318, 279.1875);
  //ojo izquierdo
   
  fill(0);
- line(313, 140.1875, 334, 148.1875);
+ line(313, 140.1875+10*intensity, 334, 148.1875);
  line(334, 148.1875, 313, 155.1875);
   
   //ojo derecho
   
- line(359, 148.1875, 380, 140.1875);
+ line(359, 148.1875, 380, 140.1875+10*intensity);
  line(359, 148.1875, 380, 155.1875)
   
   //nariz
@@ -3993,7 +3990,7 @@ vertex(318, 279.1875);
   
   stroke(0);
   fill(200, 131, 100);
-  arc(350, 210.1875, 35, 40, 0, PI*2)
+  arc(350, 210.1875, 35, 40+10*intensity, 0, PI*2)
   
   //cuerpo
   
