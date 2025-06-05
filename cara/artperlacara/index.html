@@ -1259,8 +1259,8 @@ vertex(318-10*intensity, 279.1875);
  //cejas
   strokeWeight(3)
   fill(255, 255, 255, 0);
-  arc(320, 138, 25, 20+7.5*intensity, -PI, 0 );
-  arc(370, 138, 25, 20+7.5*intensity, -PI, 0)
+  arc(320, 138, 25+5*intensity, 20+10*intensity, -PI, 0 );
+  arc(370, 138, 25+5*intensity, 20+10*intensity, -PI, 0);
   
  //ojo izquierdo
   strokeWeight(2)
@@ -5325,7 +5325,13 @@ vertex(317, 255.1875-20*intensity);
 vertex(317, 264.1875-20*intensity);
 vertex(318, 279.1875-20*intensity);
   endShape(CLOSE);
-  
+     
+ //cejas
+  strokeWeight(3)
+  fill(255, 255, 255, 0);
+  arc(320, 138, 25+5*intensity, 20+10*intensity, -PI, 0 );
+  arc(370, 138, 25+5*intensity, 20+10*intensity, -PI, 0);
+     
  //ojo izquierdo
   
  fill(230, 178, 118);
