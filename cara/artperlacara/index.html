@@ -108,8 +108,9 @@
       // Dibuixa la figura geomètrica gran centrada segons el sentiment
        push();
        translate(width/2, height/2);
+      switch(currentExpression.dominant) {
         //Felic
-         case 'happy': 
+        case 'happy': 
         push();
         translate(width/2 - 1000, height/2 - 600); // 300 i 400 són la meitat de 600x800
         figuraFelic(smoothIntensity); 
