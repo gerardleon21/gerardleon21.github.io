@@ -405,20 +405,20 @@ vertex(318, 279.1875);
  //ojo izquierdo
   
  fill(230, 178, 118);
-  ellipse(320, 146.1875, 20);
+  ellipse(320, 146.1875, 20-8*intensity);
   //pupila izquierda
  fill(0);
-ellipse(321, 149.1875, 5);
+ellipse(321, 149.1875, 5-2*intensity);
  
   // ojo derecho
   
  fill(230, 178, 118);
-  ellipse(368, 146.1875, 20);
+  ellipse(368, 146.1875, 20-8*intensity);
  
-  //ojo derecho
+  //pupila derecha
   
   fill(0);
-  ellipse(369,149.87, 5);
+  ellipse(369,149.87, 5-2*intensity);
   
   //nariz
   
@@ -431,7 +431,7 @@ ellipse(321, 149.1875, 5);
   
   stroke(0);
   fill(200, 131, 100);
-  arc(350.75, 207.1875, 30, 50+20*intensity, 0, PI)
+  arc(350.75, 207.1875, 30+15*intensity, 50+30*intensity, 0, PI)
   
   //cuerpo
   
