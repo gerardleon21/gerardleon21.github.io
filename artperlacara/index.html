@@ -1546,7 +1546,7 @@ vertex(60, 51.1875);
 vertex(27, 19.1875);
 vertex(30, 0.1875);
   endShape(CLOSE);
- fill(4, 21, 49);
+ fill(r, g, b);
   beginShape();
 vertex(67, 59.1875);
 vertex(64, 69.1875);
@@ -2276,7 +2276,7 @@ vertex(376, 288.1875);
   
   beginShape();
   stroke(0);
-  fill(219, 171, 123);
+  fill(r, g, b);
 vertex(342, 251.1875);
 vertex(338, 249.1875);
 vertex(334, 244.1875);
@@ -2597,20 +2597,20 @@ vertex(289, 237.1875);
 vertex(297, 236.1875);
  endShape(CLOSE);
   //lágrimas
-  noStroke();
+  StrokeWeight(0.5);
   fill(0, 60, 200);
-ellipse(371, 165.1875, 8, 10);
-ellipse(320, 165.1875, 8, 10);
-ellipse(330, 179.1875, 8, 12);
-ellipse(324, 197.1875, 8, 15);
-ellipse(382, 189.1875, 7, 12);
-ellipse(379, 225.1875, 8, 12);
-ellipse(326, 245.1875, 9, 11);
-ellipse(377, 260.1875, 8, 14);
-ellipse(325, 304.1875, 8, 17);
-ellipse(379, 337.1875, 8, 16);
-ellipse(320, 377.1875, 8, 17);
-ellipse(375, 395.1875, 8, 17);
+ellipse(371, 165.1875+10*intensity, 8, 10+5*intensity);
+ellipse(320, 165.1875+10*intensity, 8, 10+5*intensity);
+ellipse(330, 179.1875+10*intensity, 8, 12+5*intensity);
+ellipse(324, 197.1875+10*intensity, 8, 15+5*intensity);
+ellipse(382, 189.1875+10*intensity, 7, 12+5*intensity);
+ellipse(379, 225.1875+10*intensity, 8, 12+5*intensity);
+ellipse(326, 245.1875+10*intensity, 9, 11+5*intensity);
+ellipse(377, 260.1875+10*intensity, 8, 14+5*intensity);
+ellipse(325, 304.1875+10*intensity, 8, 17+5*intensity);
+ellipse(379, 337.1875+10*intensity, 8, 16+5*intensity);
+ellipse(320, 377.1875+10*intensity, 8, 17+5*intensity);
+ellipse(375, 395.1875+10*intensity, 8, 17+5*intensity);
 
     }
 
