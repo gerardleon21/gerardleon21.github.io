@@ -15,7 +15,7 @@ const questions = [
         steps: `
             <strong>a) Càlcul de la resistència equivalent \\(R_{\\text{eq}}\\) del circuit:</strong>
             <br>
-            - Connexió en paral·lel:
+            - Connexió en paral·lel, quan dues resistències estan connectades en paral·lel, la resistència equivalent es calcula amb aquesta fòrmula:
             \\[
             R_{\\text{eq}}\\ =  \\frac{1}{\\frac{1}{R_1} + \\frac{1}{R_2}}
             \\]
@@ -23,11 +23,11 @@ const questions = [
             R_{\\text{eq}}\\ = \\frac{1}{\\frac{1}{27} + \\frac{1}{54}} = 18 \\, \\Omega
             \\]
             <br>
-            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
             <br>
-            - Aplicant el rendiment de l’aerogenerador:
+            - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
             \\[
-            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\(I\\) = \\frac{\\U}{R_{\\text{eq}}}= 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
             \\]
             <br>
             <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
