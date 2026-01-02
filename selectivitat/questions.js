@@ -106,15 +106,30 @@ const questions = [
     },
      {
         type: "questions", // Tipus de pregunta
-        category: "electrics",
-        text: `Una resistència està feta amb fil de constantà de diàmetre \\(d = 0{,}5 \\, \\text{mm}\\), de llargada \\(L = 1{,}2 \\, \\text{m}\\) i de resistivitat\\(\\rho = 0{,}491 \\, \\mu\\Omega \\cdot \\text{m}\\). Quin és el valor d’aquesta resistència?`,
+        category: "organitzacio",
+        text: `Els autobusos d’una línia de transport fan el recorregut d’anar i tornar en 30 min. Si la línia disposa de 6 autobusos en servei i cada un té una capacitat nominal de 55 passatgers, quina és la capacitat nominal de transport en passatgers per hora?`,
         options: [
-                { text: "\\(3 \\, \\Omega\\)", value: "a" },
-                { text: "\\(7{,}5 \\, \\Omega\\)", value: "b" },
-                { text: "\\(9{,}5 \\, \\Omega\\)", value: "c" },
-                { text: "\\(12{,}5 \\, \\Omega\\)", value: "d" }
+                 { text: "660", value: "a" },
+                 { text: "110", value: "b" },
+                 { text: "330", value: "c" },
+                 { text: "165", value: "d" }
         ],
         correctAnswer: "a",
-        steps: `
+       steps: `
+<strong>Solució pas a pas:</strong>
+<br>
+- Cada autobús completa un recorregut d'anada i tornada en 30 min → això significa 2 recorreguts per hora per autobús.
+<br>
+- Capacitat d'un autobús per hora:
+\\[
+55 \\, \\text{passatgers} \\times 2 \\text{recorreguts/hora} = 110 \\, \\text{passatgers/hora per autobús}
+\\]
+- Com hi ha 6 autobusos en servei:
+\\[
+110 \\, \\text{passatgers/hora} \\times 6 = 660 \\, \\text{passatgers/hora}
+\\]
+<br><br>
+<img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`
+}
 ];
 
