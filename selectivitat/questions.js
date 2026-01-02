@@ -28,6 +28,8 @@ const questions = [
             - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
             \\[
             I = \\frac{U}{R_{\\text{eq}}}
+            \\]
+            \\[
             I = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 \\, \\A
             \\]
             <br>
@@ -35,7 +37,7 @@ const questions = [
             <br>
             - Fórmula de la potència:
             \\[
-             \\(P\\) = \\(U \\cdot I \\)
+             P = U \\cdot I
             \\]
             - Energia generada per un aerogenerador:
             \\[
