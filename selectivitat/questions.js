@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "exercicis",
-        category: "energia",
+        category: "electrics",
         text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
                En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 27 \\, \\text{V}\\). 
                En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
@@ -104,49 +104,45 @@ const questions = [
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials",
-        text: `Una família que anualment generava 525 kg d’envasos, en un any ha aconseguit reduir aquesta quantitat un 60 %. Quina reducció en emissions de GEH ha obtingut respecte a l’any anterior, tenint en compte que el factor d’emissió dels envasos és de 120,09 g CO2eq/kg residu?`,
+        category: "electrics",
+        text: `Una resistència està feta amb fil de constantà de diàmetre \\(d = 0{,}5 \\, \\text{mm}\\), de llargada \\(L = 1{,}2 \\, \\text{m}\\) i de resistivitat\\(\\rho = 0{,}491 \\, \\mu\\Omega \\cdot \\text{m}\\). Quin és el valor d’aquesta resistència?`,
         options: [
-            { text: "25,22 kg CO2eq", value: "a" },
-            { text: "37,83 kg CO2eq", value: "b" },
-            { text: "63,05 kg CO2eq", value: "c" },
-            { text: "88,27 kg CO2eq", value: "d" }
+                { text: "\\(3 \\, \\Omega\\)", value: "a" },
+                { text: "\\(7{,}5 \\, \\Omega\\)", value: "b" },
+                { text: "\\(9{,}5 \\, \\Omega\\)", value: "c" },
+                { text: "\\(12{,}5 \\, \\Omega\\)", value: "d" }
         ],
-        correctAnswer: "b",
+        correctAnswer: "a",
         steps: `
-            \\[
-            \\text{Quantitat inicial d’envasos} = 525 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Percentatge de reducció} = 60\\%
-            \\]
-            \\[
-            \\text{Quantitat reduïda} = 525 \\, \\text{kg} \\times 0{,}60 = 315 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Quantitat de residu restant} = 525 \\, \\text{kg} - 315 \\, \\text{kg} = 210 \\, \\text{kg}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 525 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 63047,25 \, \\text{g CO2eq}
-            \\]
-            \\[
-            \\text{Emissions inicials} = 63{,}05 \, \\text{kg CO2eq}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 210 \, \\text{kg} \\times 120{,}09 \, \\text{g CO2eq/kg}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 25218{,}9 \, \\text{g CO2eq}
-            \\]
-            \\[
-            \\text{Emissions després de la reducció} = 25{,}22 \, \\text{kg CO2eq}
-            \\]
-            \\[
-            \\text{Reducció en emissions} = 63{,}05 \, \\text{kg CO2eq} - 25{,}22 \, \\text{kg CO2eq} = 37{,}83 \, \\text{kg CO2eq}
-            \\]
+        <strong>Solució pas a pas:</strong>
+        <br>
+        - Conversió del diàmetre a metres:
+        \\[
+        d = 0{,}5 \\, \\text{mm} = 5 \\cdot 10^{-4} \\, \\text{m}
+        \\]
+
+        - Radi del fil:
+        \\[
+        r = \\frac{d}{2} = 2{,}5 \\cdot 10^{-4} \\, \\text{m}
+        \\]
+
+        - Conversió de la resistivitat a \\(\\Omega \\cdot \\text{m}\\):
+        \\[
+        \\rho = 0{,}491 \\, \\mu\\Omega \\cdot \\text{m} = 0{,}491 \\cdot 10^{-6} \\, \\Omega \\cdot \\text{m}
+        \\]
+
+        - Secció del fil:
+        \\[
+        A = \\pi r^2 = \\pi (2{,}5 \\cdot 10^{-4})^2 = 1{,}96 \\cdot 10^{-7} \\, \\text{m}^2
+        \\]
+
+        - Fórmula de la resistència:
+        \\[
+        R = \\rho \\cdot \\frac{L}{A}
+        \\]
+        \\[
+        R = \\frac{0{,}491 \\cdot 10^{-6} \\cdot 1{,}2}{1{,}96 \\cdot 10^{-7}} = 3 \\, \\Omega
+        \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
         images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
