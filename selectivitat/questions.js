@@ -27,8 +27,8 @@ const questions = [
             <br>
             - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
             \\[
-            \\(I\\) = \\frac{\\U}{R_{\\text{eq}}}
-            \\(I\\) = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 \\, \\A
+            I = \\frac{U}{R_{\\text{eq}}}
+            I = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 \\, \\A
             \\]
             <br>
             <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
