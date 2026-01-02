@@ -37,7 +37,10 @@ const questions = [
             <br>
             - Fórmula de la potència:
             \\[
-             P = U \\cdot I
+            P = U \\cdot I
+            \\]
+            \\[
+            P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
             \\]
             - Energia generada per un aerogenerador:
             \\[
