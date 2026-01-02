@@ -27,14 +27,15 @@ const questions = [
             <br>
             - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
             \\[
-            \\(I\\) = \\frac{\\U}{R_{\\text{eq}}}= 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
+            \\(I\\) = \\frac{\\U}{R_{\\text{eq}}}
+            \\(I\\) = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 \\, \\A
             \\]
             <br>
-            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
+            <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
             <br>
-            - Nombre total d'hores operatives a l'any:
+            - Fórmula de la potència:
             \\[
-            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
+             \\(P\\) = \\(U \\cdot I \\)
             \\]
             - Energia generada per un aerogenerador:
             \\[
