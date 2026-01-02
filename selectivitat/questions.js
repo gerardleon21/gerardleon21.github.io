@@ -30,7 +30,7 @@ const questions = [
             I = \\frac{U}{R_{\\text{eq}}}
             \\]
             \\[
-            I = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 A
+            I = \\frac{230}{18} = 12{,}78 A
             \\]
             <br>
             <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
@@ -54,10 +54,10 @@ const questions = [
             \\]
             - Cost econòmic:
             \\[
-            c = E \\cdot p = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
+            \\(c\\) = E \\cdot p = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
             \\[
-            c = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
+            \\(c\\) = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
