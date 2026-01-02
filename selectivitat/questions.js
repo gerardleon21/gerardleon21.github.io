@@ -59,7 +59,6 @@ const questions = [
             \\[
             c = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
-            <br><br>
     },
     {
         type: "questions", // Tipus de pregunta
