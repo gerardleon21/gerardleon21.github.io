@@ -59,7 +59,9 @@ const questions = [
             \\[
             c = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
-            `    },
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
     {
         type: "questions", // Tipus de pregunta
         category: "energia",
