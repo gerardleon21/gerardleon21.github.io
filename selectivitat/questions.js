@@ -30,7 +30,7 @@ const questions = [
             I = \\frac{U}{R_{\\text{eq}}}
             \\]
             \\[
-            I = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 \\, \\A
+            I = \\frac{230 \\, \\text{V}}{18 \\, \\Omega} = 12{,}78 A
             \\]
             <br>
             <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
@@ -42,47 +42,22 @@ const questions = [
             \\[
             P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
             \\]
-            - Energia generada per un aerogenerador:
-            \\[
-            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
-            \\]
-            - Energia total generada per 50 aerogeneradors:
-            \\[
-            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
-            \\]
             <br>
-            <strong>d) Ingressos del parc eòlic:</strong>
+            <strong>d) Càlcul del cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\):</strong>
             <br>
-            - Ingressos totals:
+            - Energia elèctrica consumida:
             \\[
-            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
+            E = P \\cdot t = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
             \\]
-            <br>
-            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
-            <br>
-            - Nova velocitat del vent:
             \\[
-            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
+            E = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
             \\]
-            - Nova potència del vent:
+            - Cost econòmic:
             \\[
-            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
+            c = E \\cdot p = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
-            - Nova potència útil:
             \\[
-            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
-            \\]
-            - Nova energia total:
-            \\[
-            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
-            \\]
-            - Nous ingressos:
-            \\[
-            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
-            \\]
-            - Percentatge de disminució:
-            \\[
-            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
+            c = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
