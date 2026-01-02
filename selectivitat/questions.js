@@ -56,9 +56,6 @@ const questions = [
             \\[
             \\(c\\) = E \\cdot p = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
             \\]
-            \\[
-            \\(c\\) = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, €
-            \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
     },
