@@ -129,6 +129,6 @@ const questions = [
 110 \\, \\text{passatgers/hora} \\times 6 = 660 \\, \\text{passatgers/hora}
 \\]
 <br><br>
-`}
+`},
 ];
 
