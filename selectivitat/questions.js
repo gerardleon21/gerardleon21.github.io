@@ -13,60 +13,59 @@ const questions = [
             <br>
             <strong>a</strong>: màquina s’atura (1 sí / 0 no)
             <br><br>
-            <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
-            <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
-            <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
-            <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
+            <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+            <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+            <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
             <br><br>
             `,  
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Càlcul de la resistència equivalent \\(R_{\\text{eq}}\\) del circuit:</strong>
-            <br>
-            - Connexió en paral·lel, quan dues resistències estan connectades en paral·lel, la resistència equivalent es calcula amb aquesta fòrmula:
-            \\[
-            R_{\\text{eq}}\\ =  \\frac{1}{\\frac{1}{R_1} + \\frac{1}{R_2}}
-            \\]
-            \\[
-            R_{\\text{eq}}\\ = \\frac{1}{\\frac{1}{27} + \\frac{1}{54}} = 18 \\, \\Omega
-            \\]
-            <br>
-            <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
-            <br>
-            - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
-            \\[
-            I = \\frac{U}{R_{\\text{eq}}}
-            \\]
-            \\[
-            I = \\frac{230}{18} = 12{,}78 A
-            \\]
-            <br>
-            <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
-            <br>
-            - Fórmula de la potència:
-            \\[
-            P = U \\cdot I
-            \\]
-            \\[
-            P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
-            \\]
-            <br>
-            <strong>d) Càlcul del cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\):</strong>
-            <br>
-            - Energia elèctrica consumida:
-            \\[
-            E = P \\cdot t = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
-            \\]
-            \\[
-            E = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
-            \\]
-            - Cost econòmic:
-            \\[
-            C = E \\cdot P = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
-            \\]
-            <br><br>
-            `,
- images: `<img src="https://mco ronil4.github.io/images/2020junyserie1q1.jpg" alt="Imatge relacionada amb la pregunta">`
+        <strong>a) Taula de veritat del sistema:</strong>
+        <br><br>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>p</th><th>b</th><th>e</th><th>a</th>
+            </tr>
+            <tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+            <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        </table>
+        <br><br>
+        <strong>b) Funció lògica del sistema:</strong>
+        <br>
+        - La màquina s’atura si es prem el botó d’emergència o si la pantalla no és al lloc i no s’ha premut el botó de permís.
+        <br><br>
+        \\[
+        a = e + (\\overline{p} \\cdot \\overline{b})
+        \\]
+        <br>
+        Aquesta funció ja està simplificada.
+        <br><br>
+        <strong>c) Esquema de portes lògiques equivalent:</strong>
+        <br>
+        - Una porta NOT a l’entrada <strong>p</strong>
+        <br>
+        - Una porta NOT a l’entrada <strong>b</strong>
+        <br>
+        - Les dues sortides NOT entren a una porta AND
+        <br>
+        - La sortida de l’AND entra a una porta OR juntament amb <strong>e</strong>
+        <br>
+        - La sortida de l’OR és <strong>a</strong> (màquina s’atura)
+        <br><br>
+        <pre>
+ p ──NOT──┐
+          AND──┐
+ b ──NOT──┘     OR── a
+                │
+ e ─────────────┘
+        </pre>
+    `
     },
     
     {
@@ -171,8 +170,8 @@ const questions = [
         R = \\frac{0{,}491 \\cdot 10^{-6} \\cdot 1{,}2}{1{,}96 \\cdot 10^{-7}} = 3 \\, \\Omega
         \\]
             <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+    `
+   
     },
      {
         type: "questions", // Tipus de pregunta
