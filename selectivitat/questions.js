@@ -2,15 +2,23 @@ const questions = [
     {
         type: "exercicis",
         category: "control",
-        text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
-               En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 27 \\, \\text{V}\\). 
-               En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
-               <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
-               <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
-               <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
-               <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
-               <br><br>
-               <img src="circuit 1.png" alt="Circuit de l'exercici">`,  // Imatge opcional al final de la pregunta
+        text: `Una fresadora disposa d’una pantalla de protecció per a evitar que en condicions normals es pugui accedir a la zona de treball quan està en marxa. La màquina s’atura si s’enretira aquesta pantalla i abans no s’ha premut el botó que dóna permís per a fer-ho sense que la màquina s’aturi. Si es prem el botó d’emergència, la màquina s’atura sempre.
+            Utilitzant les variables d’estat:
+            <br>
+            <strong>p</strong>: pantalla a lloc (1 sí / 0 no)
+            <br>
+            <strong>b</strong>: botó de permís (1 premut / 0 no premut)
+            <br>
+            <strong>e</strong>: botó d’emergència (1 premut / 0 no premut)
+            <br>
+            <strong>a</strong>: màquina s’atura (1 sí / 0 no)
+            <br><br>
+            <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
+            <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
+            <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
+            <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
+            <br><br>
+            `,  
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Càlcul de la resistència equivalent \\(R_{\\text{eq}}\\) del circuit:</strong>
@@ -57,14 +65,14 @@ const questions = [
             C = E \\cdot P = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
             \\]
             <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-    },
+
+    `},
     
     {
         type: "exercicis",
         category: "electrics",
         text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
-               En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 27 \\, \\text{V}\\). 
+               En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 230 \\, \\text{V}\\). 
                En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
                <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
                <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
