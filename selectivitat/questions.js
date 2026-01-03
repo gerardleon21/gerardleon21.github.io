@@ -116,19 +116,42 @@ const questions = [
         ],
         correctAnswer: "a",
        steps: `
-<strong>Solució pas a pas:</strong>
-<br>
-- Cada autobús completa un recorregut d'anada i tornada en 30 min → això significa 2 recorreguts per hora per autobús.
-<br>
-- Capacitat d'un autobús per hora:
-\\[
-55 \\, \\text{passatgers} \\times 2 \\text{recorreguts/hora} = 110 \\, \\text{passatgers/hora per autobús}
-\\]
-- Com hi ha 6 autobusos en servei:
-\\[
-110 \\, \\text{passatgers/hora} \\times 6 = 660 \\, \\text{passatgers/hora}
-\\]
-<br><br>
+        <strong>Solució pas a pas:</strong>
+        <br>
+        - Cada autobús completa un recorregut d'anada i tornada en 30 min → això significa 2 recorreguts per hora per autobús.
+        <br>
+        - Capacitat d'un autobús per hora:
+        \\[
+        55 \\, \\text{passatgers} \\times 2 \\text{recorreguts/hora} = 110 \\, \\text{passatgers/hora per autobús}
+        \\]
+        - Com hi ha 6 autobusos en servei:
+        \\[
+        110 \\, \\text{passatgers/hora} \\times 6 = 660 \\, \\text{passatgers/hora}
+        \\]
+        <br><br>
+   `},
+    {
+        type: "questions", // Tipus de pregunta
+        category: "organitzacio",
+        text: ` Un model de desenvolupament afirma que el desenvolupament comporta el consum de més recursos per persona i l’accés de més persones a aquests recursos. Aquest model de desenvolupament és sostenible? `,
+        options: [
+                 { text: "Sí: el consum genera la riquesa necessària per a garantir la sostenibilitat", value: "a" },
+                 { text: "Sí: els recursos, o són il·limitats (pel que fa al nombre de persones que hi tenen accés) o la riquesa en genera de nous", value: "b" },
+                 { text: "Sí: només cal esperar que tothom tingui accés als mateixos recursos", value: "c" },
+                 { text: "No: molts recursos són limitats i no és clar que es puguin substituir per altres. A més, s’ha de considerar l’impacte irreversible i nociu produït pel consum massiu de certs recursos", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+        <strong>Explicació:</strong>
+        <br>
+        El model descrit implica un augment continu del consum de recursos i del nombre de persones que hi accedeixen.
+        <br>
+        Molts recursos naturals són limitats i no es poden regenerar al mateix ritme que el consum.
+        <br>
+        A més, el consum massiu pot provocar impactes ambientals irreversibles (contaminació, pèrdua de biodiversitat, canvi climàtic).
+        <br>
+        Per aquests motius, aquest model de desenvolupament <strong>no és sostenible</strong>.
+        <br><br>
 `},
 ];
 
