@@ -62,7 +62,7 @@ const questions = [
     {
         type: "questions", // Tipus de pregunta
         category: "electrics",
-        text: `Una resistència està feta amb fil de constantà de diàmetre \\(d = 0{,}5 \\, \\text{mm}\\), de llargada \\(L = 1{,}2 \\, \\text{m}\\) i de resistivitat\\(\\rho = 0{,}491 \\, \\mu\\Omega \\cdot \\text{m}\\). Quin és el valor d’aquesta resistència?`,
+        text: `Una resistència està feta amb fil de constantà de diàmetre \\(d = 0{,}5 \\, \\text{mm}\\), de llargada \\(L = 1{,}2 \\, \\text{m}\\) i de resistivitat \\(\\rho = 0{,}491 \\, \\mu\\Omega \\cdot \\text{m}\\). Quin és el valor d’aquesta resistència?`,
         options: [
                 { text: "\\(3 \\, \\Omega\\)", value: "a" },
                 { text: "\\(7{,}5 \\, \\Omega\\)", value: "b" },
