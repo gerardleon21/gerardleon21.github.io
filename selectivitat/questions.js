@@ -132,13 +132,70 @@ const questions = [
    `},
     {
         type: "questions", // Tipus de pregunta
-        category: "organitzacio",
+        category: "energia",
         text: ` Un model de desenvolupament afirma que el desenvolupament comporta el consum de més recursos per persona i l’accés de més persones a aquests recursos. Aquest model de desenvolupament és sostenible? `,
         options: [
                  { text: "Sí: el consum genera la riquesa necessària per a garantir la sostenibilitat", value: "a" },
                  { text: "Sí: els recursos, o són il·limitats (pel que fa al nombre de persones que hi tenen accés) o la riquesa en genera de nous", value: "b" },
                  { text: "Sí: només cal esperar que tothom tingui accés als mateixos recursos", value: "c" },
                  { text: "No: molts recursos són limitats i no és clar que es puguin substituir per altres. A més, s’ha de considerar l’impacte irreversible i nociu produït pel consum massiu de certs recursos", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+        <strong>Explicació:</strong>
+        <br>
+        El model descrit implica un augment continu del consum de recursos i del nombre de persones que hi accedeixen.
+        <br>
+        Molts recursos naturals són limitats i no es poden regenerar al mateix ritme que el consum.
+        <br>
+        A més, el consum massiu pot provocar impactes ambientals irreversibles (contaminació, pèrdua de biodiversitat, canvi climàtic).
+        <br>
+        Per aquests motius, aquest model de desenvolupament <strong>no és sostenible</strong>.
+        <br><br>
+`},
+    
+ {
+        type: "questions", // Tipus de pregunta
+        category: "metrologia",
+        text: `Una bàscula de bany té una precisió de ± 0,5 kg. Una persona es pesa quatre vegades consecutives i obté aquestes lectures: 68,5 kg, 68,8 kg, 68,2 kg i 68,5 kg. Es pot prendre 68,5 kg, amb el marge d’incertesa corresponent, com a resultat de la pesada?`,
+        options: [
+                 { text: "Sí, perquè és el valor més repetit", value: "a" },
+                 { text: "Sí, perquè és la mitjana de les lectures", value: "b" },
+                 { text: "Sí, perquè coincideix amb la primera lectura", value: "c" },
+                 { text: "Sí, perquè la xifra decimal coincideix amb la precisió de la bàscula", value: "d" }
+        ],
+        correctAnswer: "c",
+       steps: `
+        <strong>Solució pas a pas:</strong>
+        <br>
+        - Massa total de l’aliatge: 325 kg
+        <br><br>
+        - Quantitat de níquel (33 %):
+        \\[
+        0.33 \\cdot 325 = 107.25 \\approx 107.3 \\, \\text{kg}
+        \\]
+        - Quantitat de ferro (44 %):
+        \\[
+        0.44 \\cdot 325 = 143 \\, \\text{kg}
+        \\]
+        - Quantitat de crom (20 %):
+        \\[
+        0.20 \\cdot 325 = 65 \\, \\text{kg}
+        \\]
+        <br>
+        Aquests valors corresponen a l’opció <strong>c)</strong>.
+        <br><br>
+   `},
+    
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials",
+        text: `L’Incoloy és un aliatge de composició: 33 % Ni (níquel), 44 % Fe (ferro), 20 % Cr (crom) i 3 % d’altres components. Quina quantitat, en kg, de cadascun dels tres components principals hi ha en 325 kg d’aliatge?`,
+        options: [
+                 { text: "Ni: 99 kg  Fe: 132 kg  Cr: 62,5 kg", value: "a" },
+                 { text: "Ni: 97,5 kg  Fe: 146,3 kg  Cr: 81,3 kg", value: "b" },
+                 { text: "Ni: 107,3 kg  Fe: 143 kg  Cr: 65 kg", value: "c" },
+                 { text: "Ni: 115,5 kg  Fe: 154 kg  Cr: 70 kg", value: "d" }
         ],
         correctAnswer: "d",
         steps: `
