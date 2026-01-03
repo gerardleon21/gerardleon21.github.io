@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "exercicis",
-        category: "electrics",
+        category: "control",
         text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
                En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 27 \\, \\text{V}\\). 
                En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
@@ -55,6 +55,67 @@ const questions = [
             - Cost econòmic:
             \\[
             C = E \\cdot P = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+    
+    {
+        type: "exercicis",
+        category: "electrics",
+        text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
+               En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 27 \\, \\text{V}\\). 
+               En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
+               <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
+               <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
+               <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
+               <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
+               <br><br>
+               <img src="circuit 1.png" alt="Circuit de l'exercici">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la resistència equivalent \\(R_{\\text{eq}}\\) del circuit:</strong>
+            <br>
+            - Connexió en paral·lel, quan dues resistències estan connectades en paral·lel, la resistència equivalent es calcula amb aquesta fòrmula:
+            \\[
+            R_{\\text{eq}}\\ =  \\frac{1}{\\frac{1}{R_1} + \\frac{1}{R_2}}
+            \\]
+            \\[
+            R_{\\text{eq}}\\ = \\frac{1}{\\frac{1}{27} + \\frac{1}{54}} = 18 \\, \\Omega
+            \\]
+            <br>
+            <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
+            <br>
+            - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
+            \\[
+            I = \\frac{U}{R_{\\text{eq}}}
+            \\]
+            \\[
+            I = \\frac{230}{18} = 12{,}78 A
+            \\]
+            <br>
+            <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
+            <br>
+            - Fórmula de la potència:
+            \\[
+            P = U \\cdot I
+            \\]
+            \\[
+            P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
+            \\]
+            <br>
+            <strong>d) Càlcul del cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\):</strong>
+            <br>
+            - Energia elèctrica consumida:
+            \\[
+            E = P \\cdot t = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
+            \\]
+            \\[
+            E = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
+            \\]
+            - Cost econòmic:
+            \\[
+            \\(c\\) = E \\cdot \\(p\\) = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
             \\]
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
@@ -164,9 +225,35 @@ const questions = [
                  { text: "Sí, perquè coincideix amb la primera lectura", value: "c" },
                  { text: "Sí, perquè la xifra decimal coincideix amb la precisió de la bàscula", value: "d" }
         ],
-        correctAnswer: "c",
+        correctAnswer: "b",
        steps: `
-        <strong>Solució pas a pas:</strong>
+        <strong>Explicació:</strong>
+        <br>
+        Calcular la mitjana de les quatre mesures:
+        \\[
+        \\frac{68.5 + 68.8 + 68.2 + 68.5}{4} = 68.5 \\, \\text{kg}
+        \\]
+        El valor mitjà coincideix amb 68,5 kg.
+        <br>
+        A més, aquest valor és coherent amb la precisió de la bàscula (± 0,5 kg).
+        <br>
+        Per tant, es pot prendre <strong>68,5 kg</strong> com a resultat de la pesada amb el marge d’incertesa corresponent.
+        <br><br>
+   `},
+    
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials",
+        text: `L’Incoloy és un aliatge de composició: 33 % Ni (níquel), 44 % Fe (ferro), 20 % Cr (crom) i 3 % d’altres components. Quina quantitat, en kg, de cadascun dels tres components principals hi ha en 325 kg d’aliatge?`,
+        options: [
+                 { text: "Ni: 99 kg  Fe: 132 kg  Cr: 62,5 kg", value: "a" },
+                 { text: "Ni: 97,5 kg  Fe: 146,3 kg  Cr: 81,3 kg", value: "b" },
+                 { text: "Ni: 107,3 kg  Fe: 143 kg  Cr: 65 kg", value: "c" },
+                 { text: "Ni: 115,5 kg  Fe: 154 kg  Cr: 70 kg", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+         <strong>Solució pas a pas:</strong>
         <br>
         - Massa total de l’aliatge: 325 kg
         <br><br>
@@ -184,30 +271,6 @@ const questions = [
         \\]
         <br>
         Aquests valors corresponen a l’opció <strong>c)</strong>.
-        <br><br>
-   `},
-    
-    {
-        type: "questions", // Tipus de pregunta
-        category: "materials",
-        text: `L’Incoloy és un aliatge de composició: 33 % Ni (níquel), 44 % Fe (ferro), 20 % Cr (crom) i 3 % d’altres components. Quina quantitat, en kg, de cadascun dels tres components principals hi ha en 325 kg d’aliatge?`,
-        options: [
-                 { text: "Ni: 99 kg  Fe: 132 kg  Cr: 62,5 kg", value: "a" },
-                 { text: "Ni: 97,5 kg  Fe: 146,3 kg  Cr: 81,3 kg", value: "b" },
-                 { text: "Ni: 107,3 kg  Fe: 143 kg  Cr: 65 kg", value: "c" },
-                 { text: "Ni: 115,5 kg  Fe: 154 kg  Cr: 70 kg", value: "d" }
-        ],
-        correctAnswer: "d",
-        steps: `
-        <strong>Explicació:</strong>
-        <br>
-        El model descrit implica un augment continu del consum de recursos i del nombre de persones que hi accedeixen.
-        <br>
-        Molts recursos naturals són limitats i no es poden regenerar al mateix ritme que el consum.
-        <br>
-        A més, el consum massiu pot provocar impactes ambientals irreversibles (contaminació, pèrdua de biodiversitat, canvi climàtic).
-        <br>
-        Per aquests motius, aquest model de desenvolupament <strong>no és sostenible</strong>.
         <br><br>
 `},
 ];
