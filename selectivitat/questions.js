@@ -184,7 +184,7 @@ const questions = [
             <br>
             <strong>b) Corba de la potència mecànica:</strong>
 
-             <img src="https://gerardleon21.github.io/selectivitat/circuit 1.png" alt="Circuit de l'exercici">
+             <img src="https://gerardleon21.github.io/selectivitat/grafic1.png" alt="Gràfica">
             
             <br>
             - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
