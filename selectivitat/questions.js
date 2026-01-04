@@ -150,12 +150,36 @@ const questions = [
         steps: `
             <strong>a) Expressió que relaciona la potència mecànica \\(P\\) amb la velocitat angular\\(omega\\):</strong>
             <br>
-            - La potència mecànica és:
+            - La potència mecànica es defineix com:
             \\[
             P = \\Gamma \\cdot \\omega
             \\]
+            - Ens diuen que el parell motor es defineix amb aquesta relació:
             \\[
-            R_{\\text{eq}}\\ = \\frac{1}{\\frac{1}{27} + \\frac{1}{54}} = 18 \\, \\Omega
+            \\Gamma = \\text{c} \\cdot I
+            \\]
+            - Substituïm el parell a la fórmula de la potència:
+            \\[
+            P = \\text{c} \\cdot I \\cdot \\omega
+            \\]
+            - Per l'expressió de la velocitat angular sabem que:
+            \\[
+            I = \\frac{U - \\omega \\cdot \\text{c}}{R}
+            \\]
+            - Substituïm el corrent:
+            \\[
+            P = \\text{c} \\cdot \\omega \\cdot \\frac{U - \\text{c} \\cdot \\omega}{R}
+            \\]
+            - Separem els termes:
+            \\[
+            P = \\frac{\\text{c} \\cdot U}{R} \\cdot \\omega - \\frac{\\text{c}^2}{R} \\cdot \\omega^2
+            \\] 
+            - Substitució numérica
+            \\[
+            P = \\frac{0{,}06 \\cdot 36}{4} \\cdot \\omega - \\frac{0{,}06^2}{4} \\cdot \\omega^2
+            \\]
+            \\[
+            P = 0{,}54\\omega - 900 \\cdot 10^{-6}\\omega^2 
             \\]
             <br>
             <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
