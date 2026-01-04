@@ -123,7 +123,7 @@ const questions = [
             \\]
             - Cost econòmic:
             \\[
-            \\text{c} = E \\cdot \\text{p} = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
+            \\text{c} = E \\cdot \\text{p} = 5{,}88 \\cdot 0{,}087 = 0{,}51 \\, \\text{€}
             \\]
             <br><br>
           
@@ -182,41 +182,32 @@ const questions = [
             P = 0{,}54\\omega - 900 \\cdot 10^{-6}\\omega^2 
             \\]
             <br>
-            <strong>b) Corba de la potència mecànica:</strong>
-
+            <strong>b) Corba de la potència mecànica:</strong>           
+            <br>
              <img src="https://gerardleon21.github.io/selectivitat/grafic1.png" alt="Gràfica">
-            
             <br>
-            - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
-            \\[
-            I = \\frac{U}{R_{\\text{eq}}}
-            \\]
-            \\[
-            I = \\frac{230}{18} = 12{,}78 A
-            \\]
+            <strong>c) Càlcul de l’energia elèctrica \\(E\\), en W·h:</strong>
             <br>
-            <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
-            <br>
-            - Fórmula de la potència:
+            - Fórmula de la energia:
             \\[
-            P = U \\cdot I
+            E = P_{\\text{elèc} \\cdot \\text{t}
             \\]
+            - La potència elèctrica s'expressa:
             \\[
-            P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
+            P = U \\cdot I 
+            \\]
+            - Substituïm al càlcul de l'energia:
+            \\[
+            E = U \\cdot I \\cdot \\text{t}
             \\]
             <br>
-            <strong>d) Càlcul del cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\):</strong>
-            <br>
+            - La intensitat és::
+            \\[
+            I = \\frac{U - \\text{c} \\cdot \\omega}{R} = \\frac{36 - 0{,}06 \\cdot 360}{4} = 3{,}6 \\, \\text{A}
+            \\]
             - Energia elèctrica consumida:
             \\[
-            E = P \\cdot t = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
-            \\]
-            \\[
-            E = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
-            \\]
-            - Cost econòmic:
-            \\[
-            \\text{c} = E \\cdot \\text{p} = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
+            E = 36 \\cdot 3{,}6 \\cdot \\text{t} = 388{,}8 \\, \\text{Wh}
             \\]
             <br><br>
           
