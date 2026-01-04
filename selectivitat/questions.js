@@ -182,7 +182,10 @@ const questions = [
             P = 0{,}54\\omega - 900 \\cdot 10^{-6}\\omega^2 
             \\]
             <br>
-            <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
+            <strong>b) Corba de la potència mecànica:</strong>
+
+             <img src="https://gerardleon21.github.io/selectivitat/circuit 1.png" alt="Circuit de l'exercici">
+            
             <br>
             - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
             \\[
