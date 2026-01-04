@@ -128,6 +128,73 @@ const questions = [
             <br><br>
           
     `},
+
+       {
+        type: "exercicis",
+        category: "electrics",
+        text: `En un motor de corrent continu, el parell motor \\(Gamma\\) i la velocitat angular \\(omega\\) de l’eix estan
+               relacionats amb la tensió d’alimentació \\(U\\) i el corrent consumit \\(I\\) per les expressions: 
+                <br>\\[
+                \\Gamma = c I, \\quad
+                \\omega = \\frac{U - I R}{c}, \\quad
+                \\text{amb } c = 0,06 \\text{ Nm/A}, \\; R = 4 \\Omega
+                \\]
+               
+               <br><strong>a)</strong> Determineu l’expressió que relaciona la potència mecànica \\(P\\) que proporciona aquest motor amb la velocitat angular \\(\\omega\\) (expressió sense I). [0,5 punts]
+               <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
+               <br><strong>c)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba potència mecànica \\(P\\) en funció de la velocitat angular \\(\\omega\\) per a \\(0 \\leq \\omega \\leq 600\\,\\text{rad/s}\\). [1 punt]
+               <br><strong>d)</strong> Calculeu l’energia elèctrica \\(E\\), en W·h, que consumeix el motor si funciona contínuament durant \\(t = 3 \\, \\text{h}\\) girant a \\(\\omega = 360 \\, \\text{rad/s}\\). [1 punt]= 2 \\, \\text{h}\\). [1 punt]
+               <br><br>
+             `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Expressió que relaciona la potència mecànica \\(P\\) amb la velocitat angular\\(omega\\):</strong>
+            <br>
+            - La potència mecànica és:
+            \\[
+            P = \\Gamma \\cdot \\omega
+            \\]
+            \\[
+            R_{\\text{eq}}\\ = \\frac{1}{\\frac{1}{27} + \\frac{1}{54}} = 18 \\, \\Omega
+            \\]
+            <br>
+            <strong>b) Càlcul del corrent \\(I\\) consumit per l’estufa:</strong>
+            <br>
+            - Aplicant la llei d'Ohm, després d'haver calculat la resistència equivalent:
+            \\[
+            I = \\frac{U}{R_{\\text{eq}}}
+            \\]
+            \\[
+            I = \\frac{230}{18} = 12{,}78 A
+            \\]
+            <br>
+            <strong>c) Càlcul de la potència \\(P\\) subministrada per l'estufa:</strong>
+            <br>
+            - Fórmula de la potència:
+            \\[
+            P = U \\cdot I
+            \\]
+            \\[
+            P = U \\cdot I = 230 \\cdot 12{,}78 = 2940 \\, \\text{W}
+            \\]
+            <br>
+            <strong>d) Càlcul del cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\):</strong>
+            <br>
+            - Energia elèctrica consumida:
+            \\[
+            E = P \\cdot t = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
+            \\]
+            \\[
+            E = 2{,}94 \\cdot 2 = 5{,}88 \\, \\text{kW·h}
+            \\]
+            - Cost econòmic:
+            \\[
+            \\text{c} = E \\cdot \\text{p} = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
+            \\]
+            <br><br>
+          
+    `}, 
+    
     {
         type: "questions", // Tipus de pregunta
         category: "electrics",
