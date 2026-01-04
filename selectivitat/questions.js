@@ -123,7 +123,7 @@ const questions = [
             \\]
             - Cost econòmic:
             \\[
-            \\(c\\) = E \\cdot \\(p\\) = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
+            \\text{c} = E \\cdot \\text{p} = 5{,}88 \\cdot 0{,}087 = 0.51 \\, \\text{€}
             \\]
             <br><br>
           
