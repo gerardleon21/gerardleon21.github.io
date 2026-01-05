@@ -74,7 +74,7 @@ const questions = [
         text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
                En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 230 \\, \\text{V}\\). 
                En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
-               <br><strong>a)</strong> La resistència equivalent\\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
+               <br><strong>a)</strong> La resistència equivalent \\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
                <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
                <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
                <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
@@ -212,6 +212,73 @@ const questions = [
             <br><br>
           
     `}, 
+
+    {
+        type: "exercicis",
+        category: "maquines",
+        text: `Un semàfor de massa \\(m\\) = 45 \\(kg\\) està suspès mitjançant dos cables de la mateixa secció tal com s’indica en la figura. Si es negligeix la massa dels cables, determineu: 
+               <br><strong>a)</strong> Els angles \\(\\phi_{1}\\) i \\(\\phi_{2}\\) indicats. [1 punt]
+               <br><strong>b)</strong> Les forces \\(F_{1}\\) i \\(F_{2}\\) que suporten els cables \\(O_{1}S\\) i \\(O_{2}S\\), respectivament.  [1 punt]
+               <br><strong>c)</strong> La relació de tensions normals \\(\\sigma_{1}\\)/\\(\\sigma_{2}\\) a les quals estan sotmesos els cables. [0,5 punts]
+               <br><br>
+             <img src="https://gerardleon21.github.io/selectivitat/estatica1.png" alt="-">`,  // Imatge opcional al final de la pregunta
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul dels angles \\(\\phi_{1}\\) i \\(\\phi_{2}\\):</strong>
+            <br>
+            - Els cables formen triangles rectangles amb una caiguda vertical \\(L\\).
+            <br><br>
+            Cable esquerre (longitud \\(4L\\)):
+            \\[
+            \\sin \\phi_1 = \\frac{L}{4L} = \\frac{1}{4}
+            \\]
+            \\[
+            \\phi_1 = \\arcsin\\left(\\frac{1}{4}\\right) = 14{,}48^\\circ
+            \\]
+
+            <br><br>
+            Cable dret (longitud \\(3L\\)):
+            \\[
+            \\sin \\phi_2 = \\frac{L}{3L} = \\frac{1}{3}
+            \\]
+            \\[
+            \\phi_2 = \\arcsin\\left(\\frac{1}{3}\\right) = 19{,}47^\\circ
+            \\]
+            <br><br>
+            
+            <strong>b) Càlcul de les forces \\(F_1\\) i \\(F_2\\):</strong>
+            <br>
+            - Com que el sistema està en equilibri estàtic, la suma de forces externes és nul·la:
+            \\[
+            \\sum \\vec{F}_{ext} = 0
+            \\]
+            \\[
+            \\begin{cases}
+            F_1 \\cos \\varphi_1 - F_2 \\cos \\varphi_2 = 0 \\\\
+            F_1 \\sin \\varphi_1 + F_2 \\sin \\varphi_2 - mg = 0
+            \\end{cases}
+            \\] 
+            - Resolent el sistema d’equacions s’obtenen les tensions als cables:
+            \\[
+            F_1 = mg \\, \\frac{\\cos \\varphi_2}{\\sin(\\varphi_1 + \\varphi_2)} = 745{,}1\\,\\text{N}
+            \\]
+            \\[
+            F_2 = mg \\, \\frac{\\cos \\varphi_1}{\\sin(\\varphi_1 + \\varphi_2)} = 765{,}2\\,\\text{N}
+            \\]
+            <br>
+            <strong>c) Relació de tensions normals \\(\\sigma_1/\\sigma_2\\):</strong>
+            <br>
+            - Com que els cables tenen la mateixa secció:
+            \\[
+            \\sigma_1 = \\frac{F_1}{S} \\qquad ; \\qquad \\sigma_2 = \\frac{F_2}{S}
+            \\]
+            \\[
+            \\frac{\\sigma_1}{\\sigma_2} = \\frac{F_1}{F_2} = 0{,}9737
+            \\]
+            <br>
+             <br><br>
+          
+    `},
     
     {
         type: "questions", // Tipus de pregunta
