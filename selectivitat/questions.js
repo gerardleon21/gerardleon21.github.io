@@ -254,16 +254,16 @@ const questions = [
             \\]
             \\[
             \\begin{cases}
-            F_1 \\cos \\varphi_1 - F_2 \\cos \\varphi_2 = 0 \\\\
-            F_1 \\sin \\varphi_1 + F_2 \\sin \\varphi_2 - mg = 0
+            F_1 \\cos \\phi_1 - F_2 \\cos \\phi_2 = 0 \\\\
+            F_1 \\sin \\phi_1 + F_2 \\sin \\phi_2 - mg = 0
             \\end{cases}
             \\] 
             - Resolent el sistema d’equacions s’obtenen les tensions als cables:
             \\[
-            F_1 = mg \\, \\frac{\\cos \\varphi_2}{\\sin(\\varphi_1 + \\varphi_2)} = 745{,}1\\,\\text{N}
+            F_1 = mg \\, \\frac{\\cos \\phi_2}{\\sin(\\phi_1 + \\phi_2)} = 745{,}1\\,\\text{N}
             \\]
             \\[
-            F_2 = mg \\, \\frac{\\cos \\varphi_1}{\\sin(\\varphi_1 + \\varphi_2)} = 765{,}2\\,\\text{N}
+            F_2 = mg \\, \\frac{\\cos \\phi_1}{\\sin(\\phi_1 + \\phi_2)} = 765{,}2\\,\\text{N}
             \\]
             <br>
             <strong>c) Relació de tensions normals \\(\\sigma_1/\\sigma_2\\):</strong>
@@ -279,6 +279,84 @@ const questions = [
              <br><br>
           
     `},
+
+           {
+        type: "exercicis",
+        category: "electrics",
+        text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(\\p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(\\q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{t} = 25^\\circ C\\).
+        La calor específica de l'aigua és \\(\\c_e = 4{,}18 \\, \\text{J/gºC}\\). Determineu, en aquestes condicions de funcionament:               
+               <br><strong>a)</strong> La potència útil \\(P\\). [0,5 punts]
+               <br><strong>b)</strong> El rendiment \\(\\eta\\) si el consum del combustible és \\(q_\\text{com} = 0{,}51 \\, \\text{g/s}\\). [1 punt]
+               <br><strong>c)</strong> El temps \\(t\\)i el combustible \\(m\\) necessaris per a escalfar 25 ºC un volum d’aigua \\(V = 150 \\, \\text{l}\\). [0,5 punts]
+               <br><br>
+             `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de la potència útil \\(P\\):</strong>
+            <br>
+            - L'energia útil o calor s'expressa així:
+            \\[
+            Q = \\text{m} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t}          
+            \\]
+            - Dividim els dos costats pel temps:
+            \\[
+            \\frac{Q}{\\text{t}} = \\frac{\\text{m} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t}}{\\text{t}}
+            \\]
+            - L'energia dividida pel temps és igual a la potència i la massa dividida pel temps és igual al cabal, perquè 1 l d'aigua és igual a 1 kg d'aigua :
+            \\[
+            P = \\text{q} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t} 
+            \\]
+            - Conversions:
+            \\[
+            \\text{q} = 13{,}8 \\, \\text{l/min} \\cdot \\frac{1000\\, \\text{g}}{1 \\, \\text{l}} \\cdot \\frac{1 \\, \\text{min}}{60\\, \\text{s}}
+            \\]
+            \\text{q} = 230 \\, \\text{g/s}
+            - Substituïm el corrent:
+            \\[
+            P = 
+            \\]
+            - Separem els termes:
+            \\[
+            P = \\frac{\\text{c} \\cdot U}{R} \\cdot \\omega - \\frac{\\text{c}^2}{R} \\cdot \\omega^2
+            \\] 
+            - Substitució numérica
+            \\[
+            P = \\frac{0{,}06 \\cdot 36}{4} \\cdot \\omega - \\frac{0{,}06^2}{4} \\cdot \\omega^2
+            \\]
+            \\[
+            P = 0{,}54\\omega - 900 \\cdot 10^{-6}\\omega^2 
+            \\]
+            <br>
+            <strong>b) Corba de la potència mecànica:</strong>           
+            <br>
+             <img src="https://gerardleon21.github.io/selectivitat/grafic1.png" alt="Gràfica">
+            <br>
+            <strong>c) Càlcul de l’energia elèctrica \\(E\\), en W·h:</strong>
+            <br>
+            - Fórmula de la energia:
+            \\[
+            E = P_{\\text{elèc} \\cdot \\text{t}
+            \\]
+            - La potència elèctrica s'expressa:
+            \\[
+            P = U \\cdot I 
+            \\]
+            - Substituïm al càlcul de l'energia:
+            \\[
+            E = U \\cdot I \\cdot \\text{t}
+            \\]
+            <br>
+            - La intensitat és::
+            \\[
+            I = \\frac{U - \\text{c} \\cdot \\omega}{R} = \\frac{36 - 0{,}06 \\cdot 360}{4} = 3{,}6 \\, \\text{A}
+            \\]
+            - Energia elèctrica consumida:
+            \\[
+            E = 36 \\cdot 3{,}6 \\cdot \\text{t} = 388{,}8 \\, \\text{Wh}
+            \\]
+            <br><br>
+          
+    `}, 
     
     {
         type: "questions", // Tipus de pregunta
