@@ -311,48 +311,41 @@ const questions = [
             \\text{q} = 13{,}8 \\, \\text{l/min} \\cdot \\frac{1000\\, \\text{g}}{1 \\, \\text{l}} \\cdot \\frac{1 \\, \\text{min}}{60\\, \\text{s}}
             \\]
             \\text{q} = 230 \\, \\text{g/s}
-            - Substituïm el corrent:
+            - Substituïm a la fórmula de la potència:
             \\[
-            P = 
+            P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, text{W} = 24{,}04 \\, \\text{kW}
             \\]
-            - Separem els termes:
-            \\[
-            P = \\frac{\\text{c} \\cdot U}{R} \\cdot \\omega - \\frac{\\text{c}^2}{R} \\cdot \\omega^2
-            \\] 
-            - Substitució numérica
-            \\[
-            P = \\frac{0{,}06 \\cdot 36}{4} \\cdot \\omega - \\frac{0{,}06^2}{4} \\cdot \\omega^2
-            \\]
-            \\[
-            P = 0{,}54\\omega - 900 \\cdot 10^{-6}\\omega^2 
-            \\]
+           
             <br>
-            <strong>b) Corba de la potència mecànica:</strong>           
+            <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>           
             <br>
-             <img src="https://gerardleon21.github.io/selectivitat/grafic1.png" alt="Gràfica">
+         
+            - Fórmula del rendiment:
+            \\[
+            \\(\\eta\\) = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
+            \\]
+            - La potència consumida és:
+            \\[
+            P_{\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{\\text{p}_{\\text{c}} \\cdot \\text{m}}{\\text{t}} = \\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}
+            \\]
+            - Càlcul del rendiment:
+            \\[
+            \\(\\eta\\) = \\frac{P_{\\text{útil}}{\\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}} 
+            \\]    
+            \\[
+            \\(\\eta\\) = \\frac{24035 \\, \\text{W}}{0{,}51 \\cdot 10^{-3} \\, \\text{kg/s} \\cdot 61 \\cdot 10^6 \\, \\text{J/kg}} = \\frac{24035 \\, \\text{W}}{31110 \\, \\text{W}} = 0,7726
+            \\]   
             <br>
-            <strong>c) Càlcul de l’energia elèctrica \\(E\\), en W·h:</strong>
+            
             <br>
-            - Fórmula de la energia:
-            \\[
-            E = P_{\\text{elèc} \\cdot \\text{t}
-            \\]
-            - La potència elèctrica s'expressa:
-            \\[
-            P = U \\cdot I 
-            \\]
-            - Substituïm al càlcul de l'energia:
-            \\[
-            E = U \\cdot I \\cdot \\text{t}
-            \\]
+            <strong>c) Càlcul del temps i el combustible necessaris:</strong>
             <br>
-            - La intensitat és::
+            - Càlcul del temps:
             \\[
-            I = \\frac{U - \\text{c} \\cdot \\omega}{R} = \\frac{36 - 0{,}06 \\cdot 360}{4} = 3{,}6 \\, \\text{A}
+            \\text{q} = \\frac{V}{\\text{t}}
             \\]
-            - Energia elèctrica consumida:
             \\[
-            E = 36 \\cdot 3{,}6 \\cdot \\text{t} = 388{,}8 \\, \\text{Wh}
+            \\text{t} = \\frac{V}{\\text{q}} = \\frac{150 \\, \\text{l}}{13{,}8 \\, \\text{l/min}} = 10{,}87 \\, \\text{min} = 652{,}2 \\, \\text{s}
             \\]
             <br><br>
           
