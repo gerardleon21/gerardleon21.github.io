@@ -21,9 +21,9 @@ const questions = [
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
         <strong>a) Taula de veritat del sistema:</strong>
-        <br><br>
+        <br>
 <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2e2ra.png" alt="Taula de la veritat">
-        <br><br>
+        <br>
         <strong>b) Funció lògica del sistema:</strong>
         <br>
         - La màquina s’atura si es prem el botó d’emergència o si la pantalla no és al lloc i no s’ha premut el botó de permís.
@@ -335,9 +335,54 @@ const questions = [
     <br><br>
     `}, 
 
-          
+    {
+    type: "exercicis",
+    category: "control",
+    text: `En un magatzem de perfils d’alumini fan un descompte del 20 % a tots els clients habituals,
+           i també als clients no habituals que compren només perfils sencers per un valor superior a 200 €.
+           <br><br>
+           Utilitzant les variables d’estat:
+           <br>
+           <strong>c</strong>: client habitual (1 sí / 0 no)
+           <br>
+           <strong>v</strong>: compra superior a 200 € (1 sí / 0 no)
+           <br>
+           <strong>t</strong>: cal tallar perfils (1 sí / 0 no)
+           <br>
+           <strong>d</strong>: descompte (1 sí / 0 no)
+           <br><br>
+           <strong>a)</strong> Escriviu la taula de veritat del procés de descompte. [1 punt]
+           <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+           <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+           <br><br>
+           `,
+    correctAnswer: "",
+    steps: `
+    <strong>a) Taula de veritat del procés de descompte:</strong>
+    <br>
+     <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae4.png" alt="Gràfica">
+    <br>
+    <strong>b) Funció lògica del sistema:</strong>
+    <br>
+    - Hi ha descompte si el client és habitual, o bé si la compra és superior a 200 € i no cal tallar perfils.
+    <br><br>
+    \\[
+    d = c + (v \\cdot \\overline{t})
+    \\]
+    <br><br>
+    <strong>c) Esquema de portes lògiques equivalent:</strong>
+    <br>
+    - Porta NOT a l’entrada <strong>t</strong>
+    <br>
+    - Porta AND entre <strong>v</strong> i <strong>¬t</strong>
+    <br>
+    - Porta OR entre <strong>c</strong> i la sortida de l’AND
+    <br>
+    - Sortida final: <strong>d</strong>
+    <br><br>   
+`}
 
-           {
+     {
         type: "exercicis",
         category: "electrics",
         text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(\\p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(\\q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{t} = 25^\\circ C\\).
