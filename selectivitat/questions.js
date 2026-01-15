@@ -360,7 +360,7 @@ const questions = [
     steps: `
     <strong>a) Taula de veritat del procés de descompte:</strong>
     <br>
-     <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae4.png" alt="Gràfica">
+     <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2ra.jpg" alt="Gràfica">
     <br>
     <strong>b) Funció lògica del sistema:</strong>
     <br>
@@ -372,15 +372,9 @@ const questions = [
     <br><br>
     <strong>c) Esquema de portes lògiques equivalent:</strong>
     <br>
-    - Porta NOT a l’entrada <strong>t</strong>
-    <br>
-    - Porta AND entre <strong>v</strong> i <strong>¬t</strong>
-    <br>
-    - Porta OR entre <strong>c</strong> i la sortida de l’AND
-    <br>
-    - Sortida final: <strong>d</strong>
+<img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2rc.jpg" alt="Taula de la veritat">
     <br><br>   
-`}
+`},
 
      {
         type: "exercicis",
