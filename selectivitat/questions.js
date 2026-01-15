@@ -360,7 +360,7 @@ const questions = [
     steps: `
     <strong>a) Taula de veritat del procés de descompte:</strong>
     <br>
-     <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2ra.jpg" alt="Gràfica">
+     <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2ra.jpg" alt="Taula de la veritat">
     <br>
     <strong>b) Funció lògica del sistema:</strong>
     <br>
@@ -372,9 +372,10 @@ const questions = [
     <br><br>
     <strong>c) Esquema de portes lògiques equivalent:</strong>
     <br>
-<img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2rc.jpg" alt="Taula de la veritat">
+<img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2rc.jpg" alt="Esquema">
     <br><br>   
 `},
+    
 
      {
         type: "exercicis",
