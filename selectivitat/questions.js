@@ -22,19 +22,7 @@ const questions = [
         steps: `
         <strong>a) Taula de veritat del sistema:</strong>
         <br><br>
-        <table border="1" cellpadding="5">
-            <tr>
-                <th>p</th><th>b</th><th>e</th><th>a</th>
-            </tr>
-            <tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
-            <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
-            <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
-            <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
-            <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
-            <tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
-            <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
-        </table>
+<img src="https://gerardleon21.github.io/selectivitat/images/2007serie2e2ra.png" alt="Taula de la veritat">
         <br><br>
         <strong>b) Funció lògica del sistema:</strong>
         <br>
@@ -59,12 +47,7 @@ const questions = [
         - La sortida de l’OR és <strong>a</strong> (màquina s’atura)
         <br><br>
         <pre>
- p ──NOT──┐
-          AND──┐
- b ──NOT──┘     OR── a
-                │
- e ─────────────┘
-        </pre>
+<img src="https://gerardleon21.github.io/selectivitat/images/2007serie2e2rc.jpg" alt="Esquema">
     `
     },
     
@@ -184,7 +167,7 @@ const questions = [
             <br>
             <strong>b) Corba de la potència mecànica:</strong>           
             <br>
-             <img src="https://gerardleon21.github.io/selectivitat/grafic1.png" alt="Gràfica">
+             <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae4.png" alt="Gràfica">
             <br>
             <strong>c) Càlcul de l’energia elèctrica \\(E\\), en W·h:</strong>
             <br>
