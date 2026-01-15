@@ -277,8 +277,82 @@ const questions = [
             \\]
             <br>
              <br><br>
-          
     `},
+
+           {
+        type: "exercicis",
+        category: "energia",
+        text: `En una planta d’aprofitament de biomassa es reben cada dia \\(m = 70 \\cdot 10^{3} \\, \\text{kg}\\) de residus vegetals que tenen un poder calorífic mitjà \\(p = 11{,}5 \\, \\text{MJ/kg}\\).               
+               La planta produeix electricitat amb un rendiment elèctric \\(\\eta_{elèc} = 0{,}29\\) i la resta d’energia s’aprofita amb un rendiment tèrmic \\(\\eta_{tèrmic} = 0{,}75\\) per a escalfar aigua.
+               <br><br>
+               La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\text{J/(g·}^\\circ\\text{C)}\\) i la temperatura augmenta \\(\\Delta t = 35 \\, ^\\circ C\\).
+               <br><br>         
+               <br><strong>a)</strong> L’energia elèctrica \\(E_{elèc}\\), en MW·h, produïda en un dia i la potència elèctrica mitjana \\(P_{elèc}\\). [1 punt]
+               <br><strong>b)</strong> La quantitat d’aigua \\(m_{aigua}\\), en kg, escalfada en un dia. [1 punt]
+               <br><strong>c)</strong> El cabal mitjà \\(q\\), en l/s, d’aigua escalfada. [0,5 punts]
+               <br><br>
+             `, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Càlcul de l'energia i la potència elèctrica produïdes:</strong>
+            <br>
+            - Energia total continguda a la biomassa:
+            \\[
+            E = m \\cdot p = 70 \\cdot 10^{3} \\, \\text{kg} \\cdot 11{,}5 \\, \\text{MJ/kg} = 805 \\cdot 10^{3} \\, \\text{MJ}         
+            \\]
+            - Energia elèctrica produïda:
+            \\[
+            E_{elèc} = \\eta_{elèc} \\cdot E = 0{,}29 \\cdot 805 \\cdot 10^{3} \\, \\text{MJ} = 233450 \\, \\text{MJ}
+            \\]
+            - Conversió a MW·h:
+            \\[
+            E_{elèc} = \\frac{233450 \\, \\text{MW·s}}{3600 \\, \\text{}} = 64{,}85 \\, \\text{MW·h}
+            \\]
+            - Potència elèctrica mitjana (un dia = 24 h):
+            \\[
+            P_{elèc} = \\frac{E_{elèc}}{t} = \\frac{64{,}85 \\, \\text{MW·h}}{24 \\, \\text{h}} = 2{,}702 \\, \\text{MW}
+            \\]     
+              <br><br>
+           
+            <br>
+            <strong>b) Quantitat d’aigua escalfada en un dia:</strong>
+            <br>
+            - Energia tèrmica disponible:
+            \\[
+            E_{tèrmica} = (1 - \\eta_{elèc}) \\cdot \\eta_{tèrmic} \\cdot E
+            \\]
+            \\[
+            E_{tèrmica} = (1 - 0{,}29) \\cdot 0{,}75 \\cdot 805 \\cdot 10^{3} \\, \\text{MJ} = 428000 \\, \\text{MJ}
+            \\]
+            \\[
+            E_{tèrmica} = 4{,}28 \\cdot 10^{11} \\, \\text{J}
+            \\]
+            - Energia per escalfar l’aigua:
+            \\[
+            E = m_{aigua} \\cdot c_e \\cdot \\Delta t
+            \\]
+            \\[
+            m_{aigua} = \\frac{E}{c_e \\cdot \\Delta t} = \\frac{4{,}28 \\cdot 10^{11} \\, \\text{J}}{4180 \\, \\text{J/kgºC} \\cdot 35 \\, \\text{ºC}}
+            \\]
+            \\[
+            m_{aigua} = 2{,}93 \\cdot 10^{6} \\, \\text{kg}
+            \\]
+            <br><br>
+
+    <strong>c) Càlcul del cabal mitjà d’aigua escalfada:</strong>
+    <br>
+    - Temps d’un dia:
+    \\[
+    t = 24\\, \\text{h} \\cdot 3600 \\, \\text{s} = 86400 \\, \\text{s}
+    \\]
+    - Cabal mitjà:
+    \\[
+    q = \\frac{m_{aigua}}{t \\cdot \\rho_{aigua}} = \\frac{2{,}93 \\cdot 10^{6} \\, \\text{l}}{86400 \\, \\text{s}} = 33{,}91 \\, \\text{l/s}
+    \\]
+    <br><br>
+    `}, 
+
+          
 
            {
         type: "exercicis",
@@ -317,12 +391,12 @@ const questions = [
             \\]
            
             <br>
-            <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>           
+            <strong>b) Càlcul del rendiment \\eta:</strong>           
             <br>
          
             - Fórmula del rendiment:
             \\[
-            \\(\\eta\\) = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
+            \\eta = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
             \\]
             - La potència consumida és:
             \\[
@@ -330,10 +404,10 @@ const questions = [
             \\]
             - Càlcul del rendiment:
             \\[
-            \\(\\eta\\) = \\frac{P_{\\text{útil}}{\\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}} 
+            \\eta = \\frac{P_{\\text{útil}}{\\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}} 
             \\]    
             \\[
-            \\(\\eta\\) = \\frac{24035 \\, \\text{W}}{0{,}51 \\cdot 10^{-3} \\, \\text{kg/s} \\cdot 61 \\cdot 10^6 \\, \\text{J/kg}} = \\frac{24035 \\, \\text{W}}{31110 \\, \\text{W}} = 0,7726
+            \\eta = \\frac{24035 \\, \\text{W}}{0{,}51 \\cdot 10^{-3} \\, \\text{kg/s} \\cdot 61 \\cdot 10^6 \\, \\text{J/kg}} = \\frac{24035 \\, \\text{W}}{31110 \\, \\text{W}} = 0,7726
             \\]   
             <br>
             
@@ -346,6 +420,10 @@ const questions = [
             \\]
             \\[
             \\text{t} = \\frac{V}{\\text{q}} = \\frac{150 \\, \\text{l}}{13{,}8 \\, \\text{l/min}} = 10{,}87 \\, \\text{min} = 652{,}2 \\, \\text{s}
+            \\]
+            - Combustible consumit:
+            \\[
+            m_{com} = q_{com} \\cdot t = 0{,}51 \\, \\text{g/s} \\cdot 652{,}2 \\, \\text{s} = 333 \\, \\text{g}
             \\]
             <br><br>
           
