@@ -221,7 +221,7 @@ const questions = [
                <br><strong>b)</strong> Les forces \\(F_{1}\\) i \\(F_{2}\\) que suporten els cables \\(O_{1}S\\) i \\(O_{2}S\\), respectivament.  [1 punt]
                <br><strong>c)</strong> La relació de tensions normals \\(\\sigma_{1}\\)/\\(\\sigma_{2}\\) a les quals estan sotmesos els cables. [0,5 punts]
                <br><br>
-             <img src="https://gerardleon21.github.io/selectivitat/estatica1.png" alt="-">`,  // Imatge opcional al final de la pregunta
+             <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Be3.jpg" alt="-">`,  // Imatge opcional al final de la pregunta
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Càlcul dels angles \\(\\phi_{1}\\) i \\(\\phi_{2}\\):</strong>
