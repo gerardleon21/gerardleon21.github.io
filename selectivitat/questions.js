@@ -1099,6 +1099,224 @@ const questions = [
     `
 },
     
+{
+    type: "exercicis",
+    category: "energia",
+    text: `En el full de característiques d’una motobomba amb motor dièsel s’indiquen, entre d’altres, les dades nominals següents:  
+           <br>
+           <strong>q</strong> = 50 m³/h ; <strong>p</strong> = 0,25 MPa  
+           <br>
+           Capacitat del dipòsit: <strong>V</strong> = 4,6 l ; Autonomia: <strong>τ</strong> = 4 h  
+           <br>
+           Potència del motor a n = 2500 min⁻¹: <strong>Pmot</strong> = 4,9 kW  
+           <br>
+           Combustible: poder calorífic <strong>pc</strong> = 43 MJ/kg ; densitat <strong>ρ</strong> = 0,84 kg/dm³  
+           <br><br>
+           Determineu:  
+           <br><strong>a)</strong> El rendiment de la bomba, \\(\\eta_\\text{bomba}\\). [0,5 punts]  
+           <br><strong>b)</strong> El rendiment mitjà mecanicotèrmic del motor, \\(\\eta_\\text{mt}\\). [1 punt]  
+           <br><strong>c)</strong> El consum específic del motor <strong>c</strong>, en g/(kW·h), entès com la relació entre la quantitat de combustible consumit i l’energia mecànica produïda.`,
+    correctAnswer: "",  // Obert
+    steps: `
+        <strong>a) Rendiment de la bomba, \\(\\eta_bomba\\):</strong>
+        <br>
+        - Potència útil de la bomba (hidràulica):  
+        \\[
+        P_{b} = \\text{p} \\cdot \\text{q}
+        \\]  
+        Convertim q a m³/s:  
+        \\[
+        q = 50 \\frac{\\text{m³}}{\\text{h}} = \\frac{50}{3600} = 0,01389 \\, \\text{m³/s}
+        \\]  
+        Pressió: p = 0,25 MPa = 0,25·10⁶ Pa  
+        \\[
+        P_{b} = \\text{p} \\cdot \\text{q} = 0,25 \\cdot 10^6 \\cdot 0,01389 = 3472{,}5 \\, W
+        \\]  
+        Rendiment de la bomba:  
+        \\[
+        \\eta_{bomba} = \\frac{P_{b}}{P_{mot}} = \\frac{3,472}{4,9} = 0,7086
+        \\]
+        <br><br>
+        
+        <strong>b) Rendiment mitjà mecanicotèrmic, \\(\\eta_\\text{mt}\\):</strong>
+        <br>
+        - Quantitat de combustible consumit durant l’autonomia:  
+        \\[
+        m_c = \\rho \\cdot V = 0,84 \\, \\text{kg/dm³} \\cdot 4,6 \\, \\text{dm³} = 3,864 \\, \\text{kg}
+        \\]  
+        Energia aportada pel combustible:  
+        \\[
+        E_c = m_c \\cdot pc = 3,864 \\cdot 43 = 166,15 \\, \\text{MJ}
+        \\]  
+        Energia mecànica produïda pel motor:  
+        \\[
+        E_m = P_{mot} \\cdot \\tau = 4,9 \\, \\text{kW} \\cdot 4 \\, \\text{h} = 19,6 \\, \\text{kWh} = 70,56 \\, \\text{MJ}
+        \\]  
+        Rendiment mitjà mecanicotèrmic:  
+        \\[
+        \\eta_{mt} = \\frac{E_m}{E_c} = \\frac{70,56}{166,15} = 0,4247 
+        \\]
+        <br><br>
+        
+        <strong>c) Consum específic del motor, c:</strong>
+        <br>
+        - Consum específic: relació entre combustible i energia mecànica:  
+        \\[
+        c = \\frac{m_c}{E_m} \\text{en kg/MJ} \\; \\text{o en g/(kW·h)}
+        \\]  
+        Convertim: 1 kWh = 3,6 MJ  
+        \\[
+        E_m = 19,6 \\, \\text{kWh}, \\quad m_c = 3,864 \\, \\text{kg} = 3864 \\, \\text{g}
+        \\]  
+        \\[
+        c = \\frac{3864}{19,6} = 197{,}1 \\, \\text{g/(kW·h)}
+        \\]
+    `
+},
+
+    {
+    type: "exercicis",
+    category: "maquines",
+    text: `Un semàfor de massa <strong>m = 40 kg</strong> està suspès mitjançant dos cables de la mateixa secció tal com s’indica en la figura.  
+           Si es negligeix la massa dels cables, determineu:  
+           <br><strong>a)</strong> Els angles <strong>φ₁</strong> i <strong>φ₂</strong> indicats. [1 punt]  
+           <br><strong>b)</strong> Les forces <strong>F₁</strong> i <strong>F₂</strong> que suporten els cables O₁S i O₂S, respectivament. [1 punt]  
+           <br><strong>c)</strong> La relació de tensions normals <strong>σ₁/σ₂</strong> a les quals estan sotmesos els cables. [0,5 punts]  
+           <br><br>
+           <img src="https://gerardleon21.github.io/selectivitat/images/2007serie3Ae4.jpg" alt="Imatge semàfor">`,
+    correctAnswer: "",  // Obert
+    steps: `
+        <strong>a) Càlcul dels angles φ₁ i φ₂:</strong>
+        <br>
+        - Els cables formen triangles rectes amb una caiguda vertical L:
+        <br><br>
+        Cable esquerre (longitud 3L):  
+        \\[
+        \\phi_1 = \\arctan\\frac{L}{3L} = \\arctan\\frac{1}{3} = 18,43^\\circ
+        \\]
+        Cable dret (longitud 3L, alçada 1,5L):  
+        \\[
+        \\phi_2 = \\arctan\\frac{1,5L}{3L} = \\arctan\\frac{1,5}{3} = 26,57^\\circ
+        \\]
+        <br><br>
+        
+        <strong>b) Càlcul de les forces F₁ i F₂:</strong>
+        <br>
+        - Equilibri estàtic, suma de forces nul·la:
+        \\[
+        \\begin{cases}
+        F_1 \\cos\\phi_1 - F_2 \\cos\\phi_2 = 0 \\\\
+        F_1 \\sin\\phi_1 + F_2 \\sin\\phi_2 - mg = 0
+        \\end{cases}
+        \\]  
+        - Resolent:  
+        \\[
+        F_1 = mg \\frac{\\cos\\phi_2}{\\sin(\\phi_1 + \\phi_2)} = 496,2 \\, N
+        \\]  
+        \\[
+        F_2 = mg \\frac{\\cos\\phi_1}{\\sin(\\phi_1 + \\phi_2)} = 526,3 \\, N
+        \\]
+        <br><br>
+        
+        <strong>c) Relació de tensions normals σ₁/σ₂:</strong>
+        <br>
+        - Com que els cables tenen la mateixa secció S:  
+        \\[
+        \\sigma_1 = \\frac{F_1}{S}, \\quad \\sigma_2 = \\frac{F_2}{S}
+        \\]  
+        \\[
+        \\frac{\\sigma_1}{\\sigma_2} = \\frac{F_1}{F_2} = 0,9428
+        \\]
+    `
+}, 
+    {
+    type: "exercicis",
+    category: "electrics",
+    text: `Un fil de nicrom tensat i calent s’utilitza per tallar poliestirè expandit.  
+           Per escalfar-lo, es fa passar corrent amb una font de tensió U regulable.  
+           El fil té una llargada <strong>l = 0,4 m</strong> i un diàmetre <strong>d = 0,5 mm</strong>.  
+           La resistivitat del nicrom és <strong>ρ = 1,1 μΩ·m</strong> i es considera que la variació amb la temperatura és negligible.  
+           <br><br>
+           Determineu:  
+           <br><strong>a)</strong> La resistència elèctrica <strong>R</strong> del fil. [0,5 punts]  
+           <br><strong>b)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba de la potència <strong>P</strong> dissipada pel fil en funció de la tensió aplicada U (0 ≤ U ≤ 20 V). [1 punt]  
+           <br><strong>c)</strong> Calculeu l’energia <strong>E</strong>, en Wh, consumida per la font si s’ha fixat la tensió U = 18 V durant t = 1,5 h i el rendiment és \\(\\eta\\) = 0{,}68. [1 punt]  
+           <br><br>
+           `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resistència elèctrica del fil:</strong>
+        \\[
+        R = \\rho \\frac{l}{S}, \\quad S = \\frac{\\pi d^2}{4} = \\frac{\\pi (0{,}0005)^2}{4} = 1{,}9635 \\cdot 10^{-7} m^2
+        \\]  
+        \\[
+        R = 1{,}1 \\cdot 10^{-6} \\frac{0{,}4}{1{,}9635 \\cdot 10^{-7}} = 2{,}241 \\, \\Omega
+        \\]  
+        <br><br>
+        
+        <strong>b) Potència dissipada en funció de U:</strong>
+        \\[
+        P = \\frac{U^2}{R} 
+        \\]  
+         <img src="https://gerardleon21.github.io/selectivitat/images/2007serie3Be3.jpg" alt="Gràfic">
+        <br><br>
+        
+        <strong>c) Energia consumida:</strong>
+        \\[
+        E = \\frac{P \\cdot \\text{t}}{\\eta} = \\frac{U^2}{R} \\cdot \\frac{\\text{t}}{\\eta} = \\frac{18^2}{2{,}241} \\cdot \\frac{1{,}5}{0{,}68} = 318{,}9 \\, \\text{Wh}
+        \\]
+    `
+},
+{
+    type: "exercicis",
+    category: "energia",
+    text: `Una planta de tractament i aprofitament de residus produeix una energia elèctrica diària <strong>E_elèc = 65 MW·h</strong> a partir de <strong>m_r = 75·10³ kg</strong> de residus vegetals amb un poder calorífic mitjà <strong>p = 11,8 MJ/kg</strong>.  
+           La resta d’energia s’utilitza per elevar la temperatura de <strong>m_a = 3·10³ kg</strong> d’aigua en \\(\\delta T\\) = 40 \\, \\text{°C}.  
+           La calor específica de l’aigua és <strong>c_e = 4,18 J/(g·°C)</strong>.  
+           <br><br>
+           Determineu:  
+           <br><strong>a)</strong> El rendiment elèctric mitjà <strong>η_elèc</strong> de la planta. [0,75 punts]  
+           <br><strong>b)</strong> El rendiment tèrmic mitjà <strong>η_tèrmic</strong> de la planta. [1,25 punts]  
+           <br><strong>c)</strong> La potència elèctrica mitjana <strong>P_elèc</strong> i el cabal mitjà <strong>q</strong>, en l/s, d’aigua escalfada. [0,5 punts]  
+           <br><br>
+`,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Rendiment elèctric mitjà:</strong>
+        \\[
+        E_\\text{tot} = m_r \\cdot \\text{p} = 75 \\ cdot 10^3 \\cdot 11,8·10^6 = 885 \\ cdot 10^9 \\,  J
+        \\]  
+        \\[
+        E_{elèc} = 65 \\, \\text{MW·h} = 65 \\cdot 10^6 \\cdot 3600 \\, J = 234 \\cdot 10^9 \\, J
+        \\]  
+        \\[
+        \\eta_\\text{elèc} = \\frac{E_\\text{elèc}}{E_\\text{tot}} = \\frac{234 \\ cdot10^9}{885 \\cdot 10^9} = 0{,}2644
+        \\]  
+        <br><br>
+        
+        <strong>b) Rendiment tèrmic mitjà:</strong>
+        \\[
+        E_{aigua} = m_a \\cdot c_e \\cdot \\delta T = 3 \\cdot 10^3 \\, \\text{kg} \\cdot 4180 \\, \\text{J/kg°C} \\cdot 40 \\, \\text{°C} = 501{,}6 \\cdot 10^3 \\, MJ
+        \\]  
+        - Energia tèrmica disponible:  
+        \\[
+        E_text{tèrmic} = (1 - \\eta_{elèc})·E_text{tot} = 651 \\cdot 10^3 \\, MJ
+        \\]  
+        \\[
+        \\eta_\\text{tèrmic} = \\frac{E_\\text{aigua}}{E_\\text{tèrmic}} = 0{,}7705
+        \\]  
+        <br><br>
+        
+        <strong>c) Potència elèctrica mitjana i cabal d’aigua:</strong>
+        \\[
+        P_\\text{elèc} = \\frac{E_\\text{elèc}}{24} = \\frac{65 \\, \\text{MW·h}}{24 \\, \\text{h}} ≈ 2,708 MW
+        \\]  
+        Cabal mitjà:  
+        \\[
+        \\text{q} = \\frac{m_a}{24·3600 s} = 34{,}72 \\, \\text{l/s}
+        \\]
+    `
+}
 
 
 ];
