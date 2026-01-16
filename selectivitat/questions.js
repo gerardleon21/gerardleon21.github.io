@@ -375,13 +375,89 @@ const questions = [
 <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1e2rc.jpg" alt="Esquema">
     <br><br>   
 `},
-    
+
+    {
+    type: "exercicis",
+    category: "mecanica",
+    text: `La taula de massa \\(m = 15 \\, \\text{kg}\\) està articulada en el punt O i es manté en repòs
+           mitjançant el tub PQ de secció resistent \\(s = 12{,}5 \\, \\text{mm}^2\\).
+           <br><br>
+           A la figura es mostren les dimensions geomètriques del sistema.
+           <br><br>
+           Determineu:
+           <br><strong>a)</strong> L’angle \\phi del tub PQ. [0,5 punts]
+           <br><strong>b)</strong> La força T que fa el tub PQ. [0,5 punts]
+           <br><strong>c)</strong> Les forces vertical \\(F_v\\) i horitzontal \\(F_h\\) a l’articulació O. [1 punt]
+           <br><strong>d)</strong> La tensió normal \\sigma del tub PQ a causa de la força que fa. [0,5 punts]
+           <br><br>`,
+    correctAnswer: "",
+    steps: `
+    <strong>a) Angle del tub \\(PQ\\):</strong>
+    <br>
+    - Relació geomètrica:
+    \\[
+    \\tan \\phi = \\frac{2L}{3L}
+    \\]
+    \\[
+    \\phi = \\arctan\\left(\\frac{2}{3}\\right) = 33{,}69^\\circ
+    \\]
+    <br><br>
+
+    <strong>b) Força \\(T\\) que fa el tub \\(PQ\\):</strong>
+    <br>
+    - Equilibri de moments respecte d’\\(O\\):
+    \\[
+    \\sum M_O = 0 \\Rightarrow 3L \\cdot T \\cdot \\sin \\varphi - 2L \\cdot m g = 0
+    \\]
+    \\[
+    T = \\frac{2}{3} \\frac{m g}{\\sin \\varphi}
+    \\]
+    \\[
+    T = 176{,}8 \\, \\text{N}
+    \\]
+    <br><br>
+
+    <strong>c) Forces a l’articulació \\(O\\):</strong>
+    <br>
+    - Equilibri de forces horitzontals:
+    \\[
+    \\sum F_h = 0 \\Rightarrow F_h - T \\cos \\varphi = 0
+    \\]
+    \\[
+    F_h = T \\cos \\varphi = 147{,}1 \\, \\text{N}
+    \\]
+    <br>
+    - Equilibri de forces verticals:
+    \\[
+    \\sum F_v = 0 \\Rightarrow F_v + T \\sin \\varphi - m g = 0
+    \\]
+    \\[
+    F_v = m g - T \\sin \\varphi = 49{,}04 \\, \\text{N}
+    \\]
+    <br><br>
+
+    <strong>d) Tensió normal \\(\\sigma\\) del tub \\(PQ\\):</strong>
+    <br>
+    - Secció resistent:
+    \\[
+    s = 12{,}5 \\, \\text{mm}^2
+    \\]
+    - Tensió normal:
+    \\[
+    \\sigma = \\frac{T}{s} = \\frac{176{,}8}{12{,}5}
+    \\]
+    \\[
+    \\sigma = 14{,}14 \\, \\text{MPa}
+    \\]
+    <br><br>
+    `
+},
 
      {
         type: "exercicis",
         category: "electrics",
-        text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(\\p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(\\q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{t} = 25^\\circ C\\).
-        La calor específica de l'aigua és \\(\\c_e = 4{,}18 \\, \\text{J/gºC}\\). Determineu, en aquestes condicions de funcionament:               
+        text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{t} = 25^\\circ C\\).
+        La calor específica de l'aigua és \\(c_e = 4{,}18 \\, \\text{J/gºC}\\). Determineu, en aquestes condicions de funcionament:               
                <br><strong>a)</strong> La potència útil \\(P\\). [0,5 punts]
                <br><strong>b)</strong> El rendiment \\(\\eta\\) si el consum del combustible és \\(q_\\text{com} = 0{,}51 \\, \\text{g/s}\\). [1 punt]
                <br><strong>c)</strong> El temps \\(t\\)i el combustible \\(m\\) necessaris per a escalfar 25 ºC un volum d’aigua \\(V = 150 \\, \\text{l}\\). [0,5 punts]
@@ -412,11 +488,9 @@ const questions = [
             \\[
             P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, text{W} = 24{,}04 \\, \\text{kW}
             \\]
-           
             <br>
             <strong>b) Càlcul del rendiment \\eta:</strong>           
             <br>
-         
             - Fórmula del rendiment:
             \\[
             \\eta = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
@@ -433,7 +507,6 @@ const questions = [
             \\eta = \\frac{24035 \\, \\text{W}}{0{,}51 \\cdot 10^{-3} \\, \\text{kg/s} \\cdot 61 \\cdot 10^6 \\, \\text{J/kg}} = \\frac{24035 \\, \\text{W}}{31110 \\, \\text{W}} = 0,7726
             \\]   
             <br>
-            
             <br>
             <strong>c) Càlcul del temps i el combustible necessaris:</strong>
             <br>
