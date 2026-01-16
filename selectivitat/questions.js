@@ -484,7 +484,9 @@ const questions = [
             \\[
             \\text{q} = 13{,}8 \\, \\text{l/min} \\cdot \\frac{1000\\, \\text{g}}{1 \\, \\text{l}} \\cdot \\frac{1 \\, \\text{min}}{60\\, \\text{s}}
             \\]
+            \\[
             \\text{q} = 230 \\, \\text{g/s}
+            \\]
             - Substituïm a la fórmula de la potència:
             \\[
             P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, text{W} = 24{,}04 \\, \\text{kW}
