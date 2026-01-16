@@ -38,15 +38,100 @@
 <div id="quiz-container"></div>
 
 <style>
-body.dark-mode { background-color: #121212; color: #f0f0f0; }
-body { font-family: Arial, sans-serif; transition: background-color 0.3s, color 0.3s; }
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(145deg, #3b0d0c, #1c0605);
+    color: #f2e5e5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(145deg, #4b1e1c, #31110f);
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    color: #f9f9f9 !important;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Contenedor principal */
+.content-container {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 1000px;
+    background: linear-gradient(145deg, #5a1f1d, #3e1513);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Preguntas */
+#quiz-container > div {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Opciones */
+ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+ul li button {
+    background: linear-gradient(145deg, #4b1e1c, #31110f);
+    color: #f2d5d5;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+ul li button:hover {
+    transform: translateY(-2px);
+    background: #5a1f1d;
+    color: #fff;
+}
+
+/* Botón solución */
+.solution-button {
+    background: #7a2a27;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.solution-button:hover {
+    background: #9b3b38;
+}
+
+/* Estados */
+.correcta { color: #6bff95; }
+.incorrecta { color: #ff6b6b; }
+
 .ocult { display: none; }
 .visible { display: block; }
-.correcta { color: green; }
-.incorrecta { color: red; }
-.solution-button { margin-top: 10px; }
-.question-images { margin: 10px 0; }
-ul { padding-left: 20px; }
+
+/* Modo oscuro (ya integrado en el diseño) */
+body.dark-mode {
+    background: linear-gradient(145deg, #1a0504, #0e0202);
+}
 </style>
 <div id="load-time" style="margin-top:20px; font-style:italic; color: #555;"></div>
 
