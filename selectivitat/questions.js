@@ -126,7 +126,7 @@ const questions = [
                <br><strong>a)</strong> Determineu l’expressió que relaciona la potència mecànica \\(P\\) que proporciona aquest motor amb la velocitat angular \\(\\omega\\) (expressió sense I). [0,5 punts]
                <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
                <br><strong>c)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba potència mecànica \\(P\\) en funció de la velocitat angular \\(\\omega\\) per a \\(0 \\leq \\omega \\leq 600\\,\\text{rad/s}\\). [1 punt]
-               <br><strong>d)</strong> Calculeu l’energia elèctrica \\(E\\), en W·h, que consumeix el motor si funciona contínuament durant \\(t = 3 \\, \\text{h}\\) girant a \\(\\omega = 360 \\, \\text{rad/s}\\). [1 punt]= 2 \\, \\text{h}\\). [1 punt]
+               <br><strong>d)</strong> Calculeu l’energia elèctrica \\(E\\), en W·h, que consumeix el motor si funciona contínuament durant \\(t = 3 \\, \\text{h}\\) girant a \\(\\omega = 360 \\, \\text{rad/s}\\). [1 punt]
                <br><br>
              `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
@@ -175,10 +175,12 @@ const questions = [
             \\[
             E = P_{\\text{elèc} \\cdot \\text{t}
             \\]
+            <br>
             - La potència elèctrica s'expressa:
             \\[
             P = U \\cdot I 
             \\]
+            <br>
             - Substituïm al càlcul de l'energia:
             \\[
             E = U \\cdot I \\cdot \\text{t}
@@ -384,10 +386,10 @@ const questions = [
            A la figura es mostren les dimensions geomètriques del sistema.
            <br><br>
            Determineu:
-           <br><strong>a)</strong> L’angle \\phi del tub PQ. [0,5 punts]
+           <br><strong>a)</strong> L’angle \\(\\phi\\) del tub PQ. [0,5 punts]
            <br><strong>b)</strong> La força T que fa el tub PQ. [0,5 punts]
            <br><strong>c)</strong> Les forces vertical \\(F_v\\) i horitzontal \\(F_h\\) a l’articulació O. [1 punt]
-           <br><strong>d)</strong> La tensió normal \\sigma del tub PQ a causa de la força que fa. [0,5 punts]
+           <br><strong>d)</strong> La tensió normal \\(\\sigma\\) del tub PQ a causa de la força que fa. [0,5 punts]
            <br><br>
            <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1Ae3.jpg" alt="-">
            `,
@@ -512,6 +514,87 @@ const questions = [
           
     `}, 
     
+       {
+    type: "exercicis",
+    category: "electrics",
+    text: `Un calefactor elèctric disposa d’una resistència i d’un interruptor en sèrie que,
+           accionat per un sensor de temperatura, obre el circuit quan s’arriba a la temperatura fixada.
+           <br><br>
+           Aquest calefactor s’alimenta a \\(U = 230 \\, \\text{V}\\) i té una potència
+           \\(P = 2000 \\, \\text{W}\\).
+           <br><br>
+           La resistència està formada per fil de nicrom de diàmetre
+           \\(d = 0{,}4 \\, \\text{mm}\\) i resistivitat
+           \\(\\rho = 10^{-6} \\, \\Omega\\cdot\\text{m}\\).
+           <br><br>
+           Determineu:
+           <br><strong>a)</strong> El valor \\(R\\) de la resistència. [0,5 punts]
+           <br><strong>b)</strong> La llargada \\(L\\) del fil de la resistència. [1 punt]
+           <br><strong>c)</strong> El consum \\(E\\) si s’utilitza durant \\(1{,}5 \\, \\text{h}\\) i,
+           per a mantenir la temperatura, l’interruptor funciona cíclicament amb una cadència
+           de 30 s obert i 90 s tancat. [1 punt]
+           <br><br>`,
+    correctAnswer: "",
+    steps: `
+    <strong>a) Valor de la resistència \\(R\\):</strong>
+    <br>
+    - Expressió de la potència elèctrica:
+    \\[
+    P = \\frac{U^2}{R}
+    \\]
+    \\[
+    R = \\frac{U^2}{P} = \\frac{230^2}{2000} = 26{,}45 \\, \\Omega
+    \\]
+    <br><br>
+
+    <strong>b) Llargada \\(L\\) del fil de la resistència:</strong>
+    <br>
+    - Secció del fil:
+    \\[
+    S = \\pi \\left( \\frac{d}{2} \\right)^2
+    = \\pi \\left(0{,}2 \\cdot 10^{-3}\\right)^2
+    = 1{,}257 \\cdot 10^{-7} \\, \\text{m}^2
+    \\]
+    - Relació entre resistència i geometria del conductor:
+    \\[
+    R = \\frac{\\rho \\cdot L}{S}
+    \\]
+    \\[
+    L = \\frac{R \\cdot S}{\\rho}
+    = \\frac{26{,}45 \\cdot 1{,}257 \\cdot 10^{-7}}{10^{-6}}
+    \\]
+    \\[
+    L = 3{,}324 \\, \\text{m}
+    \\]
+    <br><br>
+
+    <strong>c) Consum d’energia \\(E\\):</strong>
+    <br>
+    - Cicle de funcionament:
+    <br>
+    Temps total del cicle: \\(30 + 90 = 120 \\, \\text{s}\\)
+    <br>
+    Temps en funcionament: \\(90 \\, \\text{s}\\)
+    <br>
+    - Fracció de temps actiu:
+    \\[
+    f = \\frac{90}{120} = 0{,}75
+    \\]
+    - Temps efectiu de funcionament:
+    \\[
+    t_{ef} = 1{,}5 \\cdot 0{,}75 = 1{,}125 \\, \\text{h}
+    \\]
+    - Consum d’energia:
+    \\[
+    E = P \\cdot t_{ef} = 2{,}0 \\cdot 1{,}125 = 2{,}25 \\, \\text{kWh}
+    \\]
+    \\[
+    E = 8{,}1 \\, \\text{MJ}
+    \\]
+    <br><br>
+    `
+},
+    
     {
         type: "questions", // Tipus de pregunta
         category: "electrics",
@@ -557,6 +640,8 @@ const questions = [
     `
    
     },
+
+
      {
         type: "questions", // Tipus de pregunta
         category: "organitzacio",
