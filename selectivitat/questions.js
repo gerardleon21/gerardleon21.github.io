@@ -392,7 +392,7 @@ const questions = [
            <br><br>`,
     correctAnswer: "",
     steps: `
-    <strong>a) Angle del tub \\(PQ\\):</strong>
+    <strong>a) Càlcul del'angle del tub \\(PQ\\):</strong>
     <br>
     - Relació geomètrica:
     \\[
@@ -405,12 +405,12 @@ const questions = [
 
     <strong>b) Força \\(T\\) que fa el tub \\(PQ\\):</strong>
     <br>
-    - Equilibri de moments respecte d’\\(O\\):
+    - Equilibri de moments respecte \\(O\\):
     \\[
-    \\sum M_O = 0 \\Rightarrow 3L \\cdot T \\cdot \\sin \\varphi - 2L \\cdot m g = 0
+    \\sum M_O = 0 \\Rightarrow 3L \\cdot T \\cdot \\sin \\phi - 2L \\cdot m g = 0
     \\]
     \\[
-    T = \\frac{2}{3} \\frac{m g}{\\sin \\varphi}
+    T = \\frac{2}{3} \\frac{m g}{\\sin \\phi}
     \\]
     \\[
     T = 176{,}8 \\, \\text{N}
