@@ -1055,6 +1055,55 @@ const questions = [
     <br><br>
     `
 },
+{
+    type: "exercicis",
+    category: "control",
+    text: `En un vehicle s’encén un senyal d’alerta si queden menys de 10 l de combustible, o bé si en queden menys de 15 l i el consum actual és elevat (supera en un 30 % el consum mitjà).  
+           Utilitzant les variables d’estat:  
+           <br>
+           <strong>c_10</strong>: quantitat de combustible inferior a 10 l (1 sí / 0 no)  
+           <br>
+           <strong>c_15</strong>: quantitat de combustible inferior a 15 l (1 sí / 0 no)  
+           <br>
+           <strong>c_e</strong>: consum elevat (1 sí / 0 no)  
+           <br>
+           <strong>a</strong>: senyal d’alerta (1 sí / 0 no)  
+           <br><br>
+           <strong>a)</strong> Escriviu la taula de veritat del sistema i indiqueu els casos que no són possibles. [1 punt]  
+           <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]  
+           <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]`,
+    correctAnswer: "",  // Obert
+    steps: `
+        <strong>a) Taula de veritat del sistema:</strong>
+        <br>
+        <img src="https://gerardleon21.github.io/selectivitat/images/2007serie3e2ra.jpg" alt="Circuit de l'exercici">
+        <br><br>
+        
+        <strong>b) Funció lògica del sistema:</strong>
+        <br>
+        - Amb x = 0:  
+        \\[
+        a = (c_{10} + c_e) \\cdot c_{15}
+        \\]  
+        - Amb x = 1:  
+        \\[
+        a = c_{10} + c_e \\cdot c_{15}
+        \\]  
+        - La forma simplificada utilitza x = 1.  
+        <br><br>
+        
+        <strong>c) Esquema de portes lògiques equivalent:</strong>
+        <br>
+        - Porta OR amb entrada <strong>c_10</strong> i sortida de porta AND  
+        - Porta AND amb entrades <strong>c_e</strong> i <strong>c_15</strong>  
+        - Sortida de l’OR és <strong>a</strong>  
+        <br>
+        - La imatge serà amb x = 1
+        <br>
+        <img src="https://gerardleon21.github.io/selectivitat/images/2007serie3e2rc.jpg" alt="Circuit de l'exercici">
+    `
+},
+    
 
 
 ];
