@@ -493,20 +493,6 @@ const questions = [
             <br>
             <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>
             <br>
-            - Fórmula del rendiment:
-            \\[
-            \\eta = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
-            \\]
-            - La potència consumida és:
-            \\[
-            P_\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{p_c \\cdot \\text{m}}{\\text{t}} = p_c \\cdot q_{\\text{comb}}
-            \\]
-            <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>           
-            <br>
-            - Fórmula del rendiment:
-            \\[
-            \\eta = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
-            \\]
             - La potència consumida és:
             \\[
             P_\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{p_c \\cdot \\text{m}}{\\text{t}} = p_c \\cdot q_{\\text{comb}}
