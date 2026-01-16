@@ -502,7 +502,9 @@ const questions = [
             \\[
             P_{\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{\\text{p}_{\\text{c}} \\cdot \\text{m}}{\\text{t}} = \\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}
             \\]
+            <br>
             - Càlcul del rendiment:
+            <br>
             \\[
             \\eta = \\frac{P_{\\text{útil}}{\\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}} 
             \\]    
