@@ -1233,13 +1233,13 @@ const questions = [
     type: "exercicis",
     category: "electrics",
     text: `Un fil de nicrom tensat i calent s’utilitza per tallar poliestirè expandit.  
-           Per escalfar-lo, es fa passar corrent amb una font de tensió U regulable.  
-           El fil té una llargada <strong>l = 0,4 m</strong> i un diàmetre <strong>d = 0,5 mm</strong>.  
-           La resistivitat del nicrom és <strong>ρ = 1,1 μΩ·m</strong> i es considera que la variació amb la temperatura és negligible.  
+           Per escalfar-lo, es fa passar corrent amb una font de tensió \\(U\\) regulable.  
+           El fil té una llargada \\(\\text{l} = 0{,}4 \\, \\text{m} i un diàmetre \\(\\text{d} = 0{,}5 \\, \\text{mm}.  
+           La resistivitat del nicrom és \\(\\rho = 1{,}1 \\, \\text{μΩ·m} i es considera que la variació amb la temperatura és negligible.  
            <br><br>
            Determineu:  
-           <br><strong>a)</strong> La resistència elèctrica <strong>R</strong> del fil. [0,5 punts]  
-           <br><strong>b)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba de la potència <strong>P</strong> dissipada pel fil en funció de la tensió aplicada U (0 ≤ U ≤ 20 V). [1 punt]  
+           <br><strong>a)</strong> La resistència elèctrica \\(R\\) del fil. [0,5 punts]  
+           <br><strong>b)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba de la potència \\(P\\) dissipada pel fil en funció de la tensió aplicada \\(U\\) (0 ≤ U ≤ 20 V). [1 punt]  
            <br><strong>c)</strong> Calculeu l’energia <strong>E</strong>, en Wh, consumida per la font si s’ha fixat la tensió U = 18 V durant t = 1,5 h i el rendiment és \\(\\eta\\) = 0{,}68. [1 punt]  
            <br><br>
            `,
@@ -1270,14 +1270,14 @@ const questions = [
 {
     type: "exercicis",
     category: "energia",
-    text: `Una planta de tractament i aprofitament de residus produeix una energia elèctrica diària <strong>E_elèc = 65 MW·h</strong> a partir de <strong>m_r = 75·10³ kg</strong> de residus vegetals amb un poder calorífic mitjà <strong>p = 11,8 MJ/kg</strong>.  
-           La resta d’energia s’utilitza per elevar la temperatura de <strong>m_a = 3·10³ kg</strong> d’aigua en \\(\\delta T\\) = 40 \\, \\text{°C}.  
-           La calor específica de l’aigua és <strong>c_e = 4,18 J/(g·°C)</strong>.  
+    text: `Una planta de tractament i aprofitament de residus produeix una energia elèctrica diària \\(E_{elèc} = 65 \\, \\text{MWh} a partir de \\(m_r = 75 \\cdot 10^3 \\, \\text{kg} de residus vegetals amb un poder calorífic mitjà \\(p = 11{,}8 \\, \\text{MJ/kg}\\).  
+           La resta d’energia s’utilitza per elevar la temperatura de \\(m_a = 3 \\cdot 10^3 \\, \\text{kg} d’aigua en \\(\\Delta T = 40 \\, \\text{°C}\\).  
+           La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\text{J/g°C}\\).  
            <br><br>
            Determineu:  
-           <br><strong>a)</strong> El rendiment elèctric mitjà <strong>η_elèc</strong> de la planta. [0,75 punts]  
-           <br><strong>b)</strong> El rendiment tèrmic mitjà <strong>η_tèrmic</strong> de la planta. [1,25 punts]  
-           <br><strong>c)</strong> La potència elèctrica mitjana <strong>P_elèc</strong> i el cabal mitjà <strong>q</strong>, en l/s, d’aigua escalfada. [0,5 punts]  
+           <br><strong>a)</strong> El rendiment elèctric mitjà \\(\\eta_{elèc}\\) de la planta. [0,75 punts]  
+           <br><strong>b)</strong> El rendiment tèrmic mitjà \\(\\eta_{tèrmic}\\) de la planta. [1,25 punts]  
+           <br><strong>c)</strong> La potència elèctrica mitjana \\(P_{elèc} i el cabal mitjà \\(\\text{q}) en l/s, d’aigua escalfada. [0,5 punts]  
            <br><br>
 `,
     correctAnswer: "",
@@ -1290,17 +1290,17 @@ const questions = [
         E_{elèc} = 65 \\, \\text{MW·h} = 65 \\cdot 10^6 \\cdot 3600 \\, J = 234 \\cdot 10^9 \\, J
         \\]  
         \\[
-        \\eta_\\text{elèc} = \\frac{E_\\text{elèc}}{E_\\text{tot}} = \\frac{234 \\ cdot10^9}{885 \\cdot 10^9} = 0{,}2644
+        \\eta_\\text{elèc} = \\frac{E_\\text{elèc}}{E_\\text{tot}} = \\frac{234 \\ cdot 10^9}{885 \\cdot 10^9} = 0{,}2644
         \\]  
         <br><br>
         
         <strong>b) Rendiment tèrmic mitjà:</strong>
         \\[
-        E_{aigua} = m_a \\cdot c_e \\cdot \\delta T = 3 \\cdot 10^3 \\, \\text{kg} \\cdot 4180 \\, \\text{J/kg°C} \\cdot 40 \\, \\text{°C} = 501{,}6 \\cdot 10^3 \\, MJ
+        E_{aigua} = m_a \\cdot c_e \\cdot \\Delta T = 3 \\cdot 10^3 \\, \\text{kg} \\cdot 4180 \\, \\text{J/kg°C} \\cdot 40 \\, \\text{°C} = 501{,}6 \\cdot 10^3 \\, MJ
         \\]  
         - Energia tèrmica disponible:  
         \\[
-        E_text{tèrmic} = (1 - \\eta_{elèc})·E_text{tot} = 651 \\cdot 10^3 \\, MJ
+        E_{tèrmic} = (1 - \\eta_{elèc})·E_{tot} = 651 \\cdot 10^3 \\, MJ
         \\]  
         \\[
         \\eta_\\text{tèrmic} = \\frac{E_\\text{aigua}}{E_\\text{tèrmic}} = 0{,}7705
@@ -1309,7 +1309,7 @@ const questions = [
         
         <strong>c) Potència elèctrica mitjana i cabal d’aigua:</strong>
         \\[
-        P_\\text{elèc} = \\frac{E_\\text{elèc}}{24} = \\frac{65 \\, \\text{MW·h}}{24 \\, \\text{h}} ≈ 2,708 MW
+        P_\\text{elèc} = \\frac{E_\\text{elèc}}{24} = \\frac{65 \\, \\text{MW·h}}{24 \\, \\text{h}} = 2,708 MW
         \\]  
         Cabal mitjà:  
         \\[
