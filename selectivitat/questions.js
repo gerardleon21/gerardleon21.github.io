@@ -422,18 +422,18 @@ const questions = [
     <br>
     - Equilibri de forces horitzontals:
     \\[
-    \\sum F_h = 0 \\Rightarrow F_h - T \\cos \\varphi = 0
+    \\sum F_h = 0 \\Rightarrow F_h - T \\cos \\phi = 0
     \\]
     \\[
-    F_h = T \\cos \\varphi = 147{,}1 \\, \\text{N}
+    F_h = T \\cos \\phi = 147{,}1 \\, \\text{N}
     \\]
     <br>
     - Equilibri de forces verticals:
     \\[
-    \\sum F_v = 0 \\Rightarrow F_v + T \\sin \\varphi - m g = 0
+    \\sum F_v = 0 \\Rightarrow F_v + T \\sin \\phi - m g = 0
     \\]
     \\[
-    F_v = m g - T \\sin \\varphi = 49{,}04 \\, \\text{N}
+    F_v = m g - T \\sin \\phi = 49{,}04 \\, \\text{N}
     \\]
     <br><br>
 
@@ -453,13 +453,11 @@ const questions = [
     <br><br>
     `
 },
-
-
     
-     {
+{
         type: "exercicis",
-        category: "electrics",
-        text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{t} = 25^\\circ C\\).
+        category: "energia",
+        text: `Un escalfador, que funciona amb gas natural de poder calorífic \\(p_c = 61 \\, \\text{MJ/kg}\\), pot arribar a donar un cabal \\(q = 13{,}8 \\, \\text{l/min}\\), i elevar la temperatura de l’aigua \\(\\Delta\\text{T} = 25^\\circ C\\).
         La calor específica de l'aigua és \\(c_e = 4{,}18 \\, \\text{J/gºC}\\). Determineu, en aquestes condicions de funcionament:               
                <br><strong>a)</strong> La potència útil \\(P\\). [0,5 punts]
                <br><strong>b)</strong> El rendiment \\(\\eta\\) si el consum del combustible és \\(q_\\text{com} = 0{,}51 \\, \\text{g/s}\\). [1 punt]
@@ -472,30 +470,26 @@ const questions = [
             <br>
             - L'energia útil o calor s'expressa així:
             \\[
-            Q = \\text{m} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t}          
+            Q = \\text{m} \\cdot c_e \\cdot \\Delta T
             \\]
-            - Dividim els dos costats pel temps:
+            - Dividim els dos costats del igual pel temps:
             \\[
-            \\frac{Q}{\\text{t}} = \\frac{\\text{m} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t}}{\\text{t}}
+            \\frac{Q}{\\text{t}} = \\frac{\\text{m} \\cdot c_e \\cdot \\Delta \\text{T}}{\\text{t}}
             \\]
-            - L'energia dividida pel temps és igual a la potència i la massa dividida pel temps és igual al cabal, perquè 1 l d'aigua és igual a 1 kg d'aigua :
+            - L'energia dividida pel temps és igual a la potència i la masa dividida pel temps és igual al cabal:
             \\[
-            P = \\text{q} \\cdot \\text{c}_\\text{e} \\cdot \\Delta\\text{t} 
+            P = \\text{q} \\cdot c_e \\cdot \\Delta \\text{T}
             \\]
-            - Conversions:
+            - Conversió del cabal:
             \\[
-            \\text{q} = 13{,}8 \\, \\text{l/min} \\cdot \\frac{1000\\, \\text{g}}{1 \\, \\text{l}} \\cdot \\frac{1 \\, \\text{min}}{60\\, \\text{s}}
-            \\]
-            \\[
-            \\text{q} = 230 \\, \\text{g/s}
+            \\text{q} = 13{,}8 \\, \\text{l/min} \\cdot \\frac{1000 \\, \\text{g}}{1 \\, \\text{l}} \\cdot \\frac{1 \\, \\text{min}}{60 \\, \\text{s}}
             \\]
             - Substituïm a la fórmula de la potència:
             \\[
-            P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, text{W} = 24{,}04 \\, \\text{kW}
+            P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, \\text{W} = 24{,}04 \\, \\text{kW}
             \\]
             <br>
-            <br>
-            <strong>b) Càlcul del rendiment \\eta:</strong>           
+            <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>           
             <br>
             - Fórmula del rendiment:
             \\[
@@ -503,33 +497,17 @@ const questions = [
             \\]
             - La potència consumida és:
             \\[
-            P_{\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{\\text{p}_{\\text{c}} \\cdot \\text{m}}{\\text{t}} = \\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}
+            P_\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{p_c \\cdot \\text{m}}{\\text{t}} = p_c \\cdot q_{\\text{comb}}
             \\]
-            <br>
-            <br>
             - Càlcul del rendiment:
-            <br>
             \\[
-            \\eta = \\frac{P_{\\text{útil}}{\\text{p}_{\\text{c}} \\cdot \\text{q}_{\\text{comb}}} 
-            \\]    
-            \\[
-            \\eta = \\frac{24035 \\, \\text{W}}{0{,}51 \\cdot 10^{-3} \\, \\text{kg/s} \\cdot 61 \\cdot 10^6 \\, \\text{J/kg}} = \\frac{24035 \\, \\text{W}}{31110 \\, \\text{W}} = 0,7726
-            \\]   
-            <br>
-            <br>
-            <strong>c) Càlcul del temps i el combustible necessaris:</strong>
-            <br>
-            - Càlcul del temps:
-            \\[
-            \\text{q} = \\frac{V}{\\text{t}}
+            \\eta = \\frac{P_{\\text{útil}}}{p_c \\cdot q{\\text{comb}}}
             \\]
             \\[
-            \\text{t} = \\frac{V}{\\text{q}} = \\frac{150 \\, \\text{l}}{13{,}8 \\, \\text{l/min}} = 10{,}87 \\, \\text{min} = 652{,}2 \\, \\text{s}
+            \\eta = \\frac{24035}{31110} = 0{,}7726
             \\]
-            - Combustible consumit:
-            \\[
-            m_{com} = q_{com} \\cdot t = 0{,}51 \\, \\text{g/s} \\cdot 652{,}2 \\, \\text{s} = 333 \\, \\text{g}
-            \\]
+            <br>
+            <strong>c) Càlcul del temps i combustibles necessaris:</strong>     
             <br><br>
           
     `}, 
