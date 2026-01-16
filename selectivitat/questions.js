@@ -1,5 +1,5 @@
 const questions = [
-    {
+    { 
         type: "exercicis",
         category: "control",
         text: `Una fresadora disposa d’una pantalla de protecció per a evitar que en condicions normals es pugui accedir a la zona de treball quan està en marxa. La màquina s’atura si s’enretira aquesta pantalla i abans no s’ha premut el botó que dóna permís per a fer-ho sense que la màquina s’aturi. Si es prem el botó d’emergència, la màquina s’atura sempre.
