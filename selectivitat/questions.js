@@ -1316,6 +1316,225 @@ const questions = [
         \\text{q} = \\frac{m_a}{24·3600 s} = 34{,}72 \\, \\text{l/s}
         \\]
     `
+},
+
+{
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `L’Elgiloy, aliatge emprat en la fabricació de molles, té una composició: 41 % Co (cobalt), 19 % Cr (crom), 15 % Ni (níquel) i 25 % d’altres elements (Mo, Mg...). 
+    Quina quantitat de crom es necessita per a aliar-lo amb 225 kg de cobalt?`,
+    options: [
+        { text: "82,32 kg", value: "a" },
+        { text: "104,3 kg", value: "b" },
+        { text: "137,2 kg", value: "c" },
+        { text: "177,6 kg", value: "d" }
+    ],
+    correctAnswer: "b",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Sabem que la composició és:
+    <br>
+    Co: 41 %  
+    Cr: 19 %  
+    Ni: 15 %  
+    Altres: 25 %
+    <br><br>
+    - La massa de cobalt disponible és:
+    \\[
+    m_{Co} = 225 \\, \\text{kg}
+    \\]
+    
+    - La relació entre les masses de Co i Cr segons la composició:
+    \\[
+    \\frac{m_{Cr}}{m_{Co}} = \\frac{19}{41}
+    \\]
+    
+    - Massa de crom necessària:
+    \\[
+    m_{Cr} = 225 \\cdot \\frac{19}{41} = 104,27 \\, \\text{kg}
+    \\]
+
+    <br>
+    La resposta correcta és l’opció <strong>b)</strong>.
+    <br><br>
+    `
+},
+
+    {
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Un tipus de paper reciclat es comercialitza en paquets de 500 fulls A4, de mida
+    \\(210 \\, \\text{mm} \\times 297 \\, \\text{mm}\\).
+    Els 500 fulls del paquet tenen un pes de \\(23{,}39 \\, \\text{N}\\).
+    Quin és el gramatge, en \\(\\text{g/m}^2\\), del paper?
+    \\((g = 10 \\, \\text{m/s}^2)\\)`,
+    options: [
+        { text: "90 g/m²", value: "a" },
+        { text: "85 g/m²", value: "b" },
+        { text: "80 g/m²", value: "c" },
+        { text: "75 g/m²", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Conversió de les dimensions del full A4 a metres:
+    \\[
+    210 \\, \\text{mm} = 0{,}21 \\, \\text{m} \\quad
+    297 \\, \\text{mm} = 0{,}297 \\, \\text{m}
+    \\]
+
+    - Àrea d’un full A4:
+    \\[
+    A_{full} = 0{,}21 \\cdot 0{,}297 = 0{,}06237 \\, \\text{m}^2
+    \\]
+
+    - Àrea total dels 500 fulls:
+    \\[
+    A_{total} = 500 \\cdot 0{,}06237 = 31{,}185 \\, \\text{m}^2
+    \\]
+
+    - Càlcul de la massa a partir del pes:
+    \\[
+    m = \\frac{P}{g} = \\frac{23{,}39}{10} = 2{,}339 \\, \\text{kg}
+    \\]
+
+    - Gramatge del paper:
+    \\[
+    G = \\frac{m}{A_{total}} = \\frac{2{,}339}{31{,}185}
+    = 0{,}075 \\, \\text{kg/m}^2
+    \\]
+
+    - Conversió a grams:
+    \\[
+    G = 75 \\, \\text{g/m}^2
+    \\]
+
+    <br>
+    La resposta correcta és l’opció <strong>d)</strong>.
+    <br><br>
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "organitzacio",
+    text: `Per a fabricar un model de collaret, un joier necessita una inversió inicial de
+    \\(750 \\, €\\) i una despesa addicional de \\(8 \\, €\\) per unitat.
+    Si els ven a un preu unitari de \\(58 \\, €\\), quants collarets ha de fabricar i vendre
+    per a tenir un benefici mínim de \\(1300 \\, €\\)?`,
+    options: [
+        { text: "23", value: "a" },
+        { text: "26", value: "b" },
+        { text: "36", value: "c" },
+        { text: "41", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Cost total en funció del nombre de collarets \\(x\\):
+    \\[
+    C = 750 + 8x
+    \\]
+
+    - Ingressos per la venda dels collarets:
+    \\[
+    I = 58x
+    \\]
+
+    - Benefici:
+    \\[
+    B = I - C = 58x - (750 + 8x) = 50x - 750
+    \\]
+
+    - Es vol obtenir un benefici mínim de 1300 €:
+    \\[
+    50x - 750 \\ge 1300
+    \\]
+
+    - Resolució de la desigualtat:
+    \\[
+    50x \\ge 2050
+    \\]
+    \\[
+    x \\ge 41
+    \\]
+
+    <br>
+    Per tant, ha de fabricar i vendre com a mínim <strong>41 collarets</strong>.
+    <br><br>
+    La resposta correcta és l’opció <strong>d)</strong>.
+    <br><br>
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "organitzacio",
+    text: `La modificació del traçat d’una xarxa viària ha d’incloure un estudi de l’impacte ambiental que genera?`,
+    options: [
+        { text: "Només si en el traçat inicial ja s’havia considerat.", value: "a" },
+        { text: "Només si el nou traçat creua una zona rural.", value: "b" },
+        { text: "Sempre.", value: "c" },
+        { text: "Només si el nou traçat creua una zona industrial.", value: "d" }
+    ],
+    correctAnswer: "c",
+    steps: `
+    <strong>Explicació:</strong>
+    <br>
+    Qualsevol modificació del traçat d’una infraestructura viària pot generar nous impactes
+    ambientals (afectació del sòl, del paisatge, del soroll, de la fauna, de la qualitat de l’aire, etc.).
+    <br>
+    Per aquest motiu, la legislació i els criteris de planificació estableixen que
+    sempre s’ha de realitzar un estudi de l’impacte ambiental, independentment del tipus de zona
+    que travessi el nou traçat.
+    <br><br>
+    La resposta correcta és l’opció <strong>c)</strong>.
+    <br><br>
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "metrologia",
+    text: `En un plànol s’indica que la tolerància general és del \\(\\pm 2\\%\\).
+    Si la distància nominal entre els centres de dos forats és de \\(15 \\, \\text{mm}\\),
+    entre quins valors pot estar compresa aquesta distància?`,
+    options: [
+        { text: "15 mm i 15,3 mm", value: "a" },
+        { text: "14,7 mm i 15 mm", value: "b" },
+        { text: "14,7 mm i 15,3 mm", value: "c" },
+        { text: "14,8 mm i 15,2 mm", value: "d" }
+    ],
+    correctAnswer: "c",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Distància nominal:
+    \\[
+    d = 15 \\, \\text{mm}
+    \\]
+
+    - Càlcul de la tolerància (2 %):
+    \\[
+    0{,}02 \\cdot 15 = 0{,}3 \\, \\text{mm}
+    \\]
+
+    - Valor mínim:
+    \\[
+    15 - 0{,}3 = 14{,}7 \\, \\text{mm}
+    \\]
+
+    - Valor màxim:
+    \\[
+    15 + 0{,}3 = 15{,}3 \\, \\text{mm}
+    \\]
+
+    <br>
+    Per tant, la distància pot estar compresa entre <strong>14,7 mm i 15,3 mm</strong>.
+    <br><br>
+    La resposta correcta és l’opció <strong>c)</strong>.
+    <br><br>
+    `
 }
 
 
