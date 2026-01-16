@@ -378,9 +378,8 @@ const questions = [
 
     {
     type: "exercicis",
-    category: "mecanica",
-    text: `La taula de massa \\(m = 15 \\, \\text{kg}\\) està articulada en el punt O i es manté en repòs
-           mitjançant el tub PQ de secció resistent \\(s = 12{,}5 \\, \\text{mm}^2\\).
+    category: "maquines",
+    text: `La taula de massa \\(m = 15 \\, \\text{kg}\\) està articulada en el punt O i es manté en repòs mitjançant el tub PQ de secció resistent \\(s = 12{,}5 \\, \\text{mm}^2\\).
            <br><br>
            A la figura es mostren les dimensions geomètriques del sistema.
            <br><br>
@@ -389,7 +388,9 @@ const questions = [
            <br><strong>b)</strong> La força T que fa el tub PQ. [0,5 punts]
            <br><strong>c)</strong> Les forces vertical \\(F_v\\) i horitzontal \\(F_h\\) a l’articulació O. [1 punt]
            <br><strong>d)</strong> La tensió normal \\sigma del tub PQ a causa de la força que fa. [0,5 punts]
-           <br><br>`,
+           <br><br>
+           <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1Ae3.jpg" alt="-">
+           `,
     correctAnswer: "",
     steps: `
     <strong>a) Càlcul del'angle del tub \\(PQ\\):</strong>
