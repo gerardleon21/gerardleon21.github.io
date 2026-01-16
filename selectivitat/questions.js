@@ -506,7 +506,16 @@ const questions = [
             \\]
             <br>
             <strong>c) Càlcul del temps i combustibles necessaris:</strong>     
-            <br><br>
+                <br>
+    - Temps necessari:
+    \\[
+    \\text{t} = \\frac{V}{\\text{q}} = \\frac{150 \\, \\text{l}}{13{,}8 \\, \\text{l/min}} = 10{,}87 \\, \\text{min} = 652{,}2 \\, \\text{s}
+    \\]
+    - Combustible consumit:
+    \\[
+    m_{com} = q_{com} \\cdot t = 0{,}51 \\, \\text{g/s} \\cdot 652{,}2 \\, \\text{s} = 332{,}6 \\, \\text{g}
+    \\]
+    <br><br>
           
     `}, 
     
