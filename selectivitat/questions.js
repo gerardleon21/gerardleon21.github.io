@@ -1233,14 +1233,14 @@ const questions = [
     type: "exercicis",
     category: "electrics",
     text: `Un fil de nicrom tensat i calent s’utilitza per tallar poliestirè expandit.  
-           Per escalfar-lo, es fa passar corrent amb una font de tensió \\(U\\) regulable.  
-           El fil té una llargada \\(\\text{l} = 0{,}4 \\, \\text{m} i un diàmetre \\(\\text{d} = 0{,}5 \\, \\text{mm}.  
-           La resistivitat del nicrom és \\(\\rho = 1{,}1 \\, \\text{μΩ·m} i es considera que la variació amb la temperatura és negligible.  
+           Per escalfar-lo, es fa passar corrent amb una font de tensió U regulable.  
+           El fil té una llargada <strong>l = 0,4 m</strong> i un diàmetre <strong>d = 0,5 mm</strong>.  
+           La resistivitat del nicrom és <strong>ρ = 1,1 μΩ·m</strong> i es considera que la variació amb la temperatura és negligible.  
            <br><br>
            Determineu:  
-           <br><strong>a)</strong> La resistència elèctrica \\(R\\) del fil. [0,5 punts]  
-           <br><strong>b)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba de la potència \\(P\\) dissipada pel fil en funció de la tensió aplicada \\(U\\) (0 ≤ U ≤ 20 V). [1 punt]  
-           <br><strong>c)</strong> Calculeu l’energia <strong>E</strong>, en Wh, consumida per la font si s’ha fixat la tensió U = 18 V durant t = 1,5 h i el rendiment és \\(\\eta\\) = 0{,}68. [1 punt]  
+           <br><strong>a)</strong> La resistència elèctrica <strong>R</strong> del fil. [0,5 punts]  
+           <br><strong>b)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba de la potència <strong>P</strong> dissipada pel fil en funció de la tensió aplicada U (0 ≤ U ≤ 20 V). [1 punt]  
+           <br><strong>c)</strong> Calculeu l’energia <strong>E</strong>, en W·h, consumida per la font si s’ha fixat la tensió U = 18 V durant t = 1,5 h i el rendiment és η = 0,68. [1 punt]  
            <br><br>
            `,
     correctAnswer: "",
@@ -1270,21 +1270,21 @@ const questions = [
 {
     type: "exercicis",
     category: "energia",
-    text: `Una planta de tractament i aprofitament de residus produeix una energia elèctrica diària \\(E_{elèc} = 65 \\, \\text{MWh} a partir de \\(m_r = 75 \\cdot 10^3 \\, \\text{kg} de residus vegetals amb un poder calorífic mitjà \\(p = 11{,}8 \\, \\text{MJ/kg}\\).  
-           La resta d’energia s’utilitza per elevar la temperatura de \\(m_a = 3 \\cdot 10^3 \\, \\text{kg} d’aigua en \\(\\Delta T = 40 \\, \\text{°C}\\).  
-           La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\text{J/g°C}\\).  
+    text: `Una planta de tractament i aprofitament de residus produeix una energia elèctrica diària <strong>E_elèc = 65 MW·h</strong> a partir de <strong>m_r = 75·10³ kg</strong> de residus vegetals amb un poder calorífic mitjà <strong>p = 11,8 MJ/kg</strong>.  
+           La resta d’energia s’utilitza per elevar la temperatura de <strong>m_a = 3·10³ kg</strong> d’aigua en Δt = 40 °C.  
+           La calor específica de l’aigua és <strong>c_e = 4,18 J/(g·°C)</strong>.  
            <br><br>
            Determineu:  
-           <br><strong>a)</strong> El rendiment elèctric mitjà \\(\\eta_{elèc}\\) de la planta. [0,75 punts]  
-           <br><strong>b)</strong> El rendiment tèrmic mitjà \\(\\eta_{tèrmic}\\) de la planta. [1,25 punts]  
-           <br><strong>c)</strong> La potència elèctrica mitjana \\(P_{elèc} i el cabal mitjà \\(\\text{q}) en l/s, d’aigua escalfada. [0,5 punts]  
+           <br><strong>a)</strong> El rendiment elèctric mitjà <strong>η_elèc</strong> de la planta. [0,75 punts]  
+           <br><strong>b)</strong> El rendiment tèrmic mitjà <strong>η_tèrmic</strong> de la planta. [1,25 punts]  
+           <br><strong>c)</strong> La potència elèctrica mitjana <strong>P_elèc</strong> i el cabal mitjà <strong>q</strong>, en l/s, d’aigua escalfada. [0,5 punts]  
            <br><br>
 `,
     correctAnswer: "",
     steps: `
         <strong>a) Rendiment elèctric mitjà:</strong>
         \\[
-        E_\\text{tot} = m_r \\cdot \\text{p} = 75 \\ cdot 10^3 \\cdot 11,8·10^6 = 885 \\ cdot 10^9 \\,  J
+        E_\\text{tot} = m_r \\cdot \\text{p} = 75 \\ cdot 10^3 \\cdot 11,8·10^6 = 885 \\cdot 10^9 \\,  J
         \\]  
         \\[
         E_{elèc} = 65 \\, \\text{MW·h} = 65 \\cdot 10^6 \\cdot 3600 \\, J = 234 \\cdot 10^9 \\, J
@@ -1420,9 +1420,9 @@ const questions = [
     type: "questions", // Tipus de pregunta
     category: "organitzacio",
     text: `Per a fabricar un model de collaret, un joier necessita una inversió inicial de
-    \\(750 \\, €\\) i una despesa addicional de \\(8 \\, €\\) per unitat.
-    Si els ven a un preu unitari de \\(58 \\, €\\), quants collarets ha de fabricar i vendre
-    per a tenir un benefici mínim de \\(1300 \\, €\\)?`,
+    750 euros i una despesa addicional de 8 euros per unitat.
+    Si els ven a un preu unitari de 58 euros, quants collarets ha de fabricar i vendre
+    per a tenir un benefici mínim de 1300 euros?`,
     options: [
         { text: "23", value: "a" },
         { text: "26", value: "b" },
