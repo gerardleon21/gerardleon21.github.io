@@ -62,7 +62,7 @@ const questions = [
                <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
                <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
                <br><br>
-             <img src="https://gerardleon21.github.io/selectivitat/circuit 1.png" alt="Circuit de l'exercici">`,  // Imatge opcional al final de la pregunta
+             <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae3.jpg" alt="Circuit de l'exercici">`,  // Imatge opcional al final de la pregunta
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Càlcul de la resistència equivalent \\(R_{\\text{eq}}\\) del circuit:</strong>
@@ -491,6 +491,16 @@ const questions = [
             P = 230 \\, \\text{g/s} \\cdot 4{,}18 \\, \\text{J/gºC} \\cdot 25 \\, \\text{ºC} = 24035 \\, \\text{W} = 24{,}04 \\, \\text{kW}
             \\]
             <br>
+            <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>
+            <br>
+            - Fórmula del rendiment:
+            \\[
+            \\eta = \\frac{P_{\\text{útil}}{P_{\\text{cons}}
+            \\]
+            - La potència consumida és:
+            \\[
+            P_\\text{cons} = \\frac{E_{\\text{cons}}}{\\text{t}} = \\frac{p_c \\cdot \\text{m}}{\\text{t}} = p_c \\cdot q_{\\text{comb}}
+            \\]
             <strong>b) Càlcul del rendiment \\(\\eta\\):</strong>           
             <br>
             - Fórmula del rendiment:
@@ -533,7 +543,9 @@ const questions = [
            <br><strong>c)</strong> El consum \\(E\\) si s’utilitza durant \\(1{,}5 \\, \\text{h}\\) i,
            per a mantenir la temperatura, l’interruptor funciona cíclicament amb una cadència
            de 30 s obert i 90 s tancat. [1 punt]
-           <br><br>`,
+           <br><br>
+           <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae3.jpg" alt="Circuit de l'exercici">
+           `,
     correctAnswer: "",
     steps: `
     <strong>a) Valor de la resistència \\(R\\):</strong>
@@ -594,6 +606,105 @@ const questions = [
     <br><br>
     `
 },
+
+  {
+    type: "exercicis",
+    category: "electrics",
+    text: `El parell motor \\(\\Gamma\\) i la velocitat angular \\(\\omega\\) de l’eix d’un motor de corrent continu
+           estan relacionats amb la tensió d’alimentació \\(U\\) i el corrent consumit \\(I\\) per les expressions:
+           <br><br>
+           \\[
+           \\Gamma = c \\cdot I
+           \\]
+           \\[
+           \\omega = \\frac{U - I \\cdot R}{c}
+           \\]
+           <br><br>
+           Un trepant elèctric alimentat a \\(U = 12 \\, \\text{V}\\) té un motor d’aquestes característiques,
+           l’eix del qual gira com a màxim a \\(\\omega = 200 \\, \\text{rad/s}\\).
+           <br><br>
+           Aquest motor té una constant de parell \\(c = 0{,}06 \\, \\text{Nm/A}\\) i una resistència
+           de l’induït \\(R = 4 \\, \\Omega\\).
+           <br><br>
+           Determineu:
+           <br><strong>a)</strong> Dibuixeu, de manera aproximada i indicant les escales, la corba
+           del corrent d’alimentació \\(I\\) en funció de la velocitat de gir \\(\\omega\\). [1 punt]
+           <br><strong>b)</strong> Determineu el parell màxim que és capaç de proporcionar aquest motor
+           i a quina velocitat es produeix. [0,75 punts]
+           <br><strong>c)</strong> Calculeu l’energia elèctrica \\(E\\), en W·h, que consumeix el motor
+           si funciona contínuament durant \\(t = 4 \\, \\text{min}\\) a una velocitat
+           \\(\\omega = 120 \\, \\text{rad/s}\\). [0,75 punts]
+           <br><br>`,
+    correctAnswer: "",
+    steps: `
+    <strong>a) Corba del corrent \\(I\\) en funció de la velocitat \\(\\omega\\):</strong>
+    <br>
+    - A partir de:
+    \\[
+    \\omega = \\frac{U - c I}{R}
+    \\]
+    - Despejant el corrent:
+    \\[
+    I = \\frac{U - c \\omega}{R}
+    \\]
+    <br>
+    - Es tracta d’una relació lineal decreixent.
+    <br><br>
+    - Valors extrems:
+    <br>
+    \\(\\omega = 0 \\Rightarrow I = \\frac{12}{4} = 3 \\, \\text{A}\\)
+    <br>
+    \\(\\omega = 200 \\, \\text{rad/s} \\Rightarrow I = 0\\)
+    <br><br>
+    - Recta que uneix els punts:
+    <br>
+    \\((0 , 3)\\) i \\((200 , 0)\\)
+    <img src="https://gerardleon21.github.io/selectivitat/images/2007serie1Be4.jpg.png" alt="Gràfica">
+
+    <br><br>
+
+    <strong>b) Parell màxim del motor:</strong>
+    <br>
+    - El parell és:
+    \\[
+    \\Gamma = c \\cdot I
+    \\]
+    - El corrent màxim es produeix a \\(\\omega = 0\\):
+    \\[
+    I_{max} = \\frac{U}{R} = 3 \\, \\text{A}
+    \\]
+    - Parell màxim:
+    \\[
+    \\Gamma_{max} = c \\cdot I_{max} = 0{,}06 \\cdot 3 = 0{,}18 \\, \\text{Nm}
+    \\]
+    <br>
+    - Es produeix a \\(\\omega = 0\\) (arrencada).
+    <br><br>
+
+    <strong>c) Energia elèctrica consumida:</strong>
+    <br>
+    - Corrent a \\(\\omega = 120 \\, \\text{rad/s}\\):
+    \\[
+    I = \\frac{12 - 0{,}06 \\cdot 120}{4} = 1{,}2 \\, \\text{A}
+    \\]
+    - Potència elèctrica:
+    \\[
+    P_{el} = U \\cdot I = 12 \\cdot 1{,}2 = 14{,}4 \\, \\text{W}
+    \\]
+    - Temps:
+    \\[
+    t = 4 \\, \\text{min} = \\frac{4}{60} \\, \\text{h}
+    \\]
+    - Energia consumida:
+    \\[
+    E = P_{el} \\cdot t = 14{,}4 \\cdot \\frac{4}{60}
+    \\]
+    \\[
+    E = 0{,}96 \\, \\text{W·h} = 3{,}456 \\, \\text{kJ}
+    \\]
+    <br><br>
+    `
+},  
     
     {
         type: "questions", // Tipus de pregunta
@@ -750,5 +861,201 @@ const questions = [
         Aquests valors corresponen a l’opció <strong>c)</strong>.
         <br><br>
 `},
+
+    {
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Una fàbrica de rajoles fabrica un model de mides \\(310 \\, \\text{mm} \\times 610 \\, \\text{mm} \\times 9 \\, \\text{mm}\\).
+    Si se sap que 6 rajoles tenen un pes de \\(204{,}2 \\, \\text{N}\\), quina és la densitat mitjana del material de què són fetes les rajoles?
+    \\((g = 10 \\, \\text{m/s}^2)\\)`,
+    options: [
+        { text: "\\(2 \\cdot 10^{3} \\, \\text{kg/m}^3\\)", value: "a" },
+        { text: "\\(12 \\cdot 10^{3} \\, \\text{kg/m}^3\\)", value: "b" },
+        { text: "\\(19{,}6 \\cdot 10^{3} \\, \\text{kg/m}^3\\)", value: "c" },
+        { text: "\\(117 \\cdot 10^{3} \\, \\text{kg/m}^3\\)", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Conversió de les dimensions a metres:
+    \\[
+    310 \\, \\text{mm} = 0{,}31 \\, \\text{m} \\quad
+    610 \\, \\text{mm} = 0{,}61 \\, \\text{m} \\quad
+    9 \\, \\text{mm} = 0{,}009 \\, \\text{m}
+    \\]
+
+    - Volum d’una rajola:
+    \\[
+    V = 0{,}31 \\cdot 0{,}61 \\cdot 0{,}009 = 1{,}70 \\cdot 10^{-3} \\, \\text{m}^3
+    \\]
+
+    - Volum total de 6 rajoles:
+    \\[
+    V_{total} = 6 \\cdot 1{,}70 \\cdot 10^{-3} = 1{,}02 \\cdot 10^{-2} \\, \\text{m}^3
+    \\]
+
+    - Càlcul de la massa a partir del pes:
+    \\[
+    m = \\frac{P}{g} = \\frac{204{,}2}{10} = 20{,}42 \\, \\text{kg}
+    \\]
+
+    - Densitat del material:
+    \\[
+    \\rho = \\frac{m}{V} = \\frac{20{,}42}{1{,}02 \\cdot 10^{-2}} \\approx 2{,}0 \\cdot 10^{3} \\, \\text{kg/m}^3
+    \\]
+
+    <br>
+    La resposta correcta és l’opció <strong>a)</strong>.
+    <br><br>
+    `
+},
+    {
+    type: "questions", // Tipus de pregunta
+    category: "organitzacio",
+    text: `En una màquina eina de control numèric es realitzen sobre cada peça tres operacions simultànies.
+    La durada de les operacions és \\(t_1 = 8 \\, \\text{s}\\), \\(t_2 = 16 \\, \\text{s}\\) i \\(t_3 = 20 \\, \\text{s}\\),
+    i el temps necessari per a canviar de peça és \\(t_c = 5 \\, \\text{s}\\).
+    Quin és el nombre màxim de peces que es poden mecanitzar per hora?`,
+    options: [
+        { text: "73", value: "a" },
+        { text: "144", value: "b" },
+        { text: "150", value: "c" },
+        { text: "180", value: "d" }
+    ],
+    correctAnswer: "b",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Com que les tres operacions es realitzen de manera simultània, el temps de mecanitzat d’una peça
+    ve determinat per l’operació més llarga:
+    \\[
+    t_{mecanitzat} = \\max(8, 16, 20) = 20 \\, \\text{s}
+    \\]
+
+    - Temps total per peça (mecanitzat + canvi de peça):
+    \\[
+    t_{total} = 20 + 5 = 25 \\, \\text{s}
+    \\]
+
+    - Nombre de peces mecanitzades per hora:
+    \\[
+    \\frac{3600}{25} = 144 \\, \\text{peces/hora}
+    \\]
+
+    <br>
+    La resposta correcta és l’opció <strong>b)</strong>.
+    <br><br>
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "organitzacio",
+    text: `Un tècnic d’una empresa proposa la reestructuració d’una línia de producció amb l’únic
+    argument d’augmentar el nombre d’unitats produïdes per hora.
+    És suficient aquest argument per a justificar el canvi?`,
+    options: [
+        { text: "Sí, ja que el canvi comportaria augmentar els beneficis de l’empresa.", value: "a" },
+        { text: "Sí, ja que el canvi comportaria disminuir l’impacte ambiental per unitat produïda.", value: "b" },
+        { text: "Sí, ja que augmentar la producció és sempre un avanç tecnològic.", value: "c" },
+        { text: "No; cal aportar altres elements de judici: inversions, amortitzacions, seguretat, qualitat...", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+    <strong>Explicació:</strong>
+    <br>
+    L’augment del nombre d’unitats produïdes per hora no és, per si sol, un criteri suficient
+    per a justificar una reestructuració d’una línia de producció.
+    <br>
+    Cal tenir en compte altres factors fonamentals, com ara:
+    <ul>
+        <li>El cost de les inversions necessàries i la seva amortització</li>
+        <li>L’impacte sobre la seguretat dels treballadors</li>
+        <li>La qualitat del producte final</li>
+        <li>Els costos de manteniment i d’explotació</li>
+        <li>Els possibles impactes ambientals</li>
+    </ul>
+    <br>
+    Per tant, és necessari disposar de més elements de judici abans de justificar el canvi.
+    <br><br>
+    La resposta correcta és l’opció <strong>d)</strong>.
+    <br><br>
+    `
+},
+    {
+    type: "questions", // Tipus de pregunta
+    category: "metrologia",
+    text: `Si s’especifica que el diàmetre d’un eix ha de ser \\((27 \\pm 0{,}2) \\, \\text{mm}\\),
+    cal donar per bons tots els eixos de diàmetre`,
+    options: [
+        { text: "inferior a 27,2 mm.", value: "a" },
+        { text: "superior a 26,8 mm.", value: "b" },
+        { text: "superior a 27,2 mm o inferior a 26,8 mm.", value: "c" },
+        { text: "comprès entre 26,8 mm i 27,2 mm.", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+    <strong>Explicació:</strong>
+    <br>
+    L’especificació \\((27 \\pm 0{,}2) \\, \\text{mm}\\) indica un valor nominal de 27 mm
+    amb una tolerància de ±0,2 mm.
+    <br>
+    Això implica que els valors límit admissibles són:
+    \\[
+    27 - 0{,}2 = 26{,}8 \\, \\text{mm}
+    \\]
+    \\[
+    27 + 0{,}2 = 27{,}2 \\, \\text{mm}
+    \\]
+    <br>
+    Per tant, només són acceptables els eixos amb un diàmetre
+    <strong>comprès entre 26,8 mm i 27,2 mm</strong>, ambdós inclosos.
+    <br><br>
+    La resposta correcta és l’opció <strong>d)</strong>.
+    <br><br>
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `La tensió de ruptura d’un aliatge ferro-níquel és \\(\\sigma = 480 \\, \\text{MPa}\\). 
+    Quina és la força axial màxima que es pot aplicar a una barra massissa de 15 mm de diàmetre sense que es trenqui?`,
+    options: [
+        { text: "26,99 kN", value: "a" },
+        { text: "84,82 kN", value: "b" },
+        { text: "11,31 kN", value: "c" },
+        { text: "339,3 kN", value: "d" }
+    ],
+    correctAnswer: "b",
+    steps: `
+    <strong>Solució pas a pas:</strong>
+    <br>
+    - Diàmetre de la barra: 
+    \\[
+    d = 15 \\, \\text{mm} = 0{,}015 \\, \\text{m}
+    \\]
+
+    - Secció transversal de la barra (àrea circular):
+    \\[
+    A = \\pi \\frac{d^2}{4} = \\pi \\frac{(0{,}015)^2}{4} = 1{,}767 \\cdot 10^{-4} \\, \\text{m}^2
+    \\]
+
+    - Tensió de ruptura:
+    \\[
+    \\sigma = 480 \\, \\text{MPa} = 480 \\cdot 10^{6} \\, \\text{Pa}
+    \\]
+
+    - Força axial màxima:
+    \\[
+    F_{max} = \\sigma \\cdot A = 480 \\cdot 10^{6} \\cdot 1{,}767 \\cdot 10^{-4} = 84{,}82 \\, \\text{kN}
+    \\]
+
+    <br>
+    La resposta correcta és l’opció <strong>b)</strong>.
+    <br><br>
+    `
+},
+
+
 ];
 
