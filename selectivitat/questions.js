@@ -57,7 +57,7 @@ const questions = [
         text: `Una estufa elèctrica té un commutador de \\(n = 3\\) posicions per a seleccionar la potència que subministra.
                En la figura es mostra el circuit elèctric d’aquesta estufa, format per dues resistències elèctriques de valors \\(R_{1} = 27 \\, \\text{ohm}\\) i \\(R_{2} = 54 \\, \\text{ohm}\\)  i alimentat a \\(U = 230 \\, \\text{V}\\). 
                En funció de la posició del commutador, el terminal A es connecta a 0, 1 o 2 resistències. Determineu, per a la posició 2 del commutador: 
-               <br><strong>a)</strong> La resistència equivalent \\(R_{\\text{eq}}\\)del circuit. [0,5 punts]
+               <br><strong>a)</strong> La resistència equivalent \\(R_{\\text{eq}}\\) del circuit. [0,5 punts]
                <br><strong>b)</strong> El corrent \\(I\\) consumit per l’estufa. [0,5 punts]
                <br><strong>c)</strong> La potència \\(P\\) subministrada per l’estufa. Si el preu del \\(kW·h\\) és \\(p = 0,087 \\, \\text{€/(kW·h)}\\) [0,5 punts]
                <br><strong>d)</strong> El cost econòmic \\(c\\) de mantenir l’estufa encesa durant \\(t = 2 \\, \\text{h}\\). [1 punt]
@@ -115,7 +115,7 @@ const questions = [
        {
         type: "exercicis",
         category: "electrics",
-        text: `En un motor de corrent continu, el parell motor \\(Gamma\\) i la velocitat angular \\(omega\\) de l’eix estan
+        text: `En un motor de corrent continu, el parell motor \\(\\Gamma\\) i la velocitat angular \\(\\omega\\) de l’eix estan
                relacionats amb la tensió d’alimentació \\(U\\) i el corrent consumit \\(I\\) per les expressions: 
                 <br>\\[
                 \\Gamma = c I, \\quad
@@ -131,7 +131,7 @@ const questions = [
              `, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Expressió que relaciona la potència mecànica \\(P\\) amb la velocitat angular\\(omega\\):</strong>
+            <strong>a) Expressió que relaciona la potència mecànica \\(P\\) amb la velocitat angular \\(\\omega\\):</strong>
             <br>
             - La potència mecànica es defineix com:
             \\[
@@ -170,6 +170,7 @@ const questions = [
              <img src="https://gerardleon21.github.io/selectivitat/images/2007serie2Ae4.png" alt="Gràfica">
             <br>
             <strong>c) Càlcul de l’energia elèctrica \\(E\\), en W·h:</strong>
+            <br>
             <br>
             - Fórmula de la energia:
             \\[
@@ -963,13 +964,21 @@ const questions = [
     per a justificar una reestructuració d’una línia de producció.
     <br>
     Cal tenir en compte altres factors fonamentals, com ara:
-    <ul>
-        <li>El cost de les inversions necessàries i la seva amortització</li>
-        <li>L’impacte sobre la seguretat dels treballadors</li>
-        <li>La qualitat del producte final</li>
-        <li>Els costos de manteniment i d’explotació</li>
-        <li>Els possibles impactes ambientals</li>
-    </ul>
+    \\[
+    - El cost de les inversions necessàries i la seva amortització
+    \\]
+    \\[
+    - L’impacte sobre la seguretat dels treballadors
+    \\]
+    \\[
+    - La qualitat del producte final
+    \\]
+    \\[
+    - Els costos de manteniment i d’explotació
+    \\]
+    \\[
+    - Els possibles impactes ambientals
+    \\]
     <br>
     Per tant, és necessari disposar de més elements de judici abans de justificar el canvi.
     <br><br>
